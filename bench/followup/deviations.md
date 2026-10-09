@@ -126,3 +126,13 @@ continues from item 151 with that variable renamed.
 ## D12 (recorded 2026-10-09 10:05): sufficiency judging in batches of six
 
 Cells 8 and 9 ask the same 27B judge used for the chunk-pack yes-rate. One process judging every pack grew swap until `/System/Volumes/VM` had 14 GB free, which is the disk stop line, at memory-pressure level 2. No yes-rate had been computed. The cache of finished packs is kept. The judge now runs six new packs at a time and unloads between batches, under the same stop lines. The prompt, the temperature, and the packs are unchanged.
+
+## D13 (recorded 2026-10-09 13:05): S9a draws 38 pairs, not 60
+
+The frozen snapshot has 19 areas with at least 10 notes (Addendum 4 counted 18 on the live
+database) and 154 qualifying pairs. With an area in at most three pairs and a note B in at most
+two, the seeded draw stops at 38 pairs: three per area would allow at most 57, and several areas
+have fewer qualifying notes B. The pre-registered result is the 38 pairs, reported with their
+tests as specified. As an exploratory check, decided before running it, the same script raises
+the area cap one step at a time until 60 pairs are drawn and reports the same arms and tests,
+labelled exploratory (`s9a-explore.json`).

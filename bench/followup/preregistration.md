@@ -274,3 +274,51 @@ Wave C, one heavy job at a time, only when its gate opens.
 Cells 1, 2, 3, 5, 8 and 9 are the six already specified in the paper, questions and methods only.
 Cells 11 and 12, and a refresh of a note mean that is not stored separately, are recorded as skips
 rather than re-run. Papers tagged later or research on that scan are not cells.
+
+## Addendum 4 (recorded 2026-10-09 13:04, before any S9 data): S9, a Hilbert key over explicit attributes
+
+S6 put the key on embeddings, where it lost to plain dense search. S9 asks whether the key earns
+its place on attributes every note already has, where nearness is defined and nothing is learned.
+Three attributes are used, read from the live database: area (the first two path segments of the
+note name when it has three or more, otherwise the first; 108 areas, 18 with at least 10 notes),
+type (55 values), and month of the note's date (224 months in the span, 49 used). There is no team
+attribute, so team is not tested. Seed `numpy.random.default_rng(20261009)` for every draw.
+
+S9a, retrieval. A pair is an area P with at least 10 notes and a note B outside P that 3 to 15
+notes in P link to (the S6 link types, frozen snapshot). Sixty pairs are drawn, an area in at
+most three pairs and a note B in at most two. The question is "Which notes in <area of P, path
+words joined by spaces> are about <title of B>?" and the gold is the notes in P that link to B.
+Questions, area names and note names stay out of the repository; result files hold counts and
+scores. Arms, each excluding B:
+1. dense search on the whole question, top 10 and top 30 notes;
+2. dense search on B's title, top 50 notes, kept if in P (the attribute as a filter);
+3. dense search on B's title, top 50, intersected with dense search on the area words, top 50
+   (the attribute as text, the S6 way);
+4. the S6 level-1 region of B's title (16 ranges over stored chunk keys), kept if in P.
+Measures as in S6: set recall and precision against the gold, notes examined, tokens. Tests,
+two-sided Wilcoxon signed-rank on per-question set recall, Holm over three: arm 2 against arm 3
+(primary), arm 2 against arm 1 top 30, arm 4 against arm 2. Predictions: arm 2 beats arm 3 and
+arm 1 top 30; arm 4 does not beat arm 2. The author may later check the gold of the first 30
+pairs; results on all 60 are reported either way.
+
+S9b, the index. Each note gets ordinals (area, type, month), 8 bits per axis. Four access paths
+over the same rows, one table each, each table physically ordered by its own index (CLUSTER),
+the last in random order:
+1. a 3-D Hilbert index of the ordinals (Skilling's transform, implemented in the bench script
+   and checked to be a bijection with unit steps on a 16x16x16 grid), one B-tree on it;
+2. a 3-D Z-order (bit interleave) key, one B-tree on it;
+3. a composite B-tree on (area, type, month), with the server's skip scan;
+4. three single-column B-trees combined by bitmap AND.
+A query is a box: one area, one type, a month range; or one area, any type, a month range; or
+any area, one type, a month range. Sixty boxes per shape; area and type are drawn in proportion
+to their note counts, the month range starts at a drawn note's month and lasts 1 to 24 months
+(uniform). Curve keys cover a box with exact ranges, merged smallest gap first down to at most
+64 per box, so a merged gap brings rows that the row filter then drops. Two sizes: the 1,186 live
+notes, and 200,000 rows drawn with replacement from the live attribute tuples, each row with a
+200-byte payload, in a scratch database dropped afterwards. Per box and path: one warm-up run,
+then shared buffers touched (hit plus read) from one EXPLAIN (ANALYZE, BUFFERS), median time of
+20 runs, ranges used, and rows fetched against rows returned. Every path must return the same
+rows. Acceptance: at 200,000 rows, the Hilbert key wins a box shape if it touches at least 25%
+fewer buffers than the best other path, at most twice its median time. Predictions: it wins no
+shape against the composite B-tree with skip scan; it touches fewer buffers than Z-order on the
+two shapes with a free axis.
