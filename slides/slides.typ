@@ -135,6 +135,49 @@
 ]
 #let network = image("/slides/network.png", height: H)
 
+#let hil-line = rgb("#4C8DF6")
+#let hil-grey = rgb("#D5D9DE")
+#let hil-greydot = rgb("#BFC4CA")
+#let hil-xy(n, d) = {
+  let (x, y, t, s) = (0, 0, d, 1)
+  while s < n {
+    let rx = calc.rem(calc.quo(t, 2), 2)
+    let ry = if calc.rem(t, 2) == rx { 0 } else { 1 }
+    if ry == 0 {
+      if rx == 1 { x = s - 1 - x; y = s - 1 - y }
+      (x, y) = (y, x)
+    }
+    x += s * rx
+    y += s * ry
+    t = calc.quo(t, 4)
+    s *= 2
+  }
+  (x, y)
+}
+#let hil-step(n, cell) = range(n * n).position(d => hil-xy(n, d) == cell)
+#let hil-at(n, size, cell) = (size / n * (cell.at(0) + 0.5), size - size / n * (cell.at(1) + 0.5))
+#let hil-path(n, size, stroke, dot, r) = {
+  let pts = range(n * n).map(d => hil-at(n, size, hil-xy(n, d)))
+  for i in range(pts.len() - 1) { place(line(start: pts.at(i), end: pts.at(i + 1), stroke: stroke)) }
+  for p in pts { place(dx: p.at(0) - r, dy: p.at(1) - r, circle(radius: r, fill: dot, stroke: none)) }
+}
+#let hilbert-art(order, size, under: none, mark: ()) = box(width: size, height: size, {
+  let n = calc.pow(2, order)
+  if under != none {
+    let m = calc.pow(2, under)
+    for k in range(1, m) {
+      place(line(start: (size * k / m, 0pt), end: (size * k / m, size), stroke: (paint: hil-grey, thickness: 0.8pt, dash: "dashed")))
+      place(line(start: (0pt, size * k / m), end: (size, size * k / m), stroke: (paint: hil-grey, thickness: 0.8pt, dash: "dashed")))
+    }
+    hil-path(m, size, 1pt + hil-grey, hil-greydot, 4.5pt)
+  }
+  hil-path(n, size, 1.1pt + hil-line, blue, calc.max(2.4pt, 5.5pt - order * 1pt))
+  for c in mark {
+    let p = hil-at(n, size, c)
+    place(dx: p.at(0) - 6.5pt, dy: p.at(1) - 6.5pt, circle(radius: 6.5pt, fill: ink, stroke: 2pt + white))
+  }
+})
+
 // ------------------------------------------------------------------ title
 
 #page(footer: none)[
@@ -210,6 +253,34 @@
     card(h: 3.6cm)[Cursor CLI][The Cursor agent run headless from the terminal, with a choice of models.],
     card(h: 3.6cm)[Claude Code][Anthropic's coding agent, run headless with the same tasks.],
     card(h: 3.6cm)[Local model][qwen3.8, a 27B model in Ollama on the laptop, with context windows from 8K to 128K tokens.#footnote[Ollama, #raw("ollama.com").]],
+  )
+]
+
+// ------------------------------------------------------------------ hilbert curve
+
+#slide[
+  #title[A Hilbert curve: one line through #hl[every cell]]
+  #let pair = ((3, 0), (4, 0))
+  #let gap = calc.abs(hil-step(8, pair.at(1)) - hil-step(8, pair.at(0)))
+  #grid(columns: (auto, auto, 1fr), column-gutter: 0.9cm,
+    stack(spacing: 0.3cm,
+      hilbert-art(1, 5cm),
+      note[4 cells: one level],
+      v(0.5cm),
+      hilbert-art(2, 5cm),
+      note[16 cells: two levels],
+    ),
+    stack(spacing: 0.3cm,
+      hilbert-art(3, 12cm, under: 1, mark: pair),
+      note[64 cells: three levels. Grey: the first level's four cells.],
+    ),
+    [
+      #set text(size: 0.9em)
+      #point[One line, every cell.][The curve passes through every cell of a grid exactly once, without jumps. A cell's step number along it is one sortable number.#footnote[Hilbert, Mathematische Annalen 38, 1891; any number of dimensions: Skilling, AIP Conference Proceedings 707, 2004.]]
+      #point[Steps stay neighbours.][Two consecutive steps are always touching cells, so a range of step numbers is one compact patch of space.]
+      #point[Not the other way round.][Touching cells can be far apart on the line: the two dark dots share an edge, yet lie #gap steps apart, in different first-level cells.]
+      #point[The hk1 key.][The same curve in 8 dimensions: 8 random projections, each cut into 256 steps. The step number becomes a text key; its first byte names one of 256 first-level cells.]
+    ],
   )
 ]
 
