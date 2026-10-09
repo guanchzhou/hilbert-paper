@@ -283,7 +283,7 @@
   #block(width: 20cm)[
     #text(size: 14pt, weight: 600, fill: muted, tracking: 0.06em)[RESEARCH TALK · OCTOBER 2026]
     #v(0.4cm)
-    #text(size: 48pt, weight: 600, fill: rgb("#262626"))[#hl[Recall and tokens] in a personal AI knowledge base]
+    #text(size: 48pt, weight: 600, fill: rgb("#262626"))[#hl[Recall and tokens] \ in a personal \ AI knowledge base]
     #v(0.5cm)
     #text(size: 20pt, weight: 400)[What decides whether the right note reaches the model, and what it costs to get it there]
     #v(1.2cm)
