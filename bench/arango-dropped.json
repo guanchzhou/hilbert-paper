@@ -1,0 +1,7 @@
+{
+  "database_dropped": true,
+  "databases_left_on_throwaway_instance": [
+    "_system"
+  ],
+  "genealogy_instance_contacted": false
+}

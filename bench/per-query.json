@@ -1,0 +1,132 @@
+{
+  "n": 817,
+  "hit_at_k": {
+    "keyword-page": [
+      0.1518,
+      0.1885,
+      0.2093,
+      0.2154,
+      0.2203,
+      0.2228,
+      0.2228,
+      0.2252,
+      0.2252,
+      0.2264
+    ],
+    "keyword-chunk": [
+      0.1248,
+      0.1444,
+      0.1493,
+      0.1567,
+      0.1567,
+      0.1567,
+      0.1579,
+      0.1579,
+      0.1579,
+      0.1591
+    ],
+    "vector-page": [
+      0.3733,
+      0.5043,
+      0.5949,
+      0.6438,
+      0.6695,
+      0.6867,
+      0.7099,
+      0.7271,
+      0.7368,
+      0.7515
+    ],
+    "vector-chunk": [
+      0.3843,
+      0.5288,
+      0.6242,
+      0.6891,
+      0.7173,
+      0.7283,
+      0.7405,
+      0.7503,
+      0.7576,
+      0.7674
+    ]
+  },
+  "first_rank_histogram": {
+    "keyword-page": {
+      "1": 124,
+      "2": 30,
+      "3": 17,
+      "4": 5,
+      "5": 4,
+      "6": 2,
+      "7": 0,
+      "8": 2,
+      "9": 0,
+      "10": 1,
+      "miss": 632
+    },
+    "keyword-chunk": {
+      "1": 102,
+      "2": 16,
+      "3": 4,
+      "4": 6,
+      "5": 0,
+      "6": 0,
+      "7": 1,
+      "8": 0,
+      "9": 0,
+      "10": 1,
+      "miss": 687
+    },
+    "vector-page": {
+      "1": 305,
+      "2": 107,
+      "3": 74,
+      "4": 40,
+      "5": 21,
+      "6": 14,
+      "7": 19,
+      "8": 14,
+      "9": 8,
+      "10": 12,
+      "miss": 203
+    },
+    "vector-chunk": {
+      "1": 314,
+      "2": 118,
+      "3": 78,
+      "4": 53,
+      "5": 23,
+      "6": 9,
+      "7": 10,
+      "8": 8,
+      "9": 6,
+      "10": 8,
+      "miss": 190
+    }
+  },
+  "empty_result_lists": {
+    "keyword-page": 401,
+    "keyword-chunk": 577,
+    "vector-page": 0,
+    "vector-chunk": 0
+  },
+  "overlap_keyword_page_vs_vector_chunk": {
+    "both": 163,
+    "only_keyword-page": 22,
+    "only_vector-chunk": 464,
+    "neither": 168
+  },
+  "overlap_vector_page_vs_vector_chunk": {
+    "both": 589,
+    "only_vector-page": 25,
+    "only_vector-chunk": 38,
+    "neither": 165
+  },
+  "overlap_keyword_page_vs_keyword_chunk": {
+    "both": 125,
+    "only_keyword-page": 60,
+    "only_keyword-chunk": 5,
+    "neither": 627
+  },
+  "definition": "hit means at least one relevant page in the top k; first rank is the rank of the first relevant page"
+}

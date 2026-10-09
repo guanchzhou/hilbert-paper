@@ -1,0 +1,9 @@
+{
+ "cell": 15,
+ "name": "cite both sides",
+ "arxiv": "2608.13921",
+ "disagreeing_entity_kinds": 0,
+ "notes_with_facts": 4,
+ "passes_line": false,
+ "note": "Among live facts, no entity and kind has two different values. There is no disagreement to pack, so this line stops."
+}

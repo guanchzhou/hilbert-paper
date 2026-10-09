@@ -1,0 +1,26 @@
+{
+  "pairs": 810,
+  "target_recall": 0.9,
+  "raw": {
+    "cos_quartiles": [
+      0.5092007517814636,
+      0.603642076253891,
+      0.6816447526216507
+    ],
+    "same_cell_observed": 0.03333333333333333,
+    "same_cell_predicted": 0.06826119869947433,
+    "p_at_median_cos": 0.06192085043203256,
+    "independent_8bit_tables_for_0.9": 36.02238403752872
+  },
+  "centred": {
+    "cos_quartiles": [
+      0.3358296602964401,
+      0.4537961333990097,
+      0.5584250539541245
+    ],
+    "same_cell_observed": 0.037037037037037035,
+    "same_cell_predicted": 0.03757074102759361,
+    "p_at_median_cos": 0.031837263427130065,
+    "independent_8bit_tables_for_0.9": 71.1660862523535
+  }
+}

@@ -1,0 +1,469 @@
+{
+ "preregistration": "preregistration.md#s2",
+ "judge_model": "qwen3.8:latest",
+ "prompt": "You are judging relevance. Question:\n{q}\n\nNote:\n{text}\n\nIs this note relevant to the question, that is, does it contain information that answers the question or a substantial part of it? Reply with JSON only: {{\"answer\": \"yes\"}} or {{\"answer\": \"no\"}}",
+ "questions_drawn": 100,
+ "questions_used": 80,
+ "calls_counted": 1313,
+ "calls_used": 1059,
+ "cap_rule": "more than 1200 calls -> first 80 drawn questions",
+ "unlabelled_judged_relevant": {
+  "share": 0.423985,
+  "ci95": [
+   0.360716,
+   0.486231
+  ],
+  "pairs": 1059,
+  "yes": 449,
+  "questions_with_any_yes": 76
+ },
+ "R@10": {
+  "reference": {
+   "original": 0.761458,
+   "extended": 0.727439
+  },
+  "best_recall": {
+   "original": 0.7875,
+   "extended": 0.846734
+  }
+ },
+ "reranker_gain": {
+  "original": {
+   "mean_new": 0.7875,
+   "mean_comparator": 0.761458,
+   "diff": 0.026042,
+   "ci95": [
+    -0.032292,
+    0.085417
+   ],
+   "p": 0.252403,
+   "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+   "alternative": "two-sided",
+   "n": 80,
+   "n_nonzero": 16,
+   "improved": 9,
+   "worsened": 7
+  },
+  "extended": {
+   "mean_new": 0.846734,
+   "mean_comparator": 0.727439,
+   "diff": 0.119295,
+   "ci95": [
+    0.082712,
+    0.157295
+   ],
+   "p": 0.0,
+   "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+   "alternative": "two-sided",
+   "n": 80,
+   "n_nonzero": 51,
+   "improved": 44,
+   "worsened": 7
+  }
+ },
+ "judge_seconds_median": 15.183037,
+ "seconds": 545.259104,
+ "per_question": [
+  {
+   "qi": 742,
+   "unlabelled": 12,
+   "judged_relevant": 2
+  },
+  {
+   "qi": 78,
+   "unlabelled": 16,
+   "judged_relevant": 8
+  },
+  {
+   "qi": 168,
+   "unlabelled": 12,
+   "judged_relevant": 11
+  },
+  {
+   "qi": 769,
+   "unlabelled": 11,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 492,
+   "unlabelled": 14,
+   "judged_relevant": 2
+  },
+  {
+   "qi": 246,
+   "unlabelled": 13,
+   "judged_relevant": 7
+  },
+  {
+   "qi": 722,
+   "unlabelled": 14,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 810,
+   "unlabelled": 14,
+   "judged_relevant": 1
+  },
+  {
+   "qi": 745,
+   "unlabelled": 12,
+   "judged_relevant": 11
+  },
+  {
+   "qi": 554,
+   "unlabelled": 13,
+   "judged_relevant": 4
+  },
+  {
+   "qi": 581,
+   "unlabelled": 12,
+   "judged_relevant": 1
+  },
+  {
+   "qi": 44,
+   "unlabelled": 12,
+   "judged_relevant": 6
+  },
+  {
+   "qi": 524,
+   "unlabelled": 13,
+   "judged_relevant": 4
+  },
+  {
+   "qi": 774,
+   "unlabelled": 13,
+   "judged_relevant": 6
+  },
+  {
+   "qi": 806,
+   "unlabelled": 15,
+   "judged_relevant": 4
+  },
+  {
+   "qi": 419,
+   "unlabelled": 13,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 526,
+   "unlabelled": 15,
+   "judged_relevant": 9
+  },
+  {
+   "qi": 546,
+   "unlabelled": 15,
+   "judged_relevant": 8
+  },
+  {
+   "qi": 529,
+   "unlabelled": 10,
+   "judged_relevant": 9
+  },
+  {
+   "qi": 608,
+   "unlabelled": 15,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 183,
+   "unlabelled": 15,
+   "judged_relevant": 1
+  },
+  {
+   "qi": 702,
+   "unlabelled": 16,
+   "judged_relevant": 0
+  },
+  {
+   "qi": 52,
+   "unlabelled": 12,
+   "judged_relevant": 10
+  },
+  {
+   "qi": 547,
+   "unlabelled": 11,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 101,
+   "unlabelled": 13,
+   "judged_relevant": 5
+  },
+  {
+   "qi": 511,
+   "unlabelled": 15,
+   "judged_relevant": 2
+  },
+  {
+   "qi": 45,
+   "unlabelled": 15,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 86,
+   "unlabelled": 11,
+   "judged_relevant": 10
+  },
+  {
+   "qi": 215,
+   "unlabelled": 10,
+   "judged_relevant": 9
+  },
+  {
+   "qi": 27,
+   "unlabelled": 11,
+   "judged_relevant": 8
+  },
+  {
+   "qi": 461,
+   "unlabelled": 13,
+   "judged_relevant": 7
+  },
+  {
+   "qi": 561,
+   "unlabelled": 17,
+   "judged_relevant": 13
+  },
+  {
+   "qi": 776,
+   "unlabelled": 14,
+   "judged_relevant": 2
+  },
+  {
+   "qi": 528,
+   "unlabelled": 9,
+   "judged_relevant": 8
+  },
+  {
+   "qi": 605,
+   "unlabelled": 12,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 3,
+   "unlabelled": 16,
+   "judged_relevant": 11
+  },
+  {
+   "qi": 267,
+   "unlabelled": 14,
+   "judged_relevant": 7
+  },
+  {
+   "qi": 588,
+   "unlabelled": 17,
+   "judged_relevant": 5
+  },
+  {
+   "qi": 13,
+   "unlabelled": 14,
+   "judged_relevant": 12
+  },
+  {
+   "qi": 688,
+   "unlabelled": 11,
+   "judged_relevant": 11
+  },
+  {
+   "qi": 261,
+   "unlabelled": 15,
+   "judged_relevant": 4
+  },
+  {
+   "qi": 790,
+   "unlabelled": 12,
+   "judged_relevant": 11
+  },
+  {
+   "qi": 783,
+   "unlabelled": 14,
+   "judged_relevant": 7
+  },
+  {
+   "qi": 79,
+   "unlabelled": 16,
+   "judged_relevant": 1
+  },
+  {
+   "qi": 90,
+   "unlabelled": 13,
+   "judged_relevant": 11
+  },
+  {
+   "qi": 158,
+   "unlabelled": 14,
+   "judged_relevant": 12
+  },
+  {
+   "qi": 387,
+   "unlabelled": 13,
+   "judged_relevant": 9
+  },
+  {
+   "qi": 145,
+   "unlabelled": 13,
+   "judged_relevant": 0
+  },
+  {
+   "qi": 131,
+   "unlabelled": 13,
+   "judged_relevant": 9
+  },
+  {
+   "qi": 221,
+   "unlabelled": 11,
+   "judged_relevant": 7
+  },
+  {
+   "qi": 442,
+   "unlabelled": 14,
+   "judged_relevant": 10
+  },
+  {
+   "qi": 136,
+   "unlabelled": 16,
+   "judged_relevant": 2
+  },
+  {
+   "qi": 345,
+   "unlabelled": 13,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 513,
+   "unlabelled": 12,
+   "judged_relevant": 5
+  },
+  {
+   "qi": 731,
+   "unlabelled": 15,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 585,
+   "unlabelled": 15,
+   "judged_relevant": 5
+  },
+  {
+   "qi": 441,
+   "unlabelled": 14,
+   "judged_relevant": 8
+  },
+  {
+   "qi": 647,
+   "unlabelled": 9,
+   "judged_relevant": 5
+  },
+  {
+   "qi": 120,
+   "unlabelled": 15,
+   "judged_relevant": 1
+  },
+  {
+   "qi": 599,
+   "unlabelled": 12,
+   "judged_relevant": 8
+  },
+  {
+   "qi": 544,
+   "unlabelled": 15,
+   "judged_relevant": 5
+  },
+  {
+   "qi": 10,
+   "unlabelled": 15,
+   "judged_relevant": 1
+  },
+  {
+   "qi": 764,
+   "unlabelled": 15,
+   "judged_relevant": 9
+  },
+  {
+   "qi": 811,
+   "unlabelled": 11,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 653,
+   "unlabelled": 12,
+   "judged_relevant": 4
+  },
+  {
+   "qi": 508,
+   "unlabelled": 14,
+   "judged_relevant": 3
+  },
+  {
+   "qi": 282,
+   "unlabelled": 14,
+   "judged_relevant": 13
+  },
+  {
+   "qi": 240,
+   "unlabelled": 12,
+   "judged_relevant": 1
+  },
+  {
+   "qi": 200,
+   "unlabelled": 16,
+   "judged_relevant": 5
+  },
+  {
+   "qi": 69,
+   "unlabelled": 13,
+   "judged_relevant": 1
+  },
+  {
+   "qi": 287,
+   "unlabelled": 14,
+   "judged_relevant": 0
+  },
+  {
+   "qi": 472,
+   "unlabelled": 11,
+   "judged_relevant": 10
+  },
+  {
+   "qi": 276,
+   "unlabelled": 11,
+   "judged_relevant": 5
+  },
+  {
+   "qi": 384,
+   "unlabelled": 12,
+   "judged_relevant": 1
+  },
+  {
+   "qi": 60,
+   "unlabelled": 11,
+   "judged_relevant": 6
+  },
+  {
+   "qi": 598,
+   "unlabelled": 15,
+   "judged_relevant": 0
+  },
+  {
+   "qi": 796,
+   "unlabelled": 13,
+   "judged_relevant": 7
+  },
+  {
+   "qi": 269,
+   "unlabelled": 10,
+   "judged_relevant": 10
+  },
+  {
+   "qi": 172,
+   "unlabelled": 15,
+   "judged_relevant": 6
+  },
+  {
+   "qi": 619,
+   "unlabelled": 11,
+   "judged_relevant": 3
+  }
+ ],
+ "private": "note names, note text and question texts are kept out of the repository"
+}

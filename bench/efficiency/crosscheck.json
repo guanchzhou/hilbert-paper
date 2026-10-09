@@ -1,0 +1,92 @@
+{
+ "questions": [
+  3,
+  4,
+  5,
+  10,
+  12,
+  13,
+  14,
+  16,
+  17,
+  18,
+  19,
+  20,
+  22,
+  23,
+  24,
+  26,
+  28,
+  31,
+  32,
+  33
+ ],
+ "settings": {
+  "M1": {
+   "pool": 10
+  },
+  "M2": {
+   "lam": 2,
+   "p": 0.5
+  },
+  "M3": {
+   "lam": 0.9
+  },
+  "M4": {
+   "alpha": 20
+  },
+  "M5": {
+   "t": 0.5,
+   "beta": 0.1
+  },
+  "M6": {
+   "k": 20,
+   "a": 0.5,
+   "beta": 0.3
+  },
+  "M7": {
+   "t": 0.5,
+   "gamma": 0.25,
+   "beta": 0.1
+  }
+ },
+ "tools": {
+  "zig-select": "/Users/andreymaltsev/Development/zig-select/zig-out/bin/zig-select",
+  "zig-diffuse": "/Users/andreymaltsev/Development/zig-diffuse/zig-out/bin/zig-diffuse"
+ },
+ "results": {
+  "M1": {
+   "isotonic_max_abs_diff": "5.55e-17",
+   "selections_equal": 100,
+   "of": 100
+  },
+  "M2": {
+   "equal": 100,
+   "of": 100
+  },
+  "M3": {
+   "equal": 20,
+   "of": 20
+  },
+  "M4": {
+   "equal": 20,
+   "of": 20
+  },
+  "M5": {
+   "max_abs_diff": "8.33e-16",
+   "top10_equal": 5,
+   "of": 5
+  },
+  "M7": {
+   "max_abs_diff": "1.33e-15",
+   "top10_equal": 5,
+   "of": 5
+  },
+  "M6": {
+   "knn_edges_equal": true,
+   "edges": 24520,
+   "max_abs_diff_F": "2.84e-09",
+   "of": 5
+  }
+ }
+}

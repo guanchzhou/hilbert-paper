@@ -1,0 +1,30 @@
+{
+  "keyword-page": {
+    "cell": "keyword-page",
+    "k": 10,
+    "n": 817,
+    "P": 0.024725,
+    "R": 0.199918,
+    "MRR": 0.180416,
+    "nDCG": 0.174732,
+    "seconds": 1.079,
+    "tokens": 46609.168,
+    "tokens_total": 38079690
+  },
+  "keyword-chunk": {
+    "cell": "keyword-chunk",
+    "k": 10,
+    "n": 817,
+    "P": 0.017625,
+    "R": 0.137801,
+    "MRR": 0.138404,
+    "nDCG": 0.128446,
+    "seconds": 0.085,
+    "tokens": 6047.903,
+    "tokens_total": 4941137
+  },
+  "empty_result_lists": {
+    "keyword-page": 401,
+    "keyword-chunk": 577
+  }
+}

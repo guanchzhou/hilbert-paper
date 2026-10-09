@@ -1,0 +1,416 @@
+{
+  "pg16": {
+    "server_version": "16.15",
+    "pgvector": "0.8.6",
+    "arangodb": "3.12.10-1",
+    "embedded_chunks": 5155
+  },
+  "pg18": {
+    "server_version": "18.6 (Homebrew)",
+    "pgvector": "0.8.7",
+    "pages_live": 1226,
+    "embedded_chunks": 5164,
+    "chunk_hilbert_rows": 4969,
+    "measured_at": "2026-10-06T12:56:08+0300",
+    "arangodb": "3.12.12"
+  },
+  "design": "replication on the upgraded server, compared with stored results; not a side-by-side test, because PostgreSQL 16 was removed. The corpus grew between the runs and machine load differed.",
+  "rows": [
+    {
+      "group": "pgvector, live chunks",
+      "measure": "top-10 median",
+      "pg16": 0.458,
+      "pg18": 0.679395501720137,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "pgvector, live chunks",
+      "measure": "top-10 p95",
+      "pg16": 1.663,
+      "pg18": 1.7776249987946358,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "keyword search",
+      "measure": "keyword-page recall at 10",
+      "pg16": 0.199918,
+      "pg18": 0.199918,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "keyword search",
+      "measure": "keyword-page time, 817 questions",
+      "pg16": 1.97,
+      "pg18": 1.079,
+      "unit": "s",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "keyword search",
+      "measure": "keyword-chunk recall at 10",
+      "pg16": 0.137801,
+      "pg18": 0.137801,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "keyword search",
+      "measure": "keyword-chunk time, 817 questions",
+      "pg16": 0.654,
+      "pg18": 0.085,
+      "unit": "s",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "hk1 range scans",
+      "measure": "level 1, 1 ranges, 817 questions",
+      "pg16": 0.01666304299760668,
+      "pg18": 0.014082417990721297,
+      "unit": "s",
+      "comparable": true,
+      "note": "median candidates 24 then 22"
+    },
+    {
+      "group": "hk1 range scans",
+      "measure": "level 1, 4 ranges, 817 questions",
+      "pg16": 0.04719000099612458,
+      "pg18": 0.027040747001592536,
+      "unit": "s",
+      "comparable": true,
+      "note": "median candidates 100 then 97"
+    },
+    {
+      "group": "hk1 range scans",
+      "measure": "level 1, 8 ranges, 817 questions",
+      "pg16": 0.09999037401030364,
+      "pg18": 0.04534979300296982,
+      "unit": "s",
+      "comparable": true,
+      "note": "median candidates 188 then 183"
+    },
+    {
+      "group": "hk1 range scans",
+      "measure": "level 1, 16 ranges, 817 questions",
+      "pg16": 0.10072291899814445,
+      "pg18": 0.0783102070017776,
+      "unit": "s",
+      "comparable": true,
+      "note": "median candidates 329 then 323"
+    },
+    {
+      "group": "hk1 range scans",
+      "measure": "level 2, 8 ranges, 817 questions",
+      "pg16": 0.03135895599552896,
+      "pg18": 0.012317582997638965,
+      "unit": "s",
+      "comparable": true,
+      "note": "median candidates 1 then 1"
+    },
+    {
+      "group": "hk1 range scans",
+      "measure": "level 2, 16 ranges, 817 questions",
+      "pg16": 0.05614516500281752,
+      "pg18": 0.01955833401734708,
+      "unit": "s",
+      "comparable": true,
+      "note": "median candidates 1 then 1"
+    },
+    {
+      "group": "200,000 vectors, one session",
+      "measure": "top-10 median",
+      "pg16": 0.801,
+      "pg18": 1.124,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "200,000 vectors, one session",
+      "measure": "top-10 p95",
+      "pg16": 2.933,
+      "pg18": 2.667,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "200,000 vectors, one session",
+      "measure": "HNSW index size",
+      "pg16": 1637187584,
+      "pg18": 1637195776,
+      "unit": "bytes",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "200,000 vectors, one session",
+      "measure": "HNSW build",
+      "pg16": 49.5,
+      "pg18": 68.2,
+      "unit": "s",
+      "comparable": true,
+      "note": "the original build settings were not recorded"
+    },
+    {
+      "group": "200,000 vectors, one session",
+      "measure": "recall at 10 against exact",
+      "pg16": 0.588,
+      "pg18": 0.302,
+      "unit": "",
+      "comparable": false,
+      "note": "the original run's code was not kept; the noisy copies were rebuilt from its description, so the data set differs"
+    },
+    {
+      "group": "200,000 vectors, new psql per query",
+      "measure": "top-10 median",
+      "pg16": 68.175,
+      "pg18": 28.936,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "200,000 vectors, new psql per query",
+      "measure": "one hk1 prefix range",
+      "pg16": 364.537,
+      "pg18": 88.504,
+      "unit": "ms",
+      "comparable": true,
+      "note": "rows 734 then 724; random keys differ per run"
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 1, median",
+      "pg16": 2.003792000323301,
+      "pg18": 1.8999999992956873,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 1, exact top-10 found",
+      "pg16": 0.5525091799265606,
+      "pg18": 0.564014687882497,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 4, median",
+      "pg16": 3.793707999648177,
+      "pg18": 2.7722499980882276,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 4, exact top-10 found",
+      "pg16": 0.8308445532435741,
+      "pg18": 0.8525091799265606,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 8, median",
+      "pg16": 4.3334589990990935,
+      "pg18": 2.5273330029449426,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 8, exact top-10 found",
+      "pg16": 0.9210526315789473,
+      "pg18": 0.9304773561811506,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 16, median",
+      "pg16": 4.602666998835048,
+      "pg18": 4.1621249984018505,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 16, exact top-10 found",
+      "pg16": 0.9687882496940025,
+      "pg18": 0.9741738066095471,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 72, median",
+      "pg16": 4.638292000890942,
+      "pg18": 5.259290999674704,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango nProbe 72, exact top-10 found",
+      "pg16": 1.0,
+      "pg18": 0.9998776009791921,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango exact, median",
+      "pg16": 12.62079200023436,
+      "pg18": 12.201416000607423,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, ArangoDB 3.12.10 then 3.12.12",
+      "measure": "arango exact, exact top-10 found",
+      "pg16": 1.0,
+      "pg18": 0.9998776009791921,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector ef_search 50, median",
+      "pg16": 2.097707998473197,
+      "pg18": 1.2090829986846074,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector ef_search 50, exact top-10 found",
+      "pg16": 0.9864137086903306,
+      "pg18": 0.9866585067319462,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector ef_search 100, median",
+      "pg16": 2.1579580006800825,
+      "pg18": 1.5868330010562204,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector ef_search 100, exact top-10 found",
+      "pg16": 0.9936352509179927,
+      "pg18": 0.9937576499388004,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector ef_search 200, median",
+      "pg16": 1.8757920006464701,
+      "pg18": 2.1972079994156957,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector ef_search 200, exact top-10 found",
+      "pg16": 0.9987760097919217,
+      "pg18": 0.9984088127294982,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector ef_search 400, median",
+      "pg16": 2.428458999929717,
+      "pg18": 3.033042001334252,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector ef_search 400, exact top-10 found",
+      "pg16": 0.9997552019583843,
+      "pg18": 0.9996328029375765,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector exact, median",
+      "pg16": 8.444084000075236,
+      "pg18": 11.833791999379173,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "engine comparison, pgvector",
+      "measure": "pgvector exact, exact top-10 found",
+      "pg16": 1.0,
+      "pg18": 1.0,
+      "unit": "",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "one-hop expansion",
+      "measure": "AQL median",
+      "pg16": 1.3382289998844499,
+      "pg18": 1.1322705013299128,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "one-hop expansion",
+      "measure": "SQL median",
+      "pg16": 0.45283350027602864,
+      "pg18": 0.15724950026196893,
+      "unit": "ms",
+      "comparable": true,
+      "note": ""
+    },
+    {
+      "group": "one-hop expansion",
+      "measure": "identical neighbour sets",
+      "pg16": 300,
+      "pg18": 300,
+      "unit": "starts",
+      "comparable": true,
+      "note": ""
+    }
+  ]
+}

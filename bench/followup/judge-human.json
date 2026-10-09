@@ -1,0 +1,172 @@
+{
+ "s1b": {
+  "preregistration": "preregistration.md#s1",
+  "n_questions_labelled": 50,
+  "n_questions_judge": 150,
+  "A": {
+   "human": {
+    "estimate": 0.8,
+    "se": 0.057143,
+    "ci95": [
+     0.688002,
+     0.911998
+    ],
+    "n": 50
+   },
+   "judge_150": {
+    "estimate": 0.713333,
+    "se": 0.037046,
+    "ci95": [
+     0.640724,
+     0.785942
+    ],
+    "n": 150
+   },
+   "judge_50": {
+    "estimate": 0.76,
+    "se": 0.061012,
+    "ci95": [
+     0.640419,
+     0.879581
+    ],
+    "n": 50
+   },
+   "ppi": {
+    "estimate": 0.753333,
+    "se": 0.07363,
+    "ci95": [
+     0.609021,
+     0.897646
+    ],
+    "rectifier": 0.04,
+    "n_judge": 150,
+    "n_human": 50,
+    "interval": "normal, Var(judge)/N + Var(human - judge)/n"
+   }
+  },
+  "B": {
+   "human": {
+    "estimate": 0.8,
+    "se": 0.057143,
+    "ci95": [
+     0.688002,
+     0.911998
+    ],
+    "n": 50
+   },
+   "judge_150": {
+    "estimate": 0.793333,
+    "se": 0.033172,
+    "ci95": [
+     0.728318,
+     0.858349
+    ],
+    "n": 150
+   },
+   "judge_50": {
+    "estimate": 0.78,
+    "se": 0.059178,
+    "ci95": [
+     0.664013,
+     0.895987
+    ],
+    "n": 50
+   },
+   "ppi": {
+    "estimate": 0.813333,
+    "se": 0.062844,
+    "ci95": [
+     0.690162,
+     0.936505
+    ],
+    "rectifier": 0.02,
+    "n_judge": 150,
+    "n_human": 50,
+    "interval": "normal, Var(judge)/N + Var(human - judge)/n"
+   }
+  },
+  "A_minus_B": {
+   "human": {
+    "estimate": 0.0,
+    "se": 0.057143,
+    "ci95": [
+     -0.111998,
+     0.111998
+    ],
+    "n": 50
+   },
+   "judge_150": {
+    "estimate": -0.08,
+    "se": 0.033472,
+    "ci95": [
+     -0.145603,
+     -0.014397
+    ],
+    "n": 150
+   },
+   "judge_50": {
+    "estimate": -0.02,
+    "se": 0.060542,
+    "ci95": [
+     -0.13866,
+     0.09866
+    ],
+    "n": 50
+   },
+   "ppi": {
+    "estimate": -0.06,
+    "se": 0.085057,
+    "ci95": [
+     -0.226708,
+     0.106708
+    ],
+    "rectifier": 0.02,
+    "n_judge": 150,
+    "n_human": 50,
+    "interval": "normal, Var(judge)/N + Var(human - judge)/n"
+   }
+  },
+  "agreement": {
+   "all": {
+    "n": 100,
+    "agreement": 0.83,
+    "kappa": 0.497041,
+    "human_yes": 0.8,
+    "judge_yes": 0.77
+   },
+   "A": {
+    "n": 50,
+    "agreement": 0.8,
+    "kappa": 0.418605,
+    "human_yes": 0.8,
+    "judge_yes": 0.76
+   },
+   "B": {
+    "n": 50,
+    "agreement": 0.86,
+    "kappa": 0.578313,
+    "human_yes": 0.8,
+    "judge_yes": 0.78
+   }
+  }
+ },
+ "s2_agreement": {
+  "judge_yes": {
+   "n": 15,
+   "agreement": 0.733333,
+   "human_yes": 0.733333
+  },
+  "judge_no": {
+   "n": 15,
+   "agreement": 0.533333,
+   "human_yes": 0.466667
+  },
+  "all": {
+   "n": 30,
+   "agreement": 0.633333,
+   "kappa": 0.266667,
+   "human_yes": 0.6,
+   "judge_yes": 0.5
+  }
+ }
+}

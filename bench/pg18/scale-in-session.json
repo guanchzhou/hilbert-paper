@@ -1,0 +1,19 @@
+{
+  "n_vectors": 200000,
+  "n_real_embeddings": 5164,
+  "noise": "gaussian sigma 0.02",
+  "index_build_s": 68.2,
+  "index_bytes": 1637195776,
+  "maintenance_work_mem": "2GB",
+  "max_parallel_maintenance_workers": "2",
+  "hnsw_ef_search": "40",
+  "median_ms": 1.124,
+  "p95_ms": 2.667,
+  "exact_recall_at_10": 0.302,
+  "note": "Timed inside one Postgres session over psycopg. Scratch database dropped.",
+  "dropped": true,
+  "live_embedded_chunks_before_after": [
+    5164,
+    5164
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "n": 200000,
+  "real_vectors": 5164,
+  "pgvector_median_ms": 28.936,
+  "pgvector_p95_ms": 33.421,
+  "hilbert_one_range_ms": 88.504,
+  "hilbert_one_range_rows": 724,
+  "dropped": true
+}

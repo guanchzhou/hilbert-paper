@@ -1,0 +1,32 @@
+{
+ "embedding_max_abs_diff_first_32": 0.0,
+ "lexical_check": {
+  "pairs_new": 1245274,
+  "pairs_cached": 1245196,
+  "pairs_both": 1245196,
+  "max_abs_diff_on_both": 6.0
+ },
+ "runs": {
+  "best_recall": {
+   "config": "hybrid|mean|on|on|off|off|none",
+   "unit": "chunk",
+   "questions_compared": 817,
+   "R@10_max_abs_diff_vs_stage2": 0.0,
+   "survival_max_abs_diff_vs_stage2": 0.0
+  },
+  "best_survival": {
+   "config": "hybrid|mean|off|on|off|on|none",
+   "unit": "pruned",
+   "questions_compared": 817,
+   "R@10_max_abs_diff_vs_stage2": 0.0,
+   "survival_max_abs_diff_vs_stage2": 0.0
+  },
+  "reference": {
+   "config": "dense|best|off|off|off|off|none",
+   "unit": "chunk",
+   "questions_compared": 817,
+   "R@10_max_abs_diff_vs_stage2": 0.0,
+   "survival_max_abs_diff_vs_stage2": 0.0
+  }
+ }
+}

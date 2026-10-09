@@ -1,0 +1,60 @@
+{
+  "k": 10,
+  "n": 817,
+  "qrels": "qrels-dev.json",
+  "qrels_dev_sha256": "87b6f6a2f0b87c8d55f8bf902e00099be366a363326295732e281a7b26a5f338",
+  "keyword": "websearch_to_tsquery('english') AND, ts_rank_cd, page collapse by max score",
+  "vector_page": "cosine vs mean of the page's chunk embeddings",
+  "vector_chunk": "cosine vs every live chunk; best chunk wins the page",
+  "tokens": "mean over queries of estimate_tokens(compiled_truth) summed over the top-10 pages",
+  "cells": {
+    "keyword-page": {
+      "cell": "keyword-page",
+      "k": 10,
+      "n": 817,
+      "P": 0.024725,
+      "R": 0.199918,
+      "MRR": 0.180416,
+      "nDCG": 0.174732,
+      "seconds": 1.97,
+      "tokens": 46558.535,
+      "tokens_total": 38038323
+    },
+    "keyword-chunk": {
+      "cell": "keyword-chunk",
+      "k": 10,
+      "n": 817,
+      "P": 0.017625,
+      "R": 0.137801,
+      "MRR": 0.138404,
+      "nDCG": 0.128446,
+      "seconds": 0.654,
+      "tokens": 6031.383,
+      "tokens_total": 4927640
+    },
+    "vector-page": {
+      "cell": "vector-page",
+      "k": 10,
+      "n": 817,
+      "P": 0.090942,
+      "R": 0.683287,
+      "MRR": 0.49725,
+      "nDCG": 0.521392,
+      "seconds": 0.068,
+      "tokens": 53065.519,
+      "tokens_total": 43354529
+    },
+    "vector-chunk": {
+      "cell": "vector-chunk",
+      "k": 10,
+      "n": 817,
+      "P": 0.092534,
+      "R": 0.698391,
+      "MRR": 0.516824,
+      "nDCG": 0.537789,
+      "seconds": 0.365,
+      "tokens": 89119.509,
+      "tokens_total": 72810639
+    }
+  }
+}

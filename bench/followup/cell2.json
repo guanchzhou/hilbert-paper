@@ -1,0 +1,27 @@
+{
+ "cell": 2,
+ "name": "seed clamp",
+ "arxiv": "2603.24925",
+ "n": 817,
+ "settings": {
+  "seeds": 20,
+  "alpha": 0.15,
+  "iterations": 20,
+  "graph": "undirected links"
+ },
+ "edges": 4485,
+ "R@10": {
+  "clamped": 0.6975753336830449,
+  "best_chunk": 0.698391327155097
+ },
+ "diff": -0.0008159934720522233,
+ "ci95": [
+  -0.006119951040391677,
+  0.004691962464300286
+ ],
+ "interval_above_zero": false,
+ "original_top_retained_in_10": 817,
+ "original_top_lost": 0,
+ "passes": false,
+ "seed": 20261008
+}

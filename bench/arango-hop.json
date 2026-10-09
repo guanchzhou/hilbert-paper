@@ -1,0 +1,19 @@
+{
+  "pages": 1225,
+  "edges": 7635,
+  "hub_cap": 50,
+  "hubs_excluded": 17,
+  "starts": 300,
+  "neighbour_set_jaccard_mean": 1.0,
+  "identical_sets": 300,
+  "arangodb_aql": {
+    "median_ms": 1.3382289998844499,
+    "p95_ms": 2.3784169989085058,
+    "mean_ms": 1.4766004166570685
+  },
+  "postgres_sql": {
+    "median_ms": 0.45283350027602864,
+    "p95_ms": 0.8395839995500864,
+    "mean_ms": 0.5025425433207905
+  }
+}

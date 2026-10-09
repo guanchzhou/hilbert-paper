@@ -1,0 +1,169 @@
+{
+  "rtk_path": "/opt/homebrew/bin/rtk",
+  "rtk_present": true,
+  "hook_agent": "cursor",
+  "byte_basis": "stdout_plus_stderr",
+  "note": "Filtered argv is the rtk hook check --agent cursor rewrite (rtk prefixed). Raw commands ran without the hook by executing argv directly.",
+  "n_commands": 5,
+  "commands": [
+    {
+      "name": "ls_la_hilbert_paper",
+      "raw_argv": [
+        "ls",
+        "-la",
+        "/Users/andreymaltsev/Development/hilbert-paper"
+      ],
+      "filtered_argv": [
+        "/opt/homebrew/bin/rtk",
+        "ls",
+        "-la",
+        "/Users/andreymaltsev/Development/hilbert-paper"
+      ],
+      "bytes_before": 586,
+      "bytes_after": 129,
+      "before": {
+        "exit": 0,
+        "stdout_bytes": 586,
+        "stderr_bytes": 0,
+        "bytes": 586
+      },
+      "after": {
+        "exit": 0,
+        "stdout_bytes": 129,
+        "stderr_bytes": 0,
+        "bytes": 129
+      }
+    },
+    {
+      "name": "git_status_hilbert_paper",
+      "raw_argv": [
+        "git",
+        "-C",
+        "/Users/andreymaltsev/Development/hilbert-paper",
+        "status"
+      ],
+      "filtered_argv": [
+        "/opt/homebrew/bin/rtk",
+        "git",
+        "-C",
+        "/Users/andreymaltsev/Development/hilbert-paper",
+        "status"
+      ],
+      "bytes_before": 100,
+      "bytes_after": 49,
+      "before": {
+        "exit": 0,
+        "stdout_bytes": 100,
+        "stderr_bytes": 0,
+        "bytes": 100
+      },
+      "after": {
+        "exit": 0,
+        "stdout_bytes": 49,
+        "stderr_bytes": 0,
+        "bytes": 49
+      }
+    },
+    {
+      "name": "git_log_hilbert_paper",
+      "raw_argv": [
+        "git",
+        "-C",
+        "/Users/andreymaltsev/Development/hilbert-paper",
+        "log",
+        "-5",
+        "--oneline"
+      ],
+      "filtered_argv": [
+        "/opt/homebrew/bin/rtk",
+        "git",
+        "-C",
+        "/Users/andreymaltsev/Development/hilbert-paper",
+        "log",
+        "-5",
+        "--oneline"
+      ],
+      "bytes_before": 122,
+      "bytes_after": 122,
+      "before": {
+        "exit": 0,
+        "stdout_bytes": 122,
+        "stderr_bytes": 0,
+        "bytes": 122
+      },
+      "after": {
+        "exit": 0,
+        "stdout_bytes": 122,
+        "stderr_bytes": 0,
+        "bytes": 122
+      }
+    },
+    {
+      "name": "rg_typst_hilbert_paper",
+      "raw_argv": [
+        "rg",
+        "-l",
+        "typst",
+        "/Users/andreymaltsev/Development/hilbert-paper"
+      ],
+      "filtered_argv": [
+        "/opt/homebrew/bin/rtk",
+        "rg",
+        "-l",
+        "typst",
+        "/Users/andreymaltsev/Development/hilbert-paper"
+      ],
+      "bytes_before": 114,
+      "bytes_after": 78,
+      "before": {
+        "exit": 0,
+        "stdout_bytes": 114,
+        "stderr_bytes": 0,
+        "bytes": 114
+      },
+      "after": {
+        "exit": 0,
+        "stdout_bytes": 78,
+        "stderr_bytes": 0,
+        "bytes": 78
+      }
+    },
+    {
+      "name": "find_md_depth2_zig_hilbert",
+      "raw_argv": [
+        "find",
+        "/Users/andreymaltsev/Development/zig-hilbert",
+        "-maxdepth",
+        "2",
+        "-name",
+        "*.md"
+      ],
+      "filtered_argv": [
+        "/opt/homebrew/bin/rtk",
+        "find",
+        "/Users/andreymaltsev/Development/zig-hilbert",
+        "-maxdepth",
+        "2",
+        "-name",
+        "*.md"
+      ],
+      "bytes_before": 113,
+      "bytes_after": 139,
+      "before": {
+        "exit": 0,
+        "stdout_bytes": 113,
+        "stderr_bytes": 0,
+        "bytes": 113
+      },
+      "after": {
+        "exit": 0,
+        "stdout_bytes": 139,
+        "stderr_bytes": 0,
+        "bytes": 139
+      }
+    }
+  ],
+  "bytes_before": 1035,
+  "bytes_after": 517,
+  "ratio_after_over_before": 0.4995169082125604
+}

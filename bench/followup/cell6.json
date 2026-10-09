@@ -1,0 +1,14 @@
+{
+ "cell": 6,
+ "name": "stale-fact census",
+ "arxiv": "2605.06527",
+ "facts": 186,
+ "superseded_facts": 3,
+ "notes_with_a_superseded_fact": 0,
+ "entities_with_a_superseded_fact": 3,
+ "facts_with_valid_until": 15,
+ "facts_expired": 13,
+ "link_types_meaning_replacement": 0,
+ "passes_line": false,
+ "note": "No link type records one note replacing another. Three facts have superseded_by set, and none of those rows names a note."
+}

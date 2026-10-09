@@ -1,0 +1,3098 @@
+{
+ "main": {
+  "R@10": {
+   "F1=lexical": {
+    "effect": -0.107562,
+    "ci95": [
+     -0.127503,
+     -0.087724
+    ],
+    "cells_paired": 30,
+    "p": 0.0,
+    "improved": 92,
+    "worsened": 282,
+    "p_holm": 0.0
+   },
+   "F1=hybrid": {
+    "effect": 0.001871,
+    "ci95": [
+     -0.009784,
+     0.013749
+    ],
+    "cells_paired": 240,
+    "p": 0.188681,
+    "improved": 200,
+    "worsened": 150,
+    "p_holm": 0.363976
+   },
+   "F2=mean": {
+    "effect": 0.000736,
+    "ci95": [
+     -0.005554,
+     0.00676
+    ],
+    "cells_paired": 240,
+    "p": 0.115373,
+    "improved": 174,
+    "worsened": 133,
+    "p_holm": 0.34612
+   },
+   "F4=on": {
+    "effect": 0.007753,
+    "ci95": [
+     0.005211,
+     0.010564
+    ],
+    "cells_paired": 255,
+    "p": 0.0,
+    "improved": 187,
+    "worsened": 90,
+    "p_holm": 0.0
+   },
+   "F5=on": {
+    "effect": -0.005281,
+    "ci95": [
+     -0.009514,
+     -0.00106
+    ],
+    "cells_paired": 240,
+    "p": 0.036471,
+    "improved": 132,
+    "worsened": 168,
+    "p_holm": 0.145884
+   },
+   "F6=on": {
+    "effect": 0.005185,
+    "ci95": [
+     0.000821,
+     0.009716
+    ],
+    "cells_paired": 240,
+    "p": 0.010233,
+    "improved": 168,
+    "worsened": 124,
+    "p_holm": 0.051167
+   },
+   "F7=hk1": {
+    "effect": -0.376276,
+    "ci95": [
+     -0.406885,
+     -0.345482
+    ],
+    "cells_paired": 170,
+    "p": 0.0,
+    "improved": 112,
+    "worsened": 502,
+    "p_holm": 0.0
+   },
+   "F7=partitions": {
+    "effect": -0.045195,
+    "ci95": [
+     -0.06172,
+     -0.029475
+    ],
+    "cells_paired": 170,
+    "p": 0.181988,
+    "improved": 200,
+    "worsened": 131,
+    "p_holm": 0.363976
+   }
+  },
+  "survival": {
+   "F1=lexical": {
+    "effect": -0.145981,
+    "ci95": [
+     -0.164669,
+     -0.127008
+    ],
+    "cells_paired": 30,
+    "p": 0.0,
+    "improved": 127,
+    "worsened": 456,
+    "p_holm": 0.0
+   },
+   "F1=hybrid": {
+    "effect": -0.012617,
+    "ci95": [
+     -0.022572,
+     -0.002591
+    ],
+    "cells_paired": 240,
+    "p": 0.039998,
+    "improved": 248,
+    "worsened": 304,
+    "p_holm": 0.159992
+   },
+   "F2=mean": {
+    "effect": 0.001,
+    "ci95": [
+     -0.004473,
+     0.006242
+    ],
+    "cells_paired": 240,
+    "p": 0.000413,
+    "improved": 313,
+    "worsened": 214,
+    "p_holm": 0.002477
+   },
+   "F4=on": {
+    "effect": 0.005582,
+    "ci95": [
+     0.003192,
+     0.008141
+    ],
+    "cells_paired": 255,
+    "p": 0.000849,
+    "improved": 304,
+    "worsened": 250,
+    "p_holm": 0.004244
+   },
+   "F5=on": {
+    "effect": -0.00255,
+    "ci95": [
+     -0.006263,
+     0.00102
+    ],
+    "cells_paired": 240,
+    "p": 0.293454,
+    "improved": 261,
+    "worsened": 256,
+    "p_holm": 0.586907
+   },
+   "F6=on": {
+    "effect": 0.00103,
+    "ci95": [
+     -0.002188,
+     0.004253
+    ],
+    "cells_paired": 240,
+    "p": 0.512722,
+    "improved": 268,
+    "worsened": 251,
+    "p_holm": 0.586907
+   },
+   "F7=hk1": {
+    "effect": -0.352963,
+    "ci95": [
+     -0.382958,
+     -0.322636
+    ],
+    "cells_paired": 170,
+    "p": 0.0,
+    "improved": 193,
+    "worsened": 517,
+    "p_holm": 0.0
+   },
+   "F7=partitions": {
+    "effect": -0.046,
+    "ci95": [
+     -0.061963,
+     -0.031082
+    ],
+    "cells_paired": 170,
+    "p": 0.091,
+    "improved": 327,
+    "worsened": 205,
+    "p_holm": 0.273
+   },
+   "F8=window": {
+    "effect": -0.081791,
+    "ci95": [
+     -0.089964,
+     -0.073931
+    ],
+    "cells_paired": 102,
+    "p": 0.0,
+    "improved": 17,
+    "worsened": 535,
+    "p_holm": 0.0
+   },
+   "F8=section": {
+    "effect": -0.021948,
+    "ci95": [
+     -0.029316,
+     -0.015588
+    ],
+    "cells_paired": 102,
+    "p": 0.0,
+    "improved": 33,
+    "worsened": 209,
+    "p_holm": 0.0
+   },
+   "F8=page": {
+    "effect": -0.127139,
+    "ci95": [
+     -0.144299,
+     -0.110519
+    ],
+    "cells_paired": 102,
+    "p": 0.0,
+    "improved": 85,
+    "worsened": 417,
+    "p_holm": 0.0
+   },
+   "F8=pruned": {
+    "effect": 0.108947,
+    "ci95": [
+     0.097907,
+     0.120191
+    ],
+    "cells_paired": 102,
+    "p": 0.0,
+    "improved": 518,
+    "worsened": 0,
+    "p_holm": 0.0
+   }
+  },
+  "tokens": {
+   "F1=lexical": {
+    "effect": -83.751326,
+    "ci95": [
+     -130.624662,
+     -40.801483
+    ],
+    "cells_paired": 30,
+    "p": 0.000322,
+    "improved": 350,
+    "worsened": 467,
+    "p_holm": 0.000322
+   },
+   "F1=hybrid": {
+    "effect": 52.197317,
+    "ci95": [
+     39.805224,
+     65.288025
+    ],
+    "cells_paired": 240,
+    "p": 0.0,
+    "improved": 473,
+    "worsened": 344,
+    "p_holm": 0.0
+   },
+   "F2=mean": {
+    "effect": -8.998082,
+    "ci95": [
+     -13.241833,
+     -4.771222
+    ],
+    "cells_paired": 240,
+    "p": 5e-06,
+    "improved": 346,
+    "worsened": 471,
+    "p_holm": 1.5e-05
+   },
+   "F4=on": {
+    "effect": 12.541028,
+    "ci95": [
+     9.466976,
+     15.765541
+    ],
+    "cells_paired": 255,
+    "p": 0.0,
+    "improved": 476,
+    "worsened": 341,
+    "p_holm": 0.0
+   },
+   "F5=on": {
+    "effect": 19.663239,
+    "ci95": [
+     14.519653,
+     24.800822
+    ],
+    "cells_paired": 240,
+    "p": 0.0,
+    "improved": 505,
+    "worsened": 312,
+    "p_holm": 0.0
+   },
+   "F6=on": {
+    "effect": 8.595889,
+    "ci95": [
+     4.376474,
+     12.774491
+    ],
+    "cells_paired": 240,
+    "p": 0.0,
+    "improved": 476,
+    "worsened": 341,
+    "p_holm": 1e-06
+   },
+   "F7=hk1": {
+    "effect": -112.966707,
+    "ci95": [
+     -128.923577,
+     -97.52447
+    ],
+    "cells_paired": 170,
+    "p": 0.0,
+    "improved": 242,
+    "worsened": 575,
+    "p_holm": 0.0
+   },
+   "F7=partitions": {
+    "effect": 6.577097,
+    "ci95": [
+     0.493562,
+     12.635031
+    ],
+    "cells_paired": 170,
+    "p": 4.2e-05,
+    "improved": 453,
+    "worsened": 364,
+    "p_holm": 8.4e-05
+   },
+   "F8=window": {
+    "effect": 78.946696,
+    "ci95": [
+     61.637743,
+     96.768524
+    ],
+    "cells_paired": 102,
+    "p": 0.0,
+    "improved": 455,
+    "worsened": 362,
+    "p_holm": 0.0
+   },
+   "F8=section": {
+    "effect": 93.445016,
+    "ci95": [
+     79.064587,
+     109.16976
+    ],
+    "cells_paired": 102,
+    "p": 0.0,
+    "improved": 581,
+    "worsened": 233,
+    "p_holm": 0.0
+   },
+   "F8=page": {
+    "effect": -167.30031,
+    "ci95": [
+     -190.985771,
+     -142.865019
+    ],
+    "cells_paired": 102,
+    "p": 0.0,
+    "improved": 180,
+    "worsened": 637,
+    "p_holm": 0.0
+   },
+   "F8=pruned": {
+    "effect": -1755.684811,
+    "ci95": [
+     -1787.782842,
+     -1724.344655
+    ],
+    "cells_paired": 102,
+    "p": 0.0,
+    "improved": 0,
+    "worsened": 817,
+    "p_holm": 0.0
+   }
+  },
+  "latency": {
+   "F1=lexical": {
+    "effect": 27.331143,
+    "ci95": [
+     27.33093,
+     27.331353
+    ],
+    "cells_paired": 30,
+    "p": null,
+    "improved": 817,
+    "worsened": 0
+   },
+   "F1=hybrid": {
+    "effect": 35.498813,
+    "ci95": [
+     35.498813,
+     35.498813
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 817,
+    "worsened": 0
+   },
+   "F2=mean": {
+    "effect": -0.048504,
+    "ci95": [
+     -0.048655,
+     -0.048356
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 0,
+    "worsened": 817
+   },
+   "F4=on": {
+    "effect": 38.924359,
+    "ci95": [
+     38.924359,
+     38.924359
+    ],
+    "cells_paired": 255,
+    "p": null,
+    "improved": 817,
+    "worsened": 0
+   },
+   "F5=on": {
+    "effect": 0.002768,
+    "ci95": [
+     0.002768,
+     0.002768
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 817,
+    "worsened": 0
+   },
+   "F6=on": {
+    "effect": 0.122389,
+    "ci95": [
+     0.122179,
+     0.122602
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 817,
+    "worsened": 0
+   },
+   "F7=hk1": {
+    "effect": 2.375521,
+    "ci95": [
+     2.37506,
+     2.375993
+    ],
+    "cells_paired": 170,
+    "p": null,
+    "improved": 817,
+    "worsened": 0
+   },
+   "F7=partitions": {
+    "effect": 1.308146,
+    "ci95": [
+     1.307666,
+     1.308631
+    ],
+    "cells_paired": 170,
+    "p": null,
+    "improved": 817,
+    "worsened": 0
+   },
+   "F8=window": {
+    "effect": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 102,
+    "p": null,
+    "improved": 0,
+    "worsened": 0
+   },
+   "F8=section": {
+    "effect": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 102,
+    "p": null,
+    "improved": 0,
+    "worsened": 0
+   },
+   "F8=page": {
+    "effect": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 102,
+    "p": null,
+    "improved": 0,
+    "worsened": 0
+   },
+   "F8=pruned": {
+    "effect": 0.749254,
+    "ci95": [
+     0.749254,
+     0.749254
+    ],
+    "cells_paired": 102,
+    "p": null,
+    "improved": 817,
+    "worsened": 0
+   }
+  },
+  "MRR": {
+   "F1=lexical": {
+    "effect": -0.166789,
+    "ci95": [
+     -0.188054,
+     -0.145962
+    ],
+    "cells_paired": 30,
+    "p": null,
+    "improved": 167,
+    "worsened": 483
+   },
+   "F1=hybrid": {
+    "effect": -0.023897,
+    "ci95": [
+     -0.037696,
+     -0.010377
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 344,
+    "worsened": 351
+   },
+   "F2=mean": {
+    "effect": 0.002161,
+    "ci95": [
+     -0.006533,
+     0.010432
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 404,
+    "worsened": 279
+   },
+   "F4=on": {
+    "effect": -0.000108,
+    "ci95": [
+     -0.005573,
+     0.005341
+    ],
+    "cells_paired": 255,
+    "p": null,
+    "improved": 345,
+    "worsened": 347
+   },
+   "F5=on": {
+    "effect": 0.000495,
+    "ci95": [
+     -0.003413,
+     0.004414
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 346,
+    "worsened": 323
+   },
+   "F6=on": {
+    "effect": -0.004683,
+    "ci95": [
+     -0.008584,
+     -0.000877
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 317,
+    "worsened": 351
+   },
+   "F7=hk1": {
+    "effect": -0.213861,
+    "ci95": [
+     -0.239728,
+     -0.188273
+    ],
+    "cells_paired": 170,
+    "p": null,
+    "improved": 234,
+    "worsened": 492
+   },
+   "F7=partitions": {
+    "effect": -0.025132,
+    "ci95": [
+     -0.036744,
+     -0.014392
+    ],
+    "cells_paired": 170,
+    "p": null,
+    "improved": 378,
+    "worsened": 235
+   }
+  },
+  "nDCG@10": {
+   "F1=lexical": {
+    "effect": -0.147034,
+    "ci95": [
+     -0.165344,
+     -0.129217
+    ],
+    "cells_paired": 30,
+    "p": null,
+    "improved": 167,
+    "worsened": 501
+   },
+   "F1=hybrid": {
+    "effect": -0.018283,
+    "ci95": [
+     -0.029673,
+     -0.007101
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 342,
+    "worsened": 368
+   },
+   "F2=mean": {
+    "effect": 0.001785,
+    "ci95": [
+     -0.005164,
+     0.008362
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 419,
+    "worsened": 277
+   },
+   "F4=on": {
+    "effect": 0.001655,
+    "ci95": [
+     -0.002145,
+     0.005405
+    ],
+    "cells_paired": 255,
+    "p": null,
+    "improved": 356,
+    "worsened": 347
+   },
+   "F5=on": {
+    "effect": -0.001232,
+    "ci95": [
+     -0.004623,
+     0.002167
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 344,
+    "worsened": 343
+   },
+   "F6=on": {
+    "effect": -0.001375,
+    "ci95": [
+     -0.004651,
+     0.001909
+    ],
+    "cells_paired": 240,
+    "p": null,
+    "improved": 334,
+    "worsened": 353
+   },
+   "F7=hk1": {
+    "effect": -0.254043,
+    "ci95": [
+     -0.279068,
+     -0.228974
+    ],
+    "cells_paired": 170,
+    "p": null,
+    "improved": 198,
+    "worsened": 533
+   },
+   "F7=partitions": {
+    "effect": -0.029787,
+    "ci95": [
+     -0.041719,
+     -0.018458
+    ],
+    "cells_paired": 170,
+    "p": null,
+    "improved": 398,
+    "worsened": 245
+   }
+  }
+ },
+ "interactions": {
+  "R@10": {
+   "F1=hybrid x F2=mean": {
+    "interaction": 0.008248,
+    "ci95": [
+     0.000773,
+     0.015706
+    ],
+    "cells_paired": 120,
+    "p": 0.016554,
+    "q_bh": 0.05439,
+    "p_holm": 0.28141
+   },
+   "F1=lexical x F4=on": {
+    "interaction": 0.002382,
+    "ci95": [
+     -0.006506,
+     0.011243
+    ],
+    "cells_paired": 15,
+    "p": 0.264215,
+    "q_bh": 0.40513,
+    "p_holm": 1.0
+   },
+   "F1=hybrid x F4=on": {
+    "interaction": -0.005341,
+    "ci95": [
+     -0.008954,
+     -0.001921
+    ],
+    "cells_paired": 120,
+    "p": 0.002663,
+    "q_bh": 0.012252,
+    "p_holm": 0.050606
+   },
+   "F1=hybrid x F5=on": {
+    "interaction": 0.007915,
+    "ci95": [
+     0.00217,
+     0.014156
+    ],
+    "cells_paired": 120,
+    "p": 0.023942,
+    "q_bh": 0.062271,
+    "p_holm": 0.383077
+   },
+   "F1=hybrid x F6=on": {
+    "interaction": -0.002898,
+    "ci95": [
+     -0.008676,
+     0.002752
+    ],
+    "cells_paired": 120,
+    "p": 0.075479,
+    "q_bh": 0.144669,
+    "p_holm": 0.905751
+   },
+   "F1=lexical x F7=hk1": {
+    "interaction": 0.124853,
+    "ci95": [
+     0.093492,
+     0.157242
+    ],
+    "cells_paired": 10,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=lexical x F7=partitions": {
+    "interaction": 0.048904,
+    "ci95": [
+     0.027561,
+     0.070533
+    ],
+    "cells_paired": 10,
+    "p": 1e-05,
+    "q_bh": 0.000116,
+    "p_holm": 0.000222
+   },
+   "F1=hybrid x F7=hk1": {
+    "interaction": -0.013387,
+    "ci95": [
+     -0.033971,
+     0.006903
+    ],
+    "cells_paired": 80,
+    "p": 0.042686,
+    "q_bh": 0.089253,
+    "p_holm": 0.554923
+   },
+   "F1=hybrid x F7=partitions": {
+    "interaction": -0.002108,
+    "ci95": [
+     -0.015481,
+     0.010841
+    ],
+    "cells_paired": 80,
+    "p": 0.577988,
+    "q_bh": 0.73854,
+    "p_holm": 1.0
+   },
+   "F2=mean x F4=on": {
+    "interaction": -0.00158,
+    "ci95": [
+     -0.004525,
+     0.001228
+    ],
+    "cells_paired": 120,
+    "p": 0.933067,
+    "q_bh": 0.96874,
+    "p_holm": 1.0
+   },
+   "F2=mean x F5=on": {
+    "interaction": -0.012016,
+    "ci95": [
+     -0.018023,
+     -0.006141
+    ],
+    "cells_paired": 120,
+    "p": 0.00156,
+    "q_bh": 0.008969,
+    "p_holm": 0.031197
+   },
+   "F2=mean x F6=on": {
+    "interaction": 0.007433,
+    "ci95": [
+     0.002483,
+     0.012572
+    ],
+    "cells_paired": 120,
+    "p": 0.030756,
+    "q_bh": 0.070739,
+    "p_holm": 0.430585
+   },
+   "F2=mean x F7=hk1": {
+    "interaction": 0.028353,
+    "ci95": [
+     0.017473,
+     0.039833
+    ],
+    "cells_paired": 80,
+    "p": 6e-05,
+    "q_bh": 0.000458,
+    "p_holm": 0.001256
+   },
+   "F2=mean x F7=partitions": {
+    "interaction": 0.01383,
+    "ci95": [
+     0.006828,
+     0.021573
+    ],
+    "cells_paired": 80,
+    "p": 0.014941,
+    "q_bh": 0.05439,
+    "p_holm": 0.268945
+   },
+   "F4=on x F5=on": {
+    "interaction": 0.002541,
+    "ci95": [
+     -2.9e-05,
+     0.005067
+    ],
+    "cells_paired": 120,
+    "p": 0.024367,
+    "q_bh": 0.062271,
+    "p_holm": 0.383077
+   },
+   "F4=on x F6=on": {
+    "interaction": -0.001642,
+    "ci95": [
+     -0.003776,
+     0.000409
+    ],
+    "cells_paired": 120,
+    "p": 0.117206,
+    "q_bh": 0.192553,
+    "p_holm": 1.0
+   },
+   "F4=on x F7=hk1": {
+    "interaction": -0.003884,
+    "ci95": [
+     -0.007928,
+     0.000162
+    ],
+    "cells_paired": 85,
+    "p": 0.092659,
+    "q_bh": 0.163935,
+    "p_holm": 1.0
+   },
+   "F4=on x F7=partitions": {
+    "interaction": -9.3e-05,
+    "ci95": [
+     -0.00273,
+     0.002631
+    ],
+    "cells_paired": 85,
+    "p": 0.793542,
+    "q_bh": 0.960604,
+    "p_holm": 1.0
+   },
+   "F5=on x F6=on": {
+    "interaction": 0.000179,
+    "ci95": [
+     -0.004218,
+     0.004534
+    ],
+    "cells_paired": 120,
+    "p": 0.892763,
+    "q_bh": 0.96874,
+    "p_holm": 1.0
+   },
+   "F5=on x F7=hk1": {
+    "interaction": -0.002135,
+    "ci95": [
+     -0.00896,
+     0.004814
+    ],
+    "cells_paired": 80,
+    "p": 0.428498,
+    "q_bh": 0.579732,
+    "p_holm": 1.0
+   },
+   "F5=on x F7=partitions": {
+    "interaction": -0.001366,
+    "ci95": [
+     -0.00642,
+     0.003731
+    ],
+    "cells_paired": 80,
+    "p": 0.307122,
+    "q_bh": 0.441488,
+    "p_holm": 1.0
+   },
+   "F6=on x F7=hk1": {
+    "interaction": 0.003391,
+    "ci95": [
+     -0.003548,
+     0.010355
+    ],
+    "cells_paired": 80,
+    "p": 0.947504,
+    "q_bh": 0.96874,
+    "p_holm": 1.0
+   },
+   "F6=on x F7=partitions": {
+    "interaction": 0.001288,
+    "ci95": [
+     -0.004551,
+     0.007308
+    ],
+    "cells_paired": 80,
+    "p": 0.96874,
+    "q_bh": 0.96874,
+    "p_holm": 1.0
+   }
+  },
+  "survival": {
+   "F1=hybrid x F2=mean": {
+    "interaction": 0.014545,
+    "ci95": [
+     0.009109,
+     0.020033
+    ],
+    "cells_paired": 120,
+    "p": 0.0,
+    "q_bh": 1e-06,
+    "p_holm": 1.2e-05
+   },
+   "F1=lexical x F4=on": {
+    "interaction": 0.011914,
+    "ci95": [
+     0.005712,
+     0.018199
+    ],
+    "cells_paired": 15,
+    "p": 7.8e-05,
+    "q_bh": 0.00039,
+    "p_holm": 0.00351
+   },
+   "F1=hybrid x F4=on": {
+    "interaction": -0.002387,
+    "ci95": [
+     -0.005365,
+     0.000755
+    ],
+    "cells_paired": 120,
+    "p": 0.064214,
+    "q_bh": 0.153556,
+    "p_holm": 1.0
+   },
+   "F1=hybrid x F5=on": {
+    "interaction": 0.006997,
+    "ci95": [
+     0.002723,
+     0.011271
+    ],
+    "cells_paired": 120,
+    "p": 0.000455,
+    "q_bh": 0.001786,
+    "p_holm": 0.019225
+   },
+   "F1=hybrid x F6=on": {
+    "interaction": -0.003794,
+    "ci95": [
+     -0.007844,
+     0.000235
+    ],
+    "cells_paired": 120,
+    "p": 0.003028,
+    "q_bh": 0.009795,
+    "p_holm": 0.120316
+   },
+   "F1=lexical x F7=hk1": {
+    "interaction": 0.171726,
+    "ci95": [
+     0.143452,
+     0.199755
+    ],
+    "cells_paired": 10,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=lexical x F7=partitions": {
+    "interaction": 0.070012,
+    "ci95": [
+     0.05459,
+     0.085067
+    ],
+    "cells_paired": 10,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=hybrid x F7=hk1": {
+    "interaction": -0.005095,
+    "ci95": [
+     -0.021344,
+     0.0112
+    ],
+    "cells_paired": 80,
+    "p": 0.33534,
+    "q_bh": 0.472915,
+    "p_holm": 1.0
+   },
+   "F1=hybrid x F7=partitions": {
+    "interaction": -0.001683,
+    "ci95": [
+     -0.011919,
+     0.008277
+    ],
+    "cells_paired": 80,
+    "p": 0.312489,
+    "q_bh": 0.452286,
+    "p_holm": 1.0
+   },
+   "F1=lexical x F8=window": {
+    "interaction": -0.055896,
+    "ci95": [
+     -0.074051,
+     -0.03774
+    ],
+    "cells_paired": 6,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=lexical x F8=section": {
+    "interaction": 0.001632,
+    "ci95": [
+     -0.003876,
+     0.007548
+    ],
+    "cells_paired": 6,
+    "p": 0.511388,
+    "q_bh": 0.62831,
+    "p_holm": 1.0
+   },
+   "F1=lexical x F8=page": {
+    "interaction": 0.007956,
+    "ci95": [
+     -0.00918,
+     0.025092
+    ],
+    "cells_paired": 6,
+    "p": 0.395035,
+    "q_bh": 0.543173,
+    "p_holm": 1.0
+   },
+   "F1=lexical x F8=pruned": {
+    "interaction": 0.116075,
+    "ci95": [
+     0.095063,
+     0.137291
+    ],
+    "cells_paired": 6,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=hybrid x F8=window": {
+    "interaction": -0.033201,
+    "ci95": [
+     -0.043477,
+     -0.023128
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=hybrid x F8=section": {
+    "interaction": -0.00436,
+    "ci95": [
+     -0.007905,
+     -0.001198
+    ],
+    "cells_paired": 48,
+    "p": 0.11448,
+    "q_bh": 0.224872,
+    "p_holm": 1.0
+   },
+   "F1=hybrid x F8=page": {
+    "interaction": -0.01507,
+    "ci95": [
+     -0.025781,
+     -0.004768
+    ],
+    "cells_paired": 48,
+    "p": 0.076018,
+    "q_bh": 0.174208,
+    "p_holm": 1.0
+   },
+   "F1=hybrid x F8=pruned": {
+    "interaction": 0.01479,
+    "ci95": [
+     0.002448,
+     0.027566
+    ],
+    "cells_paired": 48,
+    "p": 0.110428,
+    "q_bh": 0.224872,
+    "p_holm": 1.0
+   },
+   "F2=mean x F4=on": {
+    "interaction": 0.000612,
+    "ci95": [
+     -0.001357,
+     0.002601
+    ],
+    "cells_paired": 120,
+    "p": 0.97132,
+    "q_bh": 0.989308,
+    "p_holm": 1.0
+   },
+   "F2=mean x F5=on": {
+    "interaction": -0.005426,
+    "ci95": [
+     -0.010037,
+     -0.001071
+    ],
+    "cells_paired": 120,
+    "p": 0.593622,
+    "q_bh": 0.680192,
+    "p_holm": 1.0
+   },
+   "F2=mean x F6=on": {
+    "interaction": 0.003856,
+    "ci95": [
+     9.2e-05,
+     0.007681
+    ],
+    "cells_paired": 120,
+    "p": 0.227586,
+    "q_bh": 0.389762,
+    "p_holm": 1.0
+   },
+   "F2=mean x F7=hk1": {
+    "interaction": 0.022078,
+    "ci95": [
+     0.013112,
+     0.031594
+    ],
+    "cells_paired": 80,
+    "p": 0.09136,
+    "q_bh": 0.195929,
+    "p_holm": 1.0
+   },
+   "F2=mean x F7=partitions": {
+    "interaction": 0.006671,
+    "ci95": [
+     0.00104,
+     0.012622
+    ],
+    "cells_paired": 80,
+    "p": 0.235892,
+    "q_bh": 0.389762,
+    "p_holm": 1.0
+   },
+   "F2=mean x F8=window": {
+    "interaction": -0.000765,
+    "ci95": [
+     -0.008262,
+     0.006604
+    ],
+    "cells_paired": 48,
+    "p": 0.990946,
+    "q_bh": 0.990946,
+    "p_holm": 1.0
+   },
+   "F2=mean x F8=section": {
+    "interaction": -0.001096,
+    "ci95": [
+     -0.004105,
+     0.001861
+    ],
+    "cells_paired": 48,
+    "p": 0.935967,
+    "q_bh": 0.989308,
+    "p_holm": 1.0
+   },
+   "F2=mean x F8=page": {
+    "interaction": -0.003034,
+    "ci95": [
+     -0.010863,
+     0.004998
+    ],
+    "cells_paired": 48,
+    "p": 0.058865,
+    "q_bh": 0.153556,
+    "p_holm": 1.0
+   },
+   "F2=mean x F8=pruned": {
+    "interaction": -0.001071,
+    "ci95": [
+     -0.007828,
+     0.005942
+    ],
+    "cells_paired": 48,
+    "p": 0.31003,
+    "q_bh": 0.452286,
+    "p_holm": 1.0
+   },
+   "F4=on x F5=on": {
+    "interaction": 0.002856,
+    "ci95": [
+     0.000979,
+     0.004733
+    ],
+    "cells_paired": 120,
+    "p": 0.000447,
+    "q_bh": 0.001786,
+    "p_holm": 0.019225
+   },
+   "F4=on x F6=on": {
+    "interaction": -0.002101,
+    "ci95": [
+     -0.003846,
+     -0.000357
+    ],
+    "cells_paired": 120,
+    "p": 0.136564,
+    "q_bh": 0.250492,
+    "p_holm": 1.0
+   },
+   "F4=on x F7=hk1": {
+    "interaction": 0.001282,
+    "ci95": [
+     -0.00203,
+     0.004579
+    ],
+    "cells_paired": 85,
+    "p": 0.242833,
+    "q_bh": 0.389762,
+    "p_holm": 1.0
+   },
+   "F4=on x F7=partitions": {
+    "interaction": -4.3e-05,
+    "ci95": [
+     -0.002261,
+     0.002203
+    ],
+    "cells_paired": 85,
+    "p": 0.843813,
+    "q_bh": 0.909995,
+    "p_holm": 1.0
+   },
+   "F4=on x F8=window": {
+    "interaction": -0.003936,
+    "ci95": [
+     -0.008496,
+     0.000721
+    ],
+    "cells_paired": 51,
+    "p": 0.029741,
+    "q_bh": 0.086093,
+    "p_holm": 1.0
+   },
+   "F4=on x F8=section": {
+    "interaction": 2.4e-05,
+    "ci95": [
+     -0.001392,
+     0.00144
+    ],
+    "cells_paired": 51,
+    "p": 0.969566,
+    "q_bh": 0.989308,
+    "p_holm": 1.0
+   },
+   "F4=on x F8=page": {
+    "interaction": -0.003096,
+    "ci95": [
+     -0.007153,
+     0.000888
+    ],
+    "cells_paired": 51,
+    "p": 0.441316,
+    "q_bh": 0.576292,
+    "p_holm": 1.0
+   },
+   "F4=on x F8=pruned": {
+    "interaction": 0.0078,
+    "ci95": [
+     0.003888,
+     0.01188
+    ],
+    "cells_paired": 51,
+    "p": 0.000114,
+    "q_bh": 0.000523,
+    "p_holm": 0.005017
+   },
+   "F5=on x F6=on": {
+    "interaction": 0.001897,
+    "ci95": [
+     -0.001306,
+     0.0051
+    ],
+    "cells_paired": 120,
+    "p": 0.136632,
+    "q_bh": 0.250492,
+    "p_holm": 1.0
+   },
+   "F5=on x F7=hk1": {
+    "interaction": -0.001453,
+    "ci95": [
+     -0.00742,
+     0.004452
+    ],
+    "cells_paired": 80,
+    "p": 0.514072,
+    "q_bh": 0.62831,
+    "p_holm": 1.0
+   },
+   "F5=on x F7=partitions": {
+    "interaction": 0.001193,
+    "ci95": [
+     -0.0028,
+     0.005263
+    ],
+    "cells_paired": 80,
+    "p": 0.809171,
+    "q_bh": 0.890088,
+    "p_holm": 1.0
+   },
+   "F5=on x F8=window": {
+    "interaction": 0.007599,
+    "ci95": [
+     0.002805,
+     0.012444
+    ],
+    "cells_paired": 48,
+    "p": 0.016198,
+    "q_bh": 0.049495,
+    "p_holm": 0.615533
+   },
+   "F5=on x F8=section": {
+    "interaction": 0.000535,
+    "ci95": [
+     -0.002065,
+     0.003136
+    ],
+    "cells_paired": 48,
+    "p": 0.450555,
+    "q_bh": 0.576292,
+    "p_holm": 1.0
+   },
+   "F5=on x F8=page": {
+    "interaction": 0.004921,
+    "ci95": [
+     0.000204,
+     0.009639
+    ],
+    "cells_paired": 48,
+    "p": 0.172111,
+    "q_bh": 0.305358,
+    "p_holm": 1.0
+   },
+   "F5=on x F8=pruned": {
+    "interaction": -0.003366,
+    "ci95": [
+     -0.007956,
+     0.001173
+    ],
+    "cells_paired": 48,
+    "p": 0.092621,
+    "q_bh": 0.195929,
+    "p_holm": 1.0
+   },
+   "F6=on x F7=hk1": {
+    "interaction": 0.003534,
+    "ci95": [
+     -0.001882,
+     0.00918
+    ],
+    "cells_paired": 80,
+    "p": 0.419953,
+    "q_bh": 0.563351,
+    "p_holm": 1.0
+   },
+   "F6=on x F7=partitions": {
+    "interaction": 0.001805,
+    "ci95": [
+     -0.002601,
+     0.006395
+    ],
+    "cells_paired": 80,
+    "p": 0.746282,
+    "q_bh": 0.837664,
+    "p_holm": 1.0
+   },
+   "F6=on x F8=window": {
+    "interaction": -0.007701,
+    "ci95": [
+     -0.01224,
+     -0.003238
+    ],
+    "cells_paired": 48,
+    "p": 0.003008,
+    "q_bh": 0.009795,
+    "p_holm": 0.120316
+   },
+   "F6=on x F8=section": {
+    "interaction": -0.000994,
+    "ci95": [
+     -0.002932,
+     0.000943
+    ],
+    "cells_paired": 48,
+    "p": 0.264989,
+    "q_bh": 0.404845,
+    "p_holm": 1.0
+   },
+   "F6=on x F8=page": {
+    "interaction": -0.005329,
+    "ci95": [
+     -0.009766,
+     -0.00102
+    ],
+    "cells_paired": 48,
+    "p": 0.035655,
+    "q_bh": 0.09805,
+    "p_holm": 1.0
+   },
+   "F6=on x F8=pruned": {
+    "interaction": -0.000714,
+    "ci95": [
+     -0.005253,
+     0.003927
+    ],
+    "cells_paired": 48,
+    "p": 0.534303,
+    "q_bh": 0.638841,
+    "p_holm": 1.0
+   },
+   "F7=hk1 x F8=window": {
+    "interaction": 0.060948,
+    "ci95": [
+     0.048563,
+     0.073511
+    ],
+    "cells_paired": 34,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F7=hk1 x F8=section": {
+    "interaction": 0.003456,
+    "ci95": [
+     -0.003312,
+     0.010405
+    ],
+    "cells_paired": 34,
+    "p": 0.061601,
+    "q_bh": 0.153556,
+    "p_holm": 1.0
+   },
+   "F7=hk1 x F8=page": {
+    "interaction": 0.05238,
+    "ci95": [
+     0.036359,
+     0.067931
+    ],
+    "cells_paired": 34,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F7=hk1 x F8=pruned": {
+    "interaction": -0.079631,
+    "ci95": [
+     -0.096335,
+     -0.062999
+    ],
+    "cells_paired": 34,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F7=partitions x F8=window": {
+    "interaction": 0.009036,
+    "ci95": [
+     0.002591,
+     0.015516
+    ],
+    "cells_paired": 34,
+    "p": 0.001695,
+    "q_bh": 0.006213,
+    "p_holm": 0.069478
+   },
+   "F7=partitions x F8=section": {
+    "interaction": 0.001764,
+    "ci95": [
+     -0.00144,
+     0.00504
+    ],
+    "cells_paired": 34,
+    "p": 0.24803,
+    "q_bh": 0.389762,
+    "p_holm": 1.0
+   },
+   "F7=partitions x F8=page": {
+    "interaction": -0.00018,
+    "ci95": [
+     -0.007092,
+     0.006876
+    ],
+    "cells_paired": 34,
+    "p": 0.572792,
+    "q_bh": 0.670289,
+    "p_holm": 1.0
+   },
+   "F7=partitions x F8=pruned": {
+    "interaction": -0.022284,
+    "ci95": [
+     -0.030924,
+     -0.013644
+    ],
+    "cells_paired": 34,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   }
+  },
+  "tokens": {
+   "F1=hybrid x F2=mean": {
+    "interaction": 33.10257,
+    "ci95": [
+     25.949821,
+     40.260154
+    ],
+    "cells_paired": 120,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=lexical x F4=on": {
+    "interaction": 42.902407,
+    "ci95": [
+     24.320712,
+     63.048135
+    ],
+    "cells_paired": 15,
+    "p": 0.007048,
+    "q_bh": 0.009691,
+    "p_holm": 0.112769
+   },
+   "F1=hybrid x F4=on": {
+    "interaction": -16.35763,
+    "ci95": [
+     -21.745451,
+     -11.148144
+    ],
+    "cells_paired": 120,
+    "p": 1e-06,
+    "q_bh": 1e-06,
+    "p_holm": 1.7e-05
+   },
+   "F1=hybrid x F5=on": {
+    "interaction": 16.213464,
+    "ci95": [
+     8.705272,
+     23.791266
+    ],
+    "cells_paired": 120,
+    "p": 6e-06,
+    "q_bh": 1.2e-05,
+    "p_holm": 0.000174
+   },
+   "F1=hybrid x F6=on": {
+    "interaction": -11.422379,
+    "ci95": [
+     -17.854143,
+     -5.216602
+    ],
+    "cells_paired": 120,
+    "p": 0.000243,
+    "q_bh": 0.000372,
+    "p_holm": 0.004867
+   },
+   "F1=lexical x F7=hk1": {
+    "interaction": 5.318482,
+    "ci95": [
+     -37.804296,
+     46.254079
+    ],
+    "cells_paired": 10,
+    "p": 3e-06,
+    "q_bh": 7e-06,
+    "p_holm": 9.3e-05
+   },
+   "F1=lexical x F7=partitions": {
+    "interaction": 9.332558,
+    "ci95": [
+     -15.960373,
+     32.170872
+    ],
+    "cells_paired": 10,
+    "p": 0.015042,
+    "q_bh": 0.020179,
+    "p_holm": 0.225636
+   },
+   "F1=hybrid x F7=hk1": {
+    "interaction": 47.336735,
+    "ci95": [
+     29.06004,
+     65.301009
+    ],
+    "cells_paired": 80,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=hybrid x F7=partitions": {
+    "interaction": 12.4931,
+    "ci95": [
+     3.326829,
+     21.255999
+    ],
+    "cells_paired": 80,
+    "p": 2e-06,
+    "q_bh": 5e-06,
+    "p_holm": 7e-05
+   },
+   "F1=lexical x F8=window": {
+    "interaction": -292.426969,
+    "ci95": [
+     -327.904763,
+     -257.751066
+    ],
+    "cells_paired": 6,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=lexical x F8=section": {
+    "interaction": -175.368625,
+    "ci95": [
+     -204.276821,
+     -147.881069
+    ],
+    "cells_paired": 6,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=lexical x F8=page": {
+    "interaction": -378.226234,
+    "ci95": [
+     -427.191575,
+     -329.152795
+    ],
+    "cells_paired": 6,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=lexical x F8=pruned": {
+    "interaction": -140.258262,
+    "ci95": [
+     -178.099526,
+     -102.422511
+    ],
+    "cells_paired": 6,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=hybrid x F8=window": {
+    "interaction": -166.771037,
+    "ci95": [
+     -186.038359,
+     -147.373925
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=hybrid x F8=section": {
+    "interaction": -111.69872,
+    "ci95": [
+     -127.091348,
+     -96.688083
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=hybrid x F8=page": {
+    "interaction": -233.062067,
+    "ci95": [
+     -259.839133,
+     -206.975704
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F1=hybrid x F8=pruned": {
+    "interaction": -91.652463,
+    "ci95": [
+     -114.614885,
+     -69.471677
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 1e-06
+   },
+   "F2=mean x F4=on": {
+    "interaction": 4.680375,
+    "ci95": [
+     1.515207,
+     7.825485
+    ],
+    "cells_paired": 120,
+    "p": 0.016115,
+    "q_bh": 0.021102,
+    "p_holm": 0.225636
+   },
+   "F2=mean x F5=on": {
+    "interaction": 20.55714,
+    "ci95": [
+     14.73858,
+     26.691685
+    ],
+    "cells_paired": 120,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F2=mean x F6=on": {
+    "interaction": -2.490208,
+    "ci95": [
+     -7.566765,
+     2.568648
+    ],
+    "cells_paired": 120,
+    "p": 0.270314,
+    "q_bh": 0.297346,
+    "p_holm": 1.0
+   },
+   "F2=mean x F7=hk1": {
+    "interaction": -24.627708,
+    "ci95": [
+     -33.670444,
+     -15.531559
+    ],
+    "cells_paired": 80,
+    "p": 1e-06,
+    "q_bh": 1e-06,
+    "p_holm": 1.9e-05
+   },
+   "F2=mean x F7=partitions": {
+    "interaction": -0.469232,
+    "ci95": [
+     -5.961175,
+     5.197879
+    ],
+    "cells_paired": 80,
+    "p": 0.821654,
+    "q_bh": 0.821654,
+    "p_holm": 1.0
+   },
+   "F2=mean x F8=window": {
+    "interaction": 19.945354,
+    "ci95": [
+     10.213858,
+     29.324717
+    ],
+    "cells_paired": 48,
+    "p": 5.9e-05,
+    "q_bh": 0.000102,
+    "p_holm": 0.001427
+   },
+   "F2=mean x F8=section": {
+    "interaction": 14.526443,
+    "ci95": [
+     6.479837,
+     22.520437
+    ],
+    "cells_paired": 48,
+    "p": 0.00011,
+    "q_bh": 0.000183,
+    "p_holm": 0.002525
+   },
+   "F2=mean x F8=page": {
+    "interaction": 60.582925,
+    "ci95": [
+     45.35592,
+     75.936235
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F2=mean x F8=pruned": {
+    "interaction": -12.697241,
+    "ci95": [
+     -21.405891,
+     -4.033219
+    ],
+    "cells_paired": 48,
+    "p": 0.000225,
+    "q_bh": 0.000354,
+    "p_holm": 0.004726
+   },
+   "F4=on x F5=on": {
+    "interaction": -1.772501,
+    "ci95": [
+     -4.950178,
+     1.322008
+    ],
+    "cells_paired": 120,
+    "p": 0.436998,
+    "q_bh": 0.445091,
+    "p_holm": 1.0
+   },
+   "F4=on x F6=on": {
+    "interaction": -1.891452,
+    "ci95": [
+     -4.947188,
+     1.224544
+    ],
+    "cells_paired": 120,
+    "p": 0.126407,
+    "q_bh": 0.147923,
+    "p_holm": 1.0
+   },
+   "F4=on x F7=hk1": {
+    "interaction": 6.116668,
+    "ci95": [
+     -0.183512,
+     12.464004
+    ],
+    "cells_paired": 85,
+    "p": 0.178084,
+    "q_bh": 0.19989,
+    "p_holm": 1.0
+   },
+   "F4=on x F7=partitions": {
+    "interaction": -3.306545,
+    "ci95": [
+     -6.480049,
+     -0.037057
+    ],
+    "cells_paired": 85,
+    "p": 0.160361,
+    "q_bh": 0.183747,
+    "p_holm": 1.0
+   },
+   "F4=on x F8=window": {
+    "interaction": -22.140735,
+    "ci95": [
+     -27.431653,
+     -16.81775
+    ],
+    "cells_paired": 51,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F4=on x F8=section": {
+    "interaction": -10.036312,
+    "ci95": [
+     -13.488047,
+     -6.54265
+    ],
+    "cells_paired": 51,
+    "p": 0.0,
+    "q_bh": 1e-06,
+    "p_holm": 9e-06
+   },
+   "F4=on x F8=page": {
+    "interaction": -27.45578,
+    "ci95": [
+     -35.864147,
+     -18.96301
+    ],
+    "cells_paired": 51,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F4=on x F8=pruned": {
+    "interaction": -1.069767,
+    "ci95": [
+     -6.59786,
+     4.603131
+    ],
+    "cells_paired": 51,
+    "p": 0.054748,
+    "q_bh": 0.068435,
+    "p_holm": 0.65698
+   },
+   "F5=on x F6=on": {
+    "interaction": 7.49947,
+    "ci95": [
+     1.890636,
+     13.049969
+    ],
+    "cells_paired": 120,
+    "p": 0.021882,
+    "q_bh": 0.027988,
+    "p_holm": 0.284462
+   },
+   "F5=on x F7=hk1": {
+    "interaction": 35.441876,
+    "ci95": [
+     24.72847,
+     46.72682
+    ],
+    "cells_paired": 80,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F5=on x F7=partitions": {
+    "interaction": 0.631992,
+    "ci95": [
+     -6.029507,
+     7.382916
+    ],
+    "cells_paired": 80,
+    "p": 0.406237,
+    "q_bh": 0.429674,
+    "p_holm": 1.0
+   },
+   "F5=on x F8=window": {
+    "interaction": 12.945507,
+    "ci95": [
+     0.672736,
+     24.6622
+    ],
+    "cells_paired": 48,
+    "p": 1e-05,
+    "q_bh": 1.9e-05,
+    "p_holm": 0.000264
+   },
+   "F5=on x F8=section": {
+    "interaction": -27.256145,
+    "ci95": [
+     -39.599336,
+     -16.286904
+    ],
+    "cells_paired": 48,
+    "p": 0.000351,
+    "q_bh": 0.000522,
+    "p_holm": 0.006677
+   },
+   "F5=on x F8=page": {
+    "interaction": 111.548756,
+    "ci95": [
+     93.191078,
+     129.076209
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F5=on x F8=pruned": {
+    "interaction": -62.995895,
+    "ci95": [
+     -77.482834,
+     -49.369285
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F6=on x F7=hk1": {
+    "interaction": -16.560358,
+    "ci95": [
+     -24.789263,
+     -8.326545
+    ],
+    "cells_paired": 80,
+    "p": 0.001253,
+    "q_bh": 0.001813,
+    "p_holm": 0.022553
+   },
+   "F6=on x F7=partitions": {
+    "interaction": -8.736154,
+    "ci95": [
+     -15.249718,
+     -2.250178
+    ],
+    "cells_paired": 80,
+    "p": 0.002705,
+    "q_bh": 0.003815,
+    "p_holm": 0.045984
+   },
+   "F6=on x F8=window": {
+    "interaction": -36.061225,
+    "ci95": [
+     -45.585054,
+     -26.464869
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F6=on x F8=section": {
+    "interaction": -8.733808,
+    "ci95": [
+     -16.8856,
+     -0.473572
+    ],
+    "cells_paired": 48,
+    "p": 3.8e-05,
+    "q_bh": 6.8e-05,
+    "p_holm": 0.000958
+   },
+   "F6=on x F8=page": {
+    "interaction": -42.423807,
+    "ci95": [
+     -55.351666,
+     -29.375238
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F6=on x F8=pruned": {
+    "interaction": 31.087592,
+    "ci95": [
+     21.893496,
+     40.352485
+    ],
+    "cells_paired": 48,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F7=hk1 x F8=window": {
+    "interaction": 117.110303,
+    "ci95": [
+     86.218866,
+     149.590578
+    ],
+    "cells_paired": 34,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 1e-06
+   },
+   "F7=hk1 x F8=section": {
+    "interaction": 115.337605,
+    "ci95": [
+     86.43004,
+     146.308979
+    ],
+    "cells_paired": 34,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F7=hk1 x F8=page": {
+    "interaction": 38.172223,
+    "ci95": [
+     -4.360178,
+     81.164155
+    ],
+    "cells_paired": 34,
+    "p": 0.434652,
+    "q_bh": 0.445091,
+    "p_holm": 1.0
+   },
+   "F7=hk1 x F8=pruned": {
+    "interaction": -209.829073,
+    "ci95": [
+     -247.30648,
+     -172.439925
+    ],
+    "cells_paired": 34,
+    "p": 0.0,
+    "q_bh": 0.0,
+    "p_holm": 0.0
+   },
+   "F7=partitions x F8=window": {
+    "interaction": 6.265138,
+    "ci95": [
+     -5.839594,
+     18.906456
+    ],
+    "cells_paired": 34,
+    "p": 0.064282,
+    "q_bh": 0.078567,
+    "p_holm": 0.707104
+   },
+   "F7=partitions x F8=section": {
+    "interaction": -0.431313,
+    "ci95": [
+     -10.733639,
+     10.811139
+    ],
+    "cells_paired": 34,
+    "p": 0.104421,
+    "q_bh": 0.124852,
+    "p_holm": 1.0
+   },
+   "F7=partitions x F8=page": {
+    "interaction": 13.852581,
+    "ci95": [
+     -4.678968,
+     32.961303
+    ],
+    "cells_paired": 34,
+    "p": 0.000125,
+    "q_bh": 0.000201,
+    "p_holm": 0.002739
+   },
+   "F7=partitions x F8=pruned": {
+    "interaction": 6.294154,
+    "ci95": [
+     -7.286626,
+     20.115419
+    ],
+    "cells_paired": 34,
+    "p": 0.329949,
+    "q_bh": 0.355827,
+    "p_holm": 1.0
+   }
+  },
+  "latency": {
+   "F1=hybrid x F2=mean": {
+    "interaction": -0.0,
+    "ci95": [
+     -0.0,
+     -0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=lexical x F4=on": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 15,
+    "p": null
+   },
+   "F1=hybrid x F4=on": {
+    "interaction": -0.0,
+    "ci95": [
+     -0.0,
+     -0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=hybrid x F5=on": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=hybrid x F6=on": {
+    "interaction": -0.0,
+    "ci95": [
+     -0.0,
+     -0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=lexical x F7=hk1": {
+    "interaction": 24.404381,
+    "ci95": [
+     24.403951,
+     24.404796
+    ],
+    "cells_paired": 10,
+    "p": null
+   },
+   "F1=lexical x F7=partitions": {
+    "interaction": 24.386174,
+    "ci95": [
+     24.385715,
+     24.386629
+    ],
+    "cells_paired": 10,
+    "p": null
+   },
+   "F1=hybrid x F7=hk1": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F1=hybrid x F7=partitions": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F1=lexical x F8=window": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 6,
+    "p": null
+   },
+   "F1=lexical x F8=section": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 6,
+    "p": null
+   },
+   "F1=lexical x F8=page": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 6,
+    "p": null
+   },
+   "F1=lexical x F8=pruned": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 6,
+    "p": null
+   },
+   "F1=hybrid x F8=window": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F1=hybrid x F8=section": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F1=hybrid x F8=page": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F1=hybrid x F8=pruned": {
+    "interaction": -0.0,
+    "ci95": [
+     -0.0,
+     -0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F2=mean x F4=on": {
+    "interaction": -0.0,
+    "ci95": [
+     -0.0,
+     -0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F2=mean x F5=on": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F2=mean x F6=on": {
+    "interaction": -0.0,
+    "ci95": [
+     -0.0,
+     0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F2=mean x F7=hk1": {
+    "interaction": 0.118279,
+    "ci95": [
+     0.117989,
+     0.118552
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F2=mean x F7=partitions": {
+    "interaction": 0.10762,
+    "ci95": [
+     0.107271,
+     0.107967
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F2=mean x F8=window": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F2=mean x F8=section": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F2=mean x F8=page": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F2=mean x F8=pruned": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F4=on x F5=on": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F4=on x F6=on": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F4=on x F7=hk1": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 85,
+    "p": null
+   },
+   "F4=on x F7=partitions": {
+    "interaction": -0.0,
+    "ci95": [
+     -0.0,
+     -0.0
+    ],
+    "cells_paired": 85,
+    "p": null
+   },
+   "F4=on x F8=window": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 51,
+    "p": null
+   },
+   "F4=on x F8=section": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 51,
+    "p": null
+   },
+   "F4=on x F8=page": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 51,
+    "p": null
+   },
+   "F4=on x F8=pruned": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 51,
+    "p": null
+   },
+   "F5=on x F6=on": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F5=on x F7=hk1": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F5=on x F7=partitions": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F5=on x F8=window": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F5=on x F8=section": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F5=on x F8=page": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F5=on x F8=pruned": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F6=on x F7=hk1": {
+    "interaction": -0.151297,
+    "ci95": [
+     -0.151712,
+     -0.150867
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F6=on x F7=partitions": {
+    "interaction": -0.133091,
+    "ci95": [
+     -0.133545,
+     -0.132631
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F6=on x F8=window": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F6=on x F8=section": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F6=on x F8=page": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F6=on x F8=pruned": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 48,
+    "p": null
+   },
+   "F7=hk1 x F8=window": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 34,
+    "p": null
+   },
+   "F7=hk1 x F8=section": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 34,
+    "p": null
+   },
+   "F7=hk1 x F8=page": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 34,
+    "p": null
+   },
+   "F7=hk1 x F8=pruned": {
+    "interaction": -0.0,
+    "ci95": [
+     -0.0,
+     -0.0
+    ],
+    "cells_paired": 34,
+    "p": null
+   },
+   "F7=partitions x F8=window": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 34,
+    "p": null
+   },
+   "F7=partitions x F8=section": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 34,
+    "p": null
+   },
+   "F7=partitions x F8=page": {
+    "interaction": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "cells_paired": 34,
+    "p": null
+   },
+   "F7=partitions x F8=pruned": {
+    "interaction": -0.0,
+    "ci95": [
+     -0.0,
+     -0.0
+    ],
+    "cells_paired": 34,
+    "p": null
+   }
+  },
+  "MRR": {
+   "F1=hybrid x F2=mean": {
+    "interaction": 0.016232,
+    "ci95": [
+     0.008165,
+     0.024307
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=lexical x F4=on": {
+    "interaction": 0.000323,
+    "ci95": [
+     -0.00776,
+     0.008357
+    ],
+    "cells_paired": 15,
+    "p": null
+   },
+   "F1=hybrid x F4=on": {
+    "interaction": -0.015314,
+    "ci95": [
+     -0.022141,
+     -0.008528
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=hybrid x F5=on": {
+    "interaction": 0.013676,
+    "ci95": [
+     0.008363,
+     0.019008
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=hybrid x F6=on": {
+    "interaction": 0.003638,
+    "ci95": [
+     -0.001936,
+     0.009151
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=lexical x F7=hk1": {
+    "interaction": 0.146732,
+    "ci95": [
+     0.119313,
+     0.174435
+    ],
+    "cells_paired": 10,
+    "p": null
+   },
+   "F1=lexical x F7=partitions": {
+    "interaction": 0.056884,
+    "ci95": [
+     0.041968,
+     0.071678
+    ],
+    "cells_paired": 10,
+    "p": null
+   },
+   "F1=hybrid x F7=hk1": {
+    "interaction": -0.008994,
+    "ci95": [
+     -0.028285,
+     0.011323
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F1=hybrid x F7=partitions": {
+    "interaction": -0.001488,
+    "ci95": [
+     -0.011823,
+     0.008397
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F2=mean x F4=on": {
+    "interaction": 0.000808,
+    "ci95": [
+     -0.003684,
+     0.005241
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F2=mean x F5=on": {
+    "interaction": -0.001681,
+    "ci95": [
+     -0.006895,
+     0.003544
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F2=mean x F6=on": {
+    "interaction": 0.006274,
+    "ci95": [
+     0.001357,
+     0.011359
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F2=mean x F7=hk1": {
+    "interaction": 0.01034,
+    "ci95": [
+     -0.0008,
+     0.021681
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F2=mean x F7=partitions": {
+    "interaction": -0.001708,
+    "ci95": [
+     -0.007905,
+     0.004501
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F4=on x F5=on": {
+    "interaction": 0.005758,
+    "ci95": [
+     0.003032,
+     0.008526
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F4=on x F6=on": {
+    "interaction": -0.00543,
+    "ci95": [
+     -0.008357,
+     -0.002522
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F4=on x F7=hk1": {
+    "interaction": 0.001913,
+    "ci95": [
+     -0.004899,
+     0.008852
+    ],
+    "cells_paired": 85,
+    "p": null
+   },
+   "F4=on x F7=partitions": {
+    "interaction": 0.000428,
+    "ci95": [
+     -0.00354,
+     0.004446
+    ],
+    "cells_paired": 85,
+    "p": null
+   },
+   "F5=on x F6=on": {
+    "interaction": -0.001065,
+    "ci95": [
+     -0.005,
+     0.00298
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F5=on x F7=hk1": {
+    "interaction": -0.003512,
+    "ci95": [
+     -0.009436,
+     0.002376
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F5=on x F7=partitions": {
+    "interaction": 0.000356,
+    "ci95": [
+     -0.003697,
+     0.004309
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F6=on x F7=hk1": {
+    "interaction": 0.005453,
+    "ci95": [
+     -0.000581,
+     0.011535
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F6=on x F7=partitions": {
+    "interaction": -0.000537,
+    "ci95": [
+     -0.004596,
+     0.003568
+    ],
+    "cells_paired": 80,
+    "p": null
+   }
+  },
+  "nDCG@10": {
+   "F1=hybrid x F2=mean": {
+    "interaction": 0.014184,
+    "ci95": [
+     0.008112,
+     0.020228
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=lexical x F4=on": {
+    "interaction": 0.001266,
+    "ci95": [
+     -0.00486,
+     0.007469
+    ],
+    "cells_paired": 15,
+    "p": null
+   },
+   "F1=hybrid x F4=on": {
+    "interaction": -0.012604,
+    "ci95": [
+     -0.017016,
+     -0.008288
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=hybrid x F5=on": {
+    "interaction": 0.011768,
+    "ci95": [
+     0.007538,
+     0.016014
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=hybrid x F6=on": {
+    "interaction": 0.001493,
+    "ci95": [
+     -0.002765,
+     0.005739
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F1=lexical x F7=hk1": {
+    "interaction": 0.142545,
+    "ci95": [
+     0.118596,
+     0.166752
+    ],
+    "cells_paired": 10,
+    "p": null
+   },
+   "F1=lexical x F7=partitions": {
+    "interaction": 0.051443,
+    "ci95": [
+     0.038794,
+     0.064303
+    ],
+    "cells_paired": 10,
+    "p": null
+   },
+   "F1=hybrid x F7=hk1": {
+    "interaction": -0.005678,
+    "ci95": [
+     -0.022509,
+     0.011351
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F1=hybrid x F7=partitions": {
+    "interaction": -0.001179,
+    "ci95": [
+     -0.010488,
+     0.007886
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F2=mean x F4=on": {
+    "interaction": 5.4e-05,
+    "ci95": [
+     -0.002951,
+     0.003021
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F2=mean x F5=on": {
+    "interaction": -0.004243,
+    "ci95": [
+     -0.008624,
+     1.4e-05
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F2=mean x F6=on": {
+    "interaction": 0.005899,
+    "ci95": [
+     0.001959,
+     0.009963
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F2=mean x F7=hk1": {
+    "interaction": 0.013525,
+    "ci95": [
+     0.004276,
+     0.023092
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F2=mean x F7=partitions": {
+    "interaction": 0.002156,
+    "ci95": [
+     -0.003276,
+     0.007727
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F4=on x F5=on": {
+    "interaction": 0.004578,
+    "ci95": [
+     0.002614,
+     0.006535
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F4=on x F6=on": {
+    "interaction": -0.003976,
+    "ci95": [
+     -0.006037,
+     -0.001924
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F4=on x F7=hk1": {
+    "interaction": -0.000403,
+    "ci95": [
+     -0.005273,
+     0.00457
+    ],
+    "cells_paired": 85,
+    "p": null
+   },
+   "F4=on x F7=partitions": {
+    "interaction": -0.000626,
+    "ci95": [
+     -0.003462,
+     0.00222
+    ],
+    "cells_paired": 85,
+    "p": null
+   },
+   "F5=on x F6=on": {
+    "interaction": -0.000772,
+    "ci95": [
+     -0.003797,
+     0.002328
+    ],
+    "cells_paired": 120,
+    "p": null
+   },
+   "F5=on x F7=hk1": {
+    "interaction": -0.002698,
+    "ci95": [
+     -0.007883,
+     0.002509
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F5=on x F7=partitions": {
+    "interaction": -0.000263,
+    "ci95": [
+     -0.003688,
+     0.003026
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F6=on x F7=hk1": {
+    "interaction": 0.005093,
+    "ci95": [
+     0.000155,
+     0.010053
+    ],
+    "cells_paired": 80,
+    "p": null
+   },
+   "F6=on x F7=partitions": {
+    "interaction": -8.1e-05,
+    "ci95": [
+     -0.003743,
+     0.003592
+    ],
+    "cells_paired": 80,
+    "p": null
+   }
+  }
+ },
+ "n_questions": 817,
+ "contrast": "per-question mean over matched cells of (level - reference)",
+ "test": "two-sided Wilcoxon signed-rank on non-zero per-question contrasts; latency not tested (composed)",
+ "correction": "Holm within metric over main effects; Benjamini-Hochberg within metric over interactions"
+}

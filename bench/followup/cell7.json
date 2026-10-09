@@ -1,0 +1,12 @@
+{
+ "cell": 7,
+ "name": "mean freshness",
+ "arxiv": "2203.16684",
+ "stored_page_mean": false,
+ "pages_vector_columns": [
+  "embedding_signature",
+  "search_vector"
+ ],
+ "passes_line": false,
+ "note": "Pages store no mean of their chunk vectors. The note mean in the paper is computed from the current chunks, so there is no separate stored mean to compare."
+}

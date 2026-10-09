@@ -1,0 +1,160 @@
+{
+  "budget": 6000,
+  "k": 10,
+  "pack": "top 10 notes by best chunk, winning chunk kept if it fits",
+  "keyed_chunks": 4969,
+  "chunks": 5164,
+  "note": "Exploratory, computed after the hypotheses were tested; the factorial study measures the same pack per filter.",
+  "conditions": [
+    {
+      "condition": "cosine, every chunk",
+      "questions": 817,
+      "mean_candidates": 5164,
+      "recall_at_10": 0.698391327155097,
+      "survival": 0.7552019583843329,
+      "tokens_processed_mean": 2673514.0,
+      "tokens_delivered_mean": 5505.372093023256,
+      "survival_per_1k_delivered": 0.13717546164434025,
+      "relevant_kept_per_1k_delivered": 0.16207603166729992,
+      "recall_per_100k_processed": 0.026122598466104797,
+      "survival_per_100k_processed": 0.028247540816480964
+    },
+    {
+      "condition": "cosine, keyed chunks",
+      "questions": 817,
+      "mean_candidates": 4969,
+      "recall_at_10": 0.6905577898233958,
+      "survival": 0.7478580171358629,
+      "tokens_processed_mean": 2519020.0,
+      "tokens_delivered_mean": 5488.162790697675,
+      "survival_per_1k_delivered": 0.1362674624745948,
+      "relevant_kept_per_1k_delivered": 0.1621382082144524,
+      "recall_per_100k_processed": 0.0274137477996759,
+      "survival_per_100k_processed": 0.02968845095060233
+    },
+    {
+      "condition": "hk1 level 1, 1 ranges",
+      "questions": 817,
+      "mean_candidates": 27.756425948592412,
+      "recall_at_10": 0.07001223990208079,
+      "survival": 0.09179926560587515,
+      "tokens_processed_mean": 13939.080783353733,
+      "tokens_delivered_mean": 4455.791921664627,
+      "survival_per_1k_delivered": 0.020602233501868756,
+      "relevant_kept_per_1k_delivered": 0.021701019288635093,
+      "recall_per_100k_processed": 0.5022730048719604,
+      "survival_per_100k_processed": 0.6585747441502977
+    },
+    {
+      "condition": "random, same size as hk1 1 ranges",
+      "questions": 817,
+      "mean_candidates": 27.756425948592412,
+      "recall_at_10": 0.027641778865769073,
+      "survival": 0.03875968992248062,
+      "tokens_processed_mean": 14060.155854753162,
+      "tokens_delivered_mean": 4887.156262749898,
+      "survival_per_1k_delivered": 0.007924778521930262,
+      "relevant_kept_per_1k_delivered": 0.008341120011606744,
+      "recall_per_100k_processed": 0.1966448048420353,
+      "survival_per_100k_processed": 0.27575008905956855,
+      "seeds": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "condition": "hk1 level 1, 4 ranges",
+      "questions": 817,
+      "mean_candidates": 107.09424724602204,
+      "recall_at_10": 0.15874278720055954,
+      "survival": 0.19583843329253367,
+      "tokens_processed_mean": 52663.45654834761,
+      "tokens_delivered_mean": 5133.831089351285,
+      "survival_per_1k_delivered": 0.03814664524096759,
+      "relevant_kept_per_1k_delivered": 0.0417228932323083,
+      "recall_per_100k_processed": 0.301428728011474,
+      "survival_per_100k_processed": 0.371867792446826
+    },
+    {
+      "condition": "random, same size as hk1 4 ranges",
+      "questions": 817,
+      "mean_candidates": 107.09424724602204,
+      "recall_at_10": 0.08723650210798314,
+      "survival": 0.10975112199102406,
+      "tokens_processed_mean": 54276.333333333336,
+      "tokens_delivered_mean": 5448.960424316606,
+      "survival_per_1k_delivered": 0.020145028888986727,
+      "relevant_kept_per_1k_delivered": 0.021119123512343005,
+      "recall_per_100k_processed": 0.16073707856829275,
+      "survival_per_100k_processed": 0.20221789364651366,
+      "seeds": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "condition": "hk1 level 1, 8 ranges",
+      "questions": 817,
+      "mean_candidates": 198.32435740514074,
+      "recall_at_10": 0.23753861397680245,
+      "survival": 0.29498164014687883,
+      "tokens_processed_mean": 96698.18482252142,
+      "tokens_delivered_mean": 5203.790697674419,
+      "survival_per_1k_delivered": 0.05668591557279706,
+      "relevant_kept_per_1k_delivered": 0.06233098600328309,
+      "recall_per_100k_processed": 0.24564950667148275,
+      "survival_per_100k_processed": 0.30505395803270174
+    },
+    {
+      "condition": "random, same size as hk1 8 ranges",
+      "questions": 817,
+      "mean_candidates": 198.32435740514074,
+      "recall_at_10": 0.12531425462882012,
+      "survival": 0.15626274989800082,
+      "tokens_processed_mean": 100527.77723378214,
+      "tokens_delivered_mean": 5477.32435740514,
+      "survival_per_1k_delivered": 0.028526816901876764,
+      "relevant_kept_per_1k_delivered": 0.030537114414915148,
+      "recall_per_100k_processed": 0.12465877768676163,
+      "survival_per_100k_processed": 0.15543940271918677,
+      "seeds": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "condition": "hk1 level 1, 16 ranges",
+      "questions": 817,
+      "mean_candidates": 341.52876376988985,
+      "recall_at_10": 0.2987789240543218,
+      "survival": 0.3574051407588739,
+      "tokens_processed_mean": 165097.11015911872,
+      "tokens_delivered_mean": 5293.883720930233,
+      "survival_per_1k_delivered": 0.06751284304674363,
+      "relevant_kept_per_1k_delivered": 0.07537392751109048,
+      "recall_per_100k_processed": 0.18097162558833532,
+      "survival_per_100k_processed": 0.21648176664898064
+    },
+    {
+      "condition": "random, same size as hk1 16 ranges",
+      "questions": 817,
+      "mean_candidates": 341.52876376988985,
+      "recall_at_10": 0.1632841794408502,
+      "survival": 0.2011423908608731,
+      "tokens_processed_mean": 172970.84332925337,
+      "tokens_delivered_mean": 5480.208894328845,
+      "survival_per_1k_delivered": 0.03670345771477894,
+      "relevant_kept_per_1k_delivered": 0.03834177086070836,
+      "recall_per_100k_processed": 0.09440449787143833,
+      "survival_per_100k_processed": 0.11629170250069891,
+      "seeds": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
+}

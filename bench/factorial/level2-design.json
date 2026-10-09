@@ -1,0 +1,1956 @@
+{
+ "best_unit": "section",
+ "units": [
+  "chunk",
+  "page",
+  "section"
+ ],
+ "rows": [
+  {
+   "stratum": "cloud-gbrain",
+   "host": "cursor",
+   "tier": "large",
+   "model": "gpt-5.6-sol-high",
+   "condition": "gbrain",
+   "budget": 2000,
+   "unit": "chunk",
+   "row": 0,
+   "tasks": [
+    "t00",
+    "t01",
+    "t02",
+    "t03",
+    "t04"
+   ]
+  },
+  {
+   "stratum": "cloud-gbrain",
+   "host": "claude",
+   "tier": "small",
+   "model": "claude-haiku-4-5",
+   "condition": "gbrain",
+   "budget": 6000,
+   "unit": "page",
+   "row": 1,
+   "tasks": [
+    "t01",
+    "t02",
+    "t03",
+    "t04",
+    "t05"
+   ]
+  },
+  {
+   "stratum": "cloud-gbrain",
+   "host": "cursor",
+   "tier": "shared",
+   "model": "claude-sonnet-5-5-medium",
+   "condition": "gbrain",
+   "budget": 24000,
+   "unit": "section",
+   "row": 2,
+   "tasks": [
+    "t02",
+    "t03",
+    "t04",
+    "t05",
+    "t06"
+   ]
+  },
+  {
+   "stratum": "cloud-gbrain",
+   "host": "claude",
+   "tier": "large",
+   "model": "claude-opus-5-5",
+   "condition": "gbrain",
+   "budget": 6000,
+   "unit": "section",
+   "row": 3,
+   "tasks": [
+    "t03",
+    "t04",
+    "t05",
+    "t06",
+    "t07"
+   ]
+  },
+  {
+   "stratum": "cloud-gbrain",
+   "host": "cursor",
+   "tier": "small",
+   "model": "composer-2.5",
+   "condition": "gbrain",
+   "budget": 24000,
+   "unit": "chunk",
+   "row": 4,
+   "tasks": [
+    "t04",
+    "t05",
+    "t06",
+    "t07",
+    "t08"
+   ]
+  },
+  {
+   "stratum": "cloud-gbrain",
+   "host": "claude",
+   "tier": "shared",
+   "model": "claude-sonnet-5-5",
+   "condition": "gbrain",
+   "budget": 2000,
+   "unit": "page",
+   "row": 5,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "cloud-gbrain",
+   "host": "cursor",
+   "tier": "large",
+   "model": "gpt-5.6-sol-high",
+   "condition": "gbrain",
+   "budget": 24000,
+   "unit": "page",
+   "row": 6,
+   "tasks": [
+    "t06",
+    "t07",
+    "t08",
+    "t09",
+    "t00"
+   ]
+  },
+  {
+   "stratum": "cloud-gbrain",
+   "host": "claude",
+   "tier": "small",
+   "model": "claude-haiku-4-5",
+   "condition": "gbrain",
+   "budget": 2000,
+   "unit": "section",
+   "row": 7,
+   "tasks": [
+    "t07",
+    "t08",
+    "t09",
+    "t00",
+    "t01"
+   ]
+  },
+  {
+   "stratum": "cloud-gbrain",
+   "host": "cursor",
+   "tier": "shared",
+   "model": "claude-sonnet-5-5-medium",
+   "condition": "gbrain",
+   "budget": 6000,
+   "unit": "chunk",
+   "row": 8,
+   "tasks": [
+    "t08",
+    "t09",
+    "t00",
+    "t01",
+    "t02"
+   ]
+  },
+  {
+   "stratum": "cloud-gbrain",
+   "host": "claude",
+   "tier": "large",
+   "model": "claude-opus-5-5",
+   "condition": "gbrain",
+   "budget": 24000,
+   "unit": "chunk",
+   "row": 9,
+   "tasks": [
+    "t09",
+    "t00",
+    "t01",
+    "t02",
+    "t03"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "cursor",
+   "tier": "large",
+   "model": "gpt-5.6-sol-high",
+   "condition": "files-rtk-off",
+   "row": 10,
+   "tasks": [
+    "t00",
+    "t01",
+    "t02",
+    "t03",
+    "t04"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "cursor",
+   "tier": "large",
+   "model": "gpt-5.6-sol-high",
+   "condition": "files-rtk-on",
+   "row": 11,
+   "tasks": [
+    "t00",
+    "t01",
+    "t02",
+    "t03",
+    "t04"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "cursor",
+   "tier": "small",
+   "model": "composer-2.5",
+   "condition": "files-rtk-off",
+   "row": 12,
+   "tasks": [
+    "t03",
+    "t04",
+    "t05",
+    "t06",
+    "t07"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "cursor",
+   "tier": "small",
+   "model": "composer-2.5",
+   "condition": "files-rtk-on",
+   "row": 13,
+   "tasks": [
+    "t03",
+    "t04",
+    "t05",
+    "t06",
+    "t07"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "cursor",
+   "tier": "shared",
+   "model": "claude-sonnet-5-5-medium",
+   "condition": "files-rtk-off",
+   "row": 14,
+   "tasks": [
+    "t06",
+    "t07",
+    "t08",
+    "t09",
+    "t00"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "cursor",
+   "tier": "shared",
+   "model": "claude-sonnet-5-5-medium",
+   "condition": "files-rtk-on",
+   "row": 15,
+   "tasks": [
+    "t06",
+    "t07",
+    "t08",
+    "t09",
+    "t00"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "claude",
+   "tier": "large",
+   "model": "claude-opus-5-5",
+   "condition": "files-rtk-off",
+   "row": 16,
+   "tasks": [
+    "t00",
+    "t01",
+    "t02",
+    "t03",
+    "t04"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "claude",
+   "tier": "large",
+   "model": "claude-opus-5-5",
+   "condition": "files-rtk-on",
+   "row": 17,
+   "tasks": [
+    "t00",
+    "t01",
+    "t02",
+    "t03",
+    "t04"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "claude",
+   "tier": "small",
+   "model": "claude-haiku-4-5",
+   "condition": "files-rtk-off",
+   "row": 18,
+   "tasks": [
+    "t03",
+    "t04",
+    "t05",
+    "t06",
+    "t07"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "claude",
+   "tier": "small",
+   "model": "claude-haiku-4-5",
+   "condition": "files-rtk-on",
+   "row": 19,
+   "tasks": [
+    "t03",
+    "t04",
+    "t05",
+    "t06",
+    "t07"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "claude",
+   "tier": "shared",
+   "model": "claude-sonnet-5-5",
+   "condition": "files-rtk-off",
+   "row": 20,
+   "tasks": [
+    "t06",
+    "t07",
+    "t08",
+    "t09",
+    "t00"
+   ]
+  },
+  {
+   "stratum": "cloud-files",
+   "host": "claude",
+   "tier": "shared",
+   "model": "claude-sonnet-5-5",
+   "condition": "files-rtk-on",
+   "row": 21,
+   "tasks": [
+    "t06",
+    "t07",
+    "t08",
+    "t09",
+    "t00"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "files",
+   "num_ctx": 8192,
+   "unit": null,
+   "row": 22,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "files",
+   "num_ctx": 32768,
+   "unit": null,
+   "row": 23,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "files",
+   "num_ctx": 131072,
+   "unit": null,
+   "row": 24,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "gbrain",
+   "num_ctx": 8192,
+   "unit": "chunk",
+   "row": 25,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "gbrain",
+   "num_ctx": 8192,
+   "unit": "page",
+   "row": 26,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "gbrain",
+   "num_ctx": 8192,
+   "unit": "section",
+   "row": 27,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "gbrain",
+   "num_ctx": 32768,
+   "unit": "chunk",
+   "row": 28,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "gbrain",
+   "num_ctx": 32768,
+   "unit": "page",
+   "row": 29,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "gbrain",
+   "num_ctx": 32768,
+   "unit": "section",
+   "row": 30,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "gbrain",
+   "num_ctx": 131072,
+   "unit": "chunk",
+   "row": 31,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "gbrain",
+   "num_ctx": 131072,
+   "unit": "page",
+   "row": 32,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  },
+  {
+   "stratum": "local",
+   "host": "local",
+   "tier": "local",
+   "model": "qwen3.8:latest",
+   "tool": "gbrain",
+   "num_ctx": 131072,
+   "unit": "section",
+   "row": 33,
+   "tasks": [
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09"
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "run_id": "r11-t00-a",
+   "row": 11,
+   "round": 0,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r18-t03-a",
+   "row": 18,
+   "round": 0,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r08-t08-a",
+   "row": 8,
+   "round": 0,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r21-t06-a",
+   "row": 21,
+   "round": 0,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r28-t05-a",
+   "row": 28,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r00-t00-a",
+   "row": 0,
+   "round": 0,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r12-t03-a",
+   "row": 12,
+   "round": 0,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r01-t01-a",
+   "row": 1,
+   "round": 0,
+   "task": "t01",
+   "rep": 0
+  },
+  {
+   "run_id": "r25-t05-a",
+   "row": 25,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r16-t00-a",
+   "row": 16,
+   "round": 0,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r24-t05-a",
+   "row": 24,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r30-t05-a",
+   "row": 30,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r03-t03-a",
+   "row": 3,
+   "round": 0,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r14-t06-a",
+   "row": 14,
+   "round": 0,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r09-t09-a",
+   "row": 9,
+   "round": 0,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r17-t00-a",
+   "row": 17,
+   "round": 0,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r33-t05-a",
+   "row": 33,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r10-t00-a",
+   "row": 10,
+   "round": 0,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r07-t07-a",
+   "row": 7,
+   "round": 0,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r29-t05-a",
+   "row": 29,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r02-t02-a",
+   "row": 2,
+   "round": 0,
+   "task": "t02",
+   "rep": 0
+  },
+  {
+   "run_id": "r15-t06-a",
+   "row": 15,
+   "round": 0,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r22-t05-a",
+   "row": 22,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r23-t05-a",
+   "row": 23,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r31-t05-a",
+   "row": 31,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r26-t05-a",
+   "row": 26,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r19-t03-a",
+   "row": 19,
+   "round": 0,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r13-t03-a",
+   "row": 13,
+   "round": 0,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r20-t06-a",
+   "row": 20,
+   "round": 0,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r32-t05-a",
+   "row": 32,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r06-t06-a",
+   "row": 6,
+   "round": 0,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r27-t05-a",
+   "row": 27,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r05-t05-a",
+   "row": 5,
+   "round": 0,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r04-t04-a",
+   "row": 4,
+   "round": 0,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r03-t04-a",
+   "row": 3,
+   "round": 1,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r31-t06-a",
+   "row": 31,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r16-t01-a",
+   "row": 16,
+   "round": 1,
+   "task": "t01",
+   "rep": 0
+  },
+  {
+   "run_id": "r01-t02-a",
+   "row": 1,
+   "round": 1,
+   "task": "t02",
+   "rep": 0
+  },
+  {
+   "run_id": "r09-t00-a",
+   "row": 9,
+   "round": 1,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r02-t03-a",
+   "row": 2,
+   "round": 1,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r14-t07-a",
+   "row": 14,
+   "round": 1,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r24-t06-a",
+   "row": 24,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r20-t07-a",
+   "row": 20,
+   "round": 1,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r22-t06-a",
+   "row": 22,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r18-t04-a",
+   "row": 18,
+   "round": 1,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r21-t07-a",
+   "row": 21,
+   "round": 1,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r00-t01-a",
+   "row": 0,
+   "round": 1,
+   "task": "t01",
+   "rep": 0
+  },
+  {
+   "run_id": "r33-t06-a",
+   "row": 33,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r29-t06-a",
+   "row": 29,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r32-t06-a",
+   "row": 32,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r17-t01-a",
+   "row": 17,
+   "round": 1,
+   "task": "t01",
+   "rep": 0
+  },
+  {
+   "run_id": "r23-t06-a",
+   "row": 23,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r26-t06-a",
+   "row": 26,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r11-t01-a",
+   "row": 11,
+   "round": 1,
+   "task": "t01",
+   "rep": 0
+  },
+  {
+   "run_id": "r25-t06-a",
+   "row": 25,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r13-t04-a",
+   "row": 13,
+   "round": 1,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r08-t09-a",
+   "row": 8,
+   "round": 1,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r28-t06-a",
+   "row": 28,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r15-t07-a",
+   "row": 15,
+   "round": 1,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r07-t08-a",
+   "row": 7,
+   "round": 1,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r10-t01-a",
+   "row": 10,
+   "round": 1,
+   "task": "t01",
+   "rep": 0
+  },
+  {
+   "run_id": "r19-t04-a",
+   "row": 19,
+   "round": 1,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r05-t06-a",
+   "row": 5,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r06-t07-a",
+   "row": 6,
+   "round": 1,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r27-t06-a",
+   "row": 27,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r30-t06-a",
+   "row": 30,
+   "round": 1,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r12-t04-a",
+   "row": 12,
+   "round": 1,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r04-t05-a",
+   "row": 4,
+   "round": 1,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r32-t07-a",
+   "row": 32,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r05-t07-a",
+   "row": 5,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r02-t04-a",
+   "row": 2,
+   "round": 2,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r22-t07-a",
+   "row": 22,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r12-t05-a",
+   "row": 12,
+   "round": 2,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r24-t07-a",
+   "row": 24,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r30-t07-a",
+   "row": 30,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r20-t08-a",
+   "row": 20,
+   "round": 2,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r08-t00-a",
+   "row": 8,
+   "round": 2,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r07-t09-a",
+   "row": 7,
+   "round": 2,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r18-t05-a",
+   "row": 18,
+   "round": 2,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r16-t02-a",
+   "row": 16,
+   "round": 2,
+   "task": "t02",
+   "rep": 0
+  },
+  {
+   "run_id": "r00-t02-a",
+   "row": 0,
+   "round": 2,
+   "task": "t02",
+   "rep": 0
+  },
+  {
+   "run_id": "r14-t08-a",
+   "row": 14,
+   "round": 2,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r06-t08-a",
+   "row": 6,
+   "round": 2,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r01-t03-a",
+   "row": 1,
+   "round": 2,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r04-t06-a",
+   "row": 4,
+   "round": 2,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r09-t01-a",
+   "row": 9,
+   "round": 2,
+   "task": "t01",
+   "rep": 0
+  },
+  {
+   "run_id": "r28-t07-a",
+   "row": 28,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r19-t05-a",
+   "row": 19,
+   "round": 2,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r31-t07-a",
+   "row": 31,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r33-t07-a",
+   "row": 33,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r23-t07-a",
+   "row": 23,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r21-t08-a",
+   "row": 21,
+   "round": 2,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r10-t02-a",
+   "row": 10,
+   "round": 2,
+   "task": "t02",
+   "rep": 0
+  },
+  {
+   "run_id": "r26-t07-a",
+   "row": 26,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r27-t07-a",
+   "row": 27,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r15-t08-a",
+   "row": 15,
+   "round": 2,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r25-t07-a",
+   "row": 25,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r11-t02-a",
+   "row": 11,
+   "round": 2,
+   "task": "t02",
+   "rep": 0
+  },
+  {
+   "run_id": "r03-t05-a",
+   "row": 3,
+   "round": 2,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r29-t07-a",
+   "row": 29,
+   "round": 2,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r13-t05-a",
+   "row": 13,
+   "round": 2,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r17-t02-a",
+   "row": 17,
+   "round": 2,
+   "task": "t02",
+   "rep": 0
+  },
+  {
+   "run_id": "r30-t08-a",
+   "row": 30,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r22-t08-a",
+   "row": 22,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r07-t00-a",
+   "row": 7,
+   "round": 3,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r02-t05-a",
+   "row": 2,
+   "round": 3,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r21-t09-a",
+   "row": 21,
+   "round": 3,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r11-t03-a",
+   "row": 11,
+   "round": 3,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r31-t08-a",
+   "row": 31,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r18-t06-a",
+   "row": 18,
+   "round": 3,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r32-t08-a",
+   "row": 32,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r05-t08-a",
+   "row": 5,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r16-t03-a",
+   "row": 16,
+   "round": 3,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r33-t08-a",
+   "row": 33,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r29-t08-a",
+   "row": 29,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r09-t02-a",
+   "row": 9,
+   "round": 3,
+   "task": "t02",
+   "rep": 0
+  },
+  {
+   "run_id": "r25-t08-a",
+   "row": 25,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r28-t08-a",
+   "row": 28,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r03-t06-a",
+   "row": 3,
+   "round": 3,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r06-t09-a",
+   "row": 6,
+   "round": 3,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r27-t08-a",
+   "row": 27,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r19-t06-a",
+   "row": 19,
+   "round": 3,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r17-t03-a",
+   "row": 17,
+   "round": 3,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r01-t04-a",
+   "row": 1,
+   "round": 3,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r12-t06-a",
+   "row": 12,
+   "round": 3,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r20-t09-a",
+   "row": 20,
+   "round": 3,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r24-t08-a",
+   "row": 24,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r13-t06-a",
+   "row": 13,
+   "round": 3,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r14-t09-a",
+   "row": 14,
+   "round": 3,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r04-t07-a",
+   "row": 4,
+   "round": 3,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r23-t08-a",
+   "row": 23,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r08-t01-a",
+   "row": 8,
+   "round": 3,
+   "task": "t01",
+   "rep": 0
+  },
+  {
+   "run_id": "r26-t08-a",
+   "row": 26,
+   "round": 3,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r15-t09-a",
+   "row": 15,
+   "round": 3,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r10-t03-a",
+   "row": 10,
+   "round": 3,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r00-t03-a",
+   "row": 0,
+   "round": 3,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r09-t03-a",
+   "row": 9,
+   "round": 4,
+   "task": "t03",
+   "rep": 0
+  },
+  {
+   "run_id": "r07-t01-a",
+   "row": 7,
+   "round": 4,
+   "task": "t01",
+   "rep": 0
+  },
+  {
+   "run_id": "r00-t04-a",
+   "row": 0,
+   "round": 4,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r12-t07-a",
+   "row": 12,
+   "round": 4,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r19-t07-a",
+   "row": 19,
+   "round": 4,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r29-t09-a",
+   "row": 29,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r10-t04-a",
+   "row": 10,
+   "round": 4,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r14-t00-a",
+   "row": 14,
+   "round": 4,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r18-t07-a",
+   "row": 18,
+   "round": 4,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r13-t07-a",
+   "row": 13,
+   "round": 4,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r33-t09-a",
+   "row": 33,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r27-t09-a",
+   "row": 27,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r15-t00-a",
+   "row": 15,
+   "round": 4,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r04-t08-a",
+   "row": 4,
+   "round": 4,
+   "task": "t08",
+   "rep": 0
+  },
+  {
+   "run_id": "r32-t09-a",
+   "row": 32,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r02-t06-a",
+   "row": 2,
+   "round": 4,
+   "task": "t06",
+   "rep": 0
+  },
+  {
+   "run_id": "r24-t09-a",
+   "row": 24,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r03-t07-a",
+   "row": 3,
+   "round": 4,
+   "task": "t07",
+   "rep": 0
+  },
+  {
+   "run_id": "r30-t09-a",
+   "row": 30,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r05-t09-a",
+   "row": 5,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r26-t09-a",
+   "row": 26,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r21-t00-a",
+   "row": 21,
+   "round": 4,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r20-t00-a",
+   "row": 20,
+   "round": 4,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r11-t04-a",
+   "row": 11,
+   "round": 4,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r22-t09-a",
+   "row": 22,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r16-t04-a",
+   "row": 16,
+   "round": 4,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r31-t09-a",
+   "row": 31,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r01-t05-a",
+   "row": 1,
+   "round": 4,
+   "task": "t05",
+   "rep": 0
+  },
+  {
+   "run_id": "r25-t09-a",
+   "row": 25,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r08-t02-a",
+   "row": 8,
+   "round": 4,
+   "task": "t02",
+   "rep": 0
+  },
+  {
+   "run_id": "r23-t09-a",
+   "row": 23,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r17-t04-a",
+   "row": 17,
+   "round": 4,
+   "task": "t04",
+   "rep": 0
+  },
+  {
+   "run_id": "r06-t00-a",
+   "row": 6,
+   "round": 4,
+   "task": "t00",
+   "rep": 0
+  },
+  {
+   "run_id": "r28-t09-a",
+   "row": 28,
+   "round": 4,
+   "task": "t09",
+   "rep": 0
+  },
+  {
+   "run_id": "r02-t02-b",
+   "row": 2,
+   "round": 6,
+   "task": "t02",
+   "rep": 1
+  },
+  {
+   "run_id": "r02-t03-b",
+   "row": 2,
+   "round": 6,
+   "task": "t03",
+   "rep": 1
+  },
+  {
+   "run_id": "r05-t05-b",
+   "row": 5,
+   "round": 6,
+   "task": "t05",
+   "rep": 1
+  },
+  {
+   "run_id": "r05-t06-b",
+   "row": 5,
+   "round": 6,
+   "task": "t06",
+   "rep": 1
+  },
+  {
+   "run_id": "r08-t08-b",
+   "row": 8,
+   "round": 6,
+   "task": "t08",
+   "rep": 1
+  },
+  {
+   "run_id": "r08-t09-b",
+   "row": 8,
+   "round": 6,
+   "task": "t09",
+   "rep": 1
+  },
+  {
+   "run_id": "r14-t06-b",
+   "row": 14,
+   "round": 6,
+   "task": "t06",
+   "rep": 1
+  },
+  {
+   "run_id": "r14-t07-b",
+   "row": 14,
+   "round": 6,
+   "task": "t07",
+   "rep": 1
+  },
+  {
+   "run_id": "r15-t06-b",
+   "row": 15,
+   "round": 6,
+   "task": "t06",
+   "rep": 1
+  },
+  {
+   "run_id": "r15-t07-b",
+   "row": 15,
+   "round": 6,
+   "task": "t07",
+   "rep": 1
+  },
+  {
+   "run_id": "r20-t06-b",
+   "row": 20,
+   "round": 6,
+   "task": "t06",
+   "rep": 1
+  },
+  {
+   "run_id": "r20-t07-b",
+   "row": 20,
+   "round": 6,
+   "task": "t07",
+   "rep": 1
+  },
+  {
+   "run_id": "r21-t06-b",
+   "row": 21,
+   "round": 6,
+   "task": "t06",
+   "rep": 1
+  },
+  {
+   "run_id": "r21-t07-b",
+   "row": 21,
+   "round": 6,
+   "task": "t07",
+   "rep": 1
+  },
+  {
+   "run_id": "r02-t02-c",
+   "row": 2,
+   "round": 7,
+   "task": "t02",
+   "rep": 2
+  },
+  {
+   "run_id": "r02-t03-c",
+   "row": 2,
+   "round": 7,
+   "task": "t03",
+   "rep": 2
+  },
+  {
+   "run_id": "r05-t05-c",
+   "row": 5,
+   "round": 7,
+   "task": "t05",
+   "rep": 2
+  },
+  {
+   "run_id": "r05-t06-c",
+   "row": 5,
+   "round": 7,
+   "task": "t06",
+   "rep": 2
+  },
+  {
+   "run_id": "r08-t08-c",
+   "row": 8,
+   "round": 7,
+   "task": "t08",
+   "rep": 2
+  },
+  {
+   "run_id": "r08-t09-c",
+   "row": 8,
+   "round": 7,
+   "task": "t09",
+   "rep": 2
+  },
+  {
+   "run_id": "r14-t06-c",
+   "row": 14,
+   "round": 7,
+   "task": "t06",
+   "rep": 2
+  },
+  {
+   "run_id": "r14-t07-c",
+   "row": 14,
+   "round": 7,
+   "task": "t07",
+   "rep": 2
+  },
+  {
+   "run_id": "r15-t06-c",
+   "row": 15,
+   "round": 7,
+   "task": "t06",
+   "rep": 2
+  },
+  {
+   "run_id": "r15-t07-c",
+   "row": 15,
+   "round": 7,
+   "task": "t07",
+   "rep": 2
+  },
+  {
+   "run_id": "r20-t06-c",
+   "row": 20,
+   "round": 7,
+   "task": "t06",
+   "rep": 2
+  },
+  {
+   "run_id": "r20-t07-c",
+   "row": 20,
+   "round": 7,
+   "task": "t07",
+   "rep": 2
+  },
+  {
+   "run_id": "r21-t06-c",
+   "row": 21,
+   "round": 7,
+   "task": "t06",
+   "rep": 2
+  },
+  {
+   "run_id": "r21-t07-c",
+   "row": 21,
+   "round": 7,
+   "task": "t07",
+   "rep": 2
+  }
+ ],
+ "n_runs": 198,
+ "n_cloud_runs": 138,
+ "n_local_runs": 60,
+ "pair_coverage_cloud_gbrain_rows": 10
+}

@@ -1,0 +1,23 @@
+{
+  "server": {
+    "server": "arango",
+    "license": "enterprise",
+    "version": "3.12.10-1",
+    "apiVersions": [
+      "v0"
+    ],
+    "deprecatedApiVersions": [],
+    "requestedApiVersion": "v0"
+  },
+  "instance": "throwaway container arango-bench on 127.0.0.1:38529, no persistent volume",
+  "database": "knowledge_bench",
+  "documents": 5156,
+  "load_seconds": 1.781535416999759,
+  "vector_index": {
+    "metric": "cosine",
+    "dimension": 1024,
+    "nLists": 72,
+    "build_seconds": 0.82614570899932
+  },
+  "genealogy_instance_contacted": false
+}

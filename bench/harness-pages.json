@@ -1,0 +1,282 @@
+{
+ "n": 30,
+ "vault_hit_rate": 0.0,
+ "gbrain_hit_rate": 0.7,
+ "vault_seconds_mean": 0.027,
+ "gbrain_seconds_mean": 8.03,
+ "rows": [
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.118,
+   "gbrain_hit": true,
+   "gbrain_seconds": 6.266,
+   "vault_token_files": 129,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.02,
+   "gbrain_hit": true,
+   "gbrain_seconds": 7.565,
+   "vault_token_files": 182,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.019,
+   "gbrain_hit": true,
+   "gbrain_seconds": 14.029,
+   "vault_token_files": 21,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.027,
+   "gbrain_hit": true,
+   "gbrain_seconds": 10.118,
+   "vault_token_files": 2,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.02,
+   "gbrain_hit": true,
+   "gbrain_seconds": 7.718,
+   "vault_token_files": 254,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.018,
+   "gbrain_hit": true,
+   "gbrain_seconds": 8.245,
+   "vault_token_files": 25,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.018,
+   "gbrain_hit": true,
+   "gbrain_seconds": 7.064,
+   "vault_token_files": 143,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.028,
+   "gbrain_hit": false,
+   "gbrain_seconds": 13.338,
+   "vault_token_files": 156,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.043,
+   "gbrain_hit": true,
+   "gbrain_seconds": 7.891,
+   "vault_token_files": 229,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.024,
+   "gbrain_hit": true,
+   "gbrain_seconds": 11.122,
+   "vault_token_files": 183,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.032,
+   "gbrain_hit": false,
+   "gbrain_seconds": 10.664,
+   "vault_token_files": 150,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.029,
+   "gbrain_hit": false,
+   "gbrain_seconds": 12.607,
+   "vault_token_files": 257,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.02,
+   "gbrain_hit": true,
+   "gbrain_seconds": 7.767,
+   "vault_token_files": 32,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.022,
+   "gbrain_hit": false,
+   "gbrain_seconds": 9.756,
+   "vault_token_files": 136,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.026,
+   "gbrain_hit": true,
+   "gbrain_seconds": 11.12,
+   "vault_token_files": 110,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.028,
+   "gbrain_hit": false,
+   "gbrain_seconds": 8.33,
+   "vault_token_files": 80,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.025,
+   "gbrain_hit": true,
+   "gbrain_seconds": 8.43,
+   "vault_token_files": 178,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.028,
+   "gbrain_hit": true,
+   "gbrain_seconds": 5.722,
+   "vault_token_files": 141,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.023,
+   "gbrain_hit": false,
+   "gbrain_seconds": 10.174,
+   "vault_token_files": 143,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.016,
+   "gbrain_hit": false,
+   "gbrain_seconds": 4.525,
+   "vault_token_files": 17,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.022,
+   "gbrain_hit": true,
+   "gbrain_seconds": 10.017,
+   "vault_token_files": 60,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.021,
+   "gbrain_hit": true,
+   "gbrain_seconds": 5.512,
+   "vault_token_files": 98,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.017,
+   "gbrain_hit": true,
+   "gbrain_seconds": 4.275,
+   "vault_token_files": 155,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.024,
+   "gbrain_hit": true,
+   "gbrain_seconds": 6.55,
+   "vault_token_files": 55,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.023,
+   "gbrain_hit": true,
+   "gbrain_seconds": 4.84,
+   "vault_token_files": 169,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.021,
+   "gbrain_hit": false,
+   "gbrain_seconds": 7.828,
+   "vault_token_files": 19,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.024,
+   "gbrain_hit": true,
+   "gbrain_seconds": 5.877,
+   "vault_token_files": 101,
+   "vault_token_hit": true
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.024,
+   "gbrain_hit": true,
+   "gbrain_seconds": 4.526,
+   "vault_token_files": 126,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.019,
+   "gbrain_hit": true,
+   "gbrain_seconds": 4.176,
+   "vault_token_files": 139,
+   "vault_token_hit": false
+  },
+  {
+   "vault_files": 0,
+   "vault_hit": false,
+   "vault_seconds": 0.024,
+   "gbrain_hit": false,
+   "gbrain_seconds": 4.85,
+   "vault_token_files": 188,
+   "vault_token_hit": false
+  }
+ ],
+ "vault_token_hit_rate": 0.5333,
+ "method": "exact phrase ripgrep versus up to four tokens longer than 5 characters; gbrain search limit 10 with the live reranker",
+ "private": "note names, note text and question texts are kept out of the repository"
+}

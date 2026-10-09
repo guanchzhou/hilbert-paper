@@ -1,0 +1,156 @@
+{
+ "preregistration": "preregistration.md#s5",
+ "best": "hybrid|mean|on|on|off|off|none",
+ "reference": "dense|best|off|off|off|off|none",
+ "observed_development_diff": 0.04425016028443201,
+ "sd_of_differences": 0.32460948467298945,
+ "nonzero_share": 0.18604651162790697,
+ "n_development": 817,
+ "bootstrap_resamples": 5000,
+ "alpha": 0.05,
+ "test": "two-sided Wilcoxon signed-rank, paired bootstrap",
+ "heldout_n": 817,
+ "deviations": [
+  "D3"
+ ],
+ "curves": {
+  "held-out (+0.016)": {
+   "effect": 0.016,
+   "method": "dilution (deviation D3)",
+   "keep_probability": 0.3615806111696523,
+   "curve": [
+    {
+     "n": 50,
+     "power": 0.0084
+    },
+    {
+     "n": 100,
+     "power": 0.0762
+    },
+    {
+     "n": 150,
+     "power": 0.1454
+    },
+    {
+     "n": 200,
+     "power": 0.201
+    },
+    {
+     "n": 300,
+     "power": 0.3072
+    },
+    {
+     "n": 400,
+     "power": 0.3846
+    },
+    {
+     "n": 500,
+     "power": 0.4716
+    },
+    {
+     "n": 600,
+     "power": 0.5474
+    },
+    {
+     "n": 800,
+     "power": 0.6644
+    },
+    {
+     "n": 1000,
+     "power": 0.772
+    },
+    {
+     "n": 1200,
+     "power": 0.8432
+    },
+    {
+     "n": 1500,
+     "power": 0.9198
+    },
+    {
+     "n": 2000,
+     "power": 0.9734
+    },
+    {
+     "n": 2500,
+     "power": 0.9914
+    }
+   ],
+   "n_for_80_percent": 1079
+  },
+  "development (observed)": {
+   "effect": 0.04425016028443201,
+   "method": "dilution (deviation D3)",
+   "keep_probability": 1.0,
+   "curve": [
+    {
+     "n": 50,
+     "power": 0.1212
+    },
+    {
+     "n": 100,
+     "power": 0.282
+    },
+    {
+     "n": 150,
+     "power": 0.398
+    },
+    {
+     "n": 200,
+     "power": 0.5186
+    },
+    {
+     "n": 300,
+     "power": 0.6994
+    },
+    {
+     "n": 400,
+     "power": 0.8146
+    },
+    {
+     "n": 500,
+     "power": 0.886
+    },
+    {
+     "n": 600,
+     "power": 0.9416
+    },
+    {
+     "n": 800,
+     "power": 0.9804
+    },
+    {
+     "n": 1000,
+     "power": 0.996
+    }
+   ],
+   "n_for_80_percent": 387
+  }
+ },
+ "shifted_method_invalid": {
+  "held-out (+0.016)": {
+   "effect": 0.016,
+   "method": "pre-registered shift; invalid with tied differences (D3)",
+   "curve": [
+    {
+     "n": 50,
+     "power": 0.9658
+    },
+    {
+     "n": 100,
+     "power": 0.9992
+    }
+   ]
+  },
+  "development (+0.050)": {
+   "effect": 0.05,
+   "method": "pre-registered shift; invalid with tied differences (D3)",
+   "curve": [
+    {
+     "n": 50,
+     "power": 0.9992
+    }
+   ]
+  }
+ }
+}

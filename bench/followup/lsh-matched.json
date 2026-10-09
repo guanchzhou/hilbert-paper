@@ -1,0 +1,32 @@
+{
+ "deviation": "D4",
+ "label": "exploratory",
+ "cross_polytope": {
+  "tables": 128,
+  "probes": 0,
+  "scanned_mean_share": 0.0940450277444901,
+  "R@10": 0.6755435099376348
+ },
+ "hyperplane": {
+  "tables": 32,
+  "probes": 0,
+  "scanned_mean_share": 0.1298744514057849,
+  "R@10": 0.6067465174564317
+ },
+ "test": {
+  "mean_new": 0.6755435099376348,
+  "mean_comparator": 0.6067465174564317,
+  "diff": 0.06879699248120301,
+  "ci95": [
+   0.04462318587165588,
+   0.09385986769248703
+  ],
+  "p": 4.702076791754909e-07,
+  "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+  "alternative": "two-sided",
+  "n": 817,
+  "n_nonzero": 165,
+  "improved": 119,
+  "worsened": 46
+ }
+}

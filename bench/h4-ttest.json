@@ -1,0 +1,25 @@
+{
+  "purpose": "Non-inferiority check for H4 with the paired t-test added next to the shifted Wilcoxon (same flaw as deviation D1 of the twelve-idea study). investigation.json stays the frozen run used by the paper; this is a separate run of the same script on the corpus as it was at run time.",
+  "run_date": "2026-10-06T08:54+03:00",
+  "corpus": {
+    "pages": 1224,
+    "chunks": 5159
+  },
+  "frozen_run_corpus": {
+    "pages": 1223,
+    "chunks": 5157
+  },
+  "margin": 0.03,
+  "H4": {
+    "mean_a": 0.2987789240543218,
+    "mean_b": 0.698391327155097,
+    "diff": -0.3996124031007752,
+    "ci_lo": -0.4334562423500612,
+    "ci_hi": -0.36611434108527136,
+    "p_wilcoxon_shifted": 1.0,
+    "p_t_shifted": 1.0,
+    "p": 1.0,
+    "n_nonzero": 419,
+    "test": "non-inferiority, H0: hk1 worse than cosine by more than 0.03; p is the larger of a one-sided Wilcoxon signed-rank test and a one-sided paired t-test on (hk1 minus cosine plus 0.03)"
+  }
+}

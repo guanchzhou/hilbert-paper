@@ -1,0 +1,52 @@
+{
+  "probes": [
+    {
+      "level": 1,
+      "ranges": 1,
+      "n_queries": 817,
+      "scan_seconds": 0.014082417990721297,
+      "median_candidates": 22,
+      "mean_candidates": 27.756425948592412
+    },
+    {
+      "level": 1,
+      "ranges": 4,
+      "n_queries": 817,
+      "scan_seconds": 0.027040747001592536,
+      "median_candidates": 97,
+      "mean_candidates": 107.09424724602204
+    },
+    {
+      "level": 1,
+      "ranges": 8,
+      "n_queries": 817,
+      "scan_seconds": 0.04534979300296982,
+      "median_candidates": 183,
+      "mean_candidates": 198.32435740514074
+    },
+    {
+      "level": 1,
+      "ranges": 16,
+      "n_queries": 817,
+      "scan_seconds": 0.0783102070017776,
+      "median_candidates": 323,
+      "mean_candidates": 341.52876376988985
+    },
+    {
+      "level": 2,
+      "ranges": 8,
+      "n_queries": 817,
+      "scan_seconds": 0.012317582997638965,
+      "median_candidates": 1,
+      "mean_candidates": 1.0085679314565483
+    },
+    {
+      "level": 2,
+      "ranges": 16,
+      "n_queries": 817,
+      "scan_seconds": 0.01955833401734708,
+      "median_candidates": 1,
+      "mean_candidates": 2.033047735618115
+    }
+  ]
+}

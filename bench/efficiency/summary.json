@@ -1,0 +1,168 @@
+{
+ "family": {
+  "M1": {
+   "chosen": "pool=10",
+   "diff": -0.053922,
+   "ci95": [
+    -0.070098,
+    -0.038235
+   ],
+   "p": 1.0,
+   "p_holm": 1.0,
+   "criterion_met": false,
+   "accepted": false
+  },
+  "M2": {
+   "chosen": "lambda=2,p=0.5",
+   "diff": -0.332843,
+   "ci95": [
+    -0.372059,
+    -0.294118
+   ],
+   "p": 1.0,
+   "p_holm": 1.0,
+   "criterion_met": false,
+   "accepted": false
+  },
+  "M3": {
+   "chosen": "lambda=0.9",
+   "diff": -0.008824,
+   "ci95": [
+    -0.019608,
+    0.001471
+   ],
+   "p": 0.937555,
+   "p_holm": 1.0,
+   "criterion_met": false,
+   "accepted": false
+  },
+  "M4": {
+   "chosen": "alpha=20",
+   "diff": -0.006373,
+   "ci95": [
+    -0.016667,
+    0.003431
+   ],
+   "p": 0.892181,
+   "p_holm": 1.0,
+   "criterion_met": false,
+   "accepted": false
+  },
+  "M5": {
+   "chosen": "t=0.5,beta=0.1",
+   "diff": -0.020588,
+   "ci95": [
+    -0.032843,
+    -0.008824
+   ],
+   "p": 0.999207,
+   "p_holm": 1.0,
+   "criterion_met": false,
+   "accepted": false
+  },
+  "M6": {
+   "chosen": "k=20,a=0.5,beta=0.3",
+   "diff": -0.016667,
+   "ci95": [
+    -0.030882,
+    -0.002941
+   ],
+   "p": 0.981467,
+   "p_holm": 1.0,
+   "criterion_met": false,
+   "accepted": false
+  },
+  "M7": {
+   "chosen": "t=0.5,gamma=0.25,beta=0.1",
+   "diff": -0.068627,
+   "ci95": [
+    -0.092157,
+    -0.046078
+   ],
+   "p": 1.0,
+   "p_holm": 1.0,
+   "criterion_met": false,
+   "accepted": false
+  },
+  "M9": {
+   "chosen": 0.436,
+   "diff": 446.639706,
+   "ci95": [
+    333.766483,
+    570.871936
+   ],
+   "p": 0.0,
+   "p_holm": 0.0,
+   "criterion_met": false,
+   "accepted": false
+  }
+ },
+ "holm": "step-down over the eight primary p-values, alpha 0.05",
+ "baseline_all": {
+  "S_bar": 0.637454,
+  "survival": {
+   "1000": 0.410037,
+   "2000": 0.596083,
+   "3000": 0.698898,
+   "4000": 0.72705,
+   "6000": 0.755202
+  },
+  "tokens": {
+   "1000": 882.930233,
+   "2000": 1851.597307,
+   "3000": 2821.585067,
+   "4000": 3779.592411,
+   "6000": 5506.033048
+  },
+  "relevant_notes_6000": 0.892289
+ },
+ "meta": {
+  "corpus": {
+   "notes_with_chunks": 1226,
+   "chunks": 5169,
+   "directed_links_between_them": 5591,
+   "live_notes": 1228,
+   "embedded_chunks": 5169,
+   "links": 8299,
+   "pages_updated_at_max": "2026-10-06 15:07:23.885748+03",
+   "chunks_embedded_at_max": "2026-10-06 15:07:28.122968+03"
+  },
+  "corpus_end": {
+   "live_notes": 1228,
+   "embedded_chunks": 5169,
+   "links": 8299,
+   "pages_updated_at_max": "2026-10-06 15:07:23.885748+03",
+   "chunks_embedded_at_max": "2026-10-06 15:07:28.122968+03"
+  },
+  "qrels_sha256": "87b6f6a2f0b87c8d55f8bf902e00099be366a363326295732e281a7b26a5f338",
+  "budgets": [
+   1000,
+   2000,
+   3000,
+   4000,
+   6000
+  ],
+  "split": "ideas/split.json",
+  "seed_bootstrap": 20261005,
+  "one_time_seconds": {
+   "M1 isotonic fit": 0.001664,
+   "M5 eigendecomposition": 0.475896,
+   "M6 graph and solve k=10 a=0.5": 0.085854,
+   "M6 graph and solve k=10 a=0.8": 0.082406,
+   "M6 graph and solve k=10 a=0.95": 0.080222,
+   "M6 graph and solve k=20 a=0.5": 0.084489,
+   "M6 graph and solve k=20 a=0.8": 0.085639,
+   "M6 graph and solve k=20 a=0.95": 0.084685,
+   "M7 expm t=0.5 gamma=0.25": 0.1452,
+   "M7 expm t=0.5 gamma=0.5": 0.159303,
+   "M7 expm t=0.5 gamma=0.75": 0.165163,
+   "M7 expm t=1 gamma=0.25": 0.172765,
+   "M7 expm t=1 gamma=0.5": 0.272599,
+   "M7 expm t=1 gamma=0.75": 0.18944,
+   "M7 expm t=2 gamma=0.25": 0.19536,
+   "M7 expm t=2 gamma=0.5": 0.201276,
+   "M7 expm t=2 gamma=0.75": 0.200992
+  },
+  "run_seconds": 21.274721
+ }
+}

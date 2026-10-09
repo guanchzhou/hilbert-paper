@@ -1,0 +1,31 @@
+{
+ "cell": 3,
+ "name": "local forward push",
+ "arxiv": "1908.10583",
+ "n": 817,
+ "settings": {
+  "seeds": 20,
+  "alpha": 0.3,
+  "beta": 0.3,
+  "power_iterations": 60,
+  "push_epsilon": 0.0001,
+  "existing_graph": "undirected",
+  "push_graph": "directed"
+ },
+ "directed_links": 5550,
+ "R@10": {
+  "forward_push": 0.7195576149676516,
+  "existing_pagerank": 0.7129276680072274
+ },
+ "diff": 0.006629946960424316,
+ "ci95": [
+  -0.0007547939616483066,
+  0.014443084455324358
+ ],
+ "seconds_per_question": {
+  "forward_push": 0.0002880008151909197,
+  "existing_pagerank": 0.00019400331456467253
+ },
+ "passes": false,
+ "seed": 20261008
+}

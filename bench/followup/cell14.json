@@ -1,0 +1,10 @@
+{
+ "cell": 14,
+ "name": "time window",
+ "arxiv": "2506.07270",
+ "facts_with_an_end_date": 15,
+ "of_those_with_a_source_note": 1,
+ "notes": 1,
+ "passes": null,
+ "note": "Fifteen facts carry an end date and one of them cites a note. That set is too small for a sufficiency check or a recall comparison, so this cell is the count."
+}

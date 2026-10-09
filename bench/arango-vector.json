@@ -1,0 +1,130 @@
+{
+  "queries": 817,
+  "warmup": 20,
+  "k_fetched": 50,
+  "client": "one persistent connection per engine from Python; latency is client-observed",
+  "pgvector_note": "HNSW rows force the index (enable_seqscan off); ef_search is at least the 50 rows fetched. At LIMIT 50 the planner otherwise prefers a sequential scan on this table. Automatic statement preparation is off so that each setting is planned afresh.",
+  "page_recall_rule": "top 50 chunks collapsed to the first 10 distinct notes",
+  "exact_numpy_page_recall_reference": 0.6984,
+  "results": [
+    {
+      "engine": "arangodb",
+      "index": "vector (IVF)",
+      "nProbe": 1,
+      "setting": "arango nProbe 1",
+      "median_ms": 2.003792000323301,
+      "p95_ms": 4.2321250002714805,
+      "mean_ms": 2.337393064854787,
+      "chunk_recall_vs_exact_at_10": 0.5525091799265606,
+      "page_recall_at_10": 0.47349478347030366
+    },
+    {
+      "engine": "arangodb",
+      "index": "vector (IVF)",
+      "nProbe": 4,
+      "setting": "arango nProbe 4",
+      "median_ms": 3.793707999648177,
+      "p95_ms": 4.858750000494183,
+      "mean_ms": 3.7483620929812,
+      "chunk_recall_vs_exact_at_10": 0.8308445532435741,
+      "page_recall_at_10": 0.6208515474733345
+    },
+    {
+      "engine": "arangodb",
+      "index": "vector (IVF)",
+      "nProbe": 8,
+      "setting": "arango nProbe 8",
+      "median_ms": 4.3334589990990935,
+      "p95_ms": 5.382042001656373,
+      "mean_ms": 4.239624586259699,
+      "chunk_recall_vs_exact_at_10": 0.9210526315789473,
+      "page_recall_at_10": 0.668811563793204
+    },
+    {
+      "engine": "arangodb",
+      "index": "vector (IVF)",
+      "nProbe": 16,
+      "setting": "arango nProbe 16",
+      "median_ms": 4.602666998835048,
+      "p95_ms": 5.710375000489876,
+      "mean_ms": 4.583204996328001,
+      "chunk_recall_vs_exact_at_10": 0.9687882496940025,
+      "page_recall_at_10": 0.6885994054904704
+    },
+    {
+      "engine": "arangodb",
+      "index": "vector (IVF)",
+      "nProbe": 72,
+      "setting": "arango nProbe 72",
+      "median_ms": 4.638292000890942,
+      "p95_ms": 6.475374999354244,
+      "mean_ms": 4.657655141965117,
+      "chunk_recall_vs_exact_at_10": 1.0,
+      "page_recall_at_10": 0.698391327155097
+    },
+    {
+      "engine": "arangodb",
+      "index": "none (full scan)",
+      "setting": "arango exact",
+      "median_ms": 12.62079200023436,
+      "p95_ms": 14.054416998988017,
+      "mean_ms": 12.850614460203337,
+      "chunk_recall_vs_exact_at_10": 1.0,
+      "page_recall_at_10": 0.698391327155097
+    },
+    {
+      "engine": "pgvector",
+      "index": "HNSW",
+      "ef_search": 50,
+      "setting": "pgvector ef_search 50",
+      "median_ms": 2.097707998473197,
+      "p95_ms": 2.921084000263363,
+      "mean_ms": 2.1217887625384457,
+      "chunk_recall_vs_exact_at_10": 0.9864137086903306,
+      "page_recall_at_10": 0.6980853296030775
+    },
+    {
+      "engine": "pgvector",
+      "index": "HNSW",
+      "ef_search": 100,
+      "setting": "pgvector ef_search 100",
+      "median_ms": 2.1579580006800825,
+      "p95_ms": 3.1610419991920935,
+      "mean_ms": 2.217683607084162,
+      "chunk_recall_vs_exact_at_10": 0.9936352509179927,
+      "page_recall_at_10": 0.6986973247071167
+    },
+    {
+      "engine": "pgvector",
+      "index": "HNSW",
+      "ef_search": 200,
+      "setting": "pgvector ef_search 200",
+      "median_ms": 1.8757920006464701,
+      "p95_ms": 3.441584000029252,
+      "mean_ms": 2.0308720220987393,
+      "chunk_recall_vs_exact_at_10": 0.9987760097919217,
+      "page_recall_at_10": 0.6971673369470187
+    },
+    {
+      "engine": "pgvector",
+      "index": "HNSW",
+      "ef_search": 400,
+      "setting": "pgvector ef_search 400",
+      "median_ms": 2.428458999929717,
+      "p95_ms": 4.257499998857384,
+      "mean_ms": 2.623213022045734,
+      "chunk_recall_vs_exact_at_10": 0.9997552019583843,
+      "page_recall_at_10": 0.698391327155097
+    },
+    {
+      "engine": "pgvector",
+      "index": "none (full scan)",
+      "setting": "pgvector exact",
+      "median_ms": 8.444084000075236,
+      "p95_ms": 9.201875000144355,
+      "mean_ms": 8.455884332913854,
+      "chunk_recall_vs_exact_at_10": 1.0,
+      "page_recall_at_10": 0.698391327155097
+    }
+  ]
+}

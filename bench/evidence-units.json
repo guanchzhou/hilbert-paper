@@ -1,0 +1,58 @@
+{
+  "budget": 6000,
+  "source_ranking": "cell-vector-chunk",
+  "units": {
+    "chunk": {
+      "unit": "chunk",
+      "budget": 6000,
+      "source_ranking": "cell-vector-chunk",
+      "queries": 817,
+      "tokens_delivered": 5503.28,
+      "tokens_delivered_total": 4496180,
+      "hits_dropped": 1.421,
+      "hits_dropped_total": 1161,
+      "relevant_in_pack": 0.755202,
+      "tokens_per_successful_query": 5521.018,
+      "successful_queries": 617
+    },
+    "window": {
+      "unit": "window",
+      "budget": 6000,
+      "source_ranking": "cell-vector-chunk",
+      "queries": 817,
+      "tokens_delivered": 5661.469,
+      "tokens_delivered_total": 4625420,
+      "hits_dropped": 4.852,
+      "hits_dropped_total": 3964,
+      "relevant_in_pack": 0.686659,
+      "tokens_per_successful_query": 5657.624,
+      "successful_queries": 561
+    },
+    "section": {
+      "unit": "section",
+      "budget": 6000,
+      "source_ranking": "cell-vector-chunk",
+      "queries": 817,
+      "tokens_delivered": 5647.684,
+      "tokens_delivered_total": 4614158,
+      "hits_dropped": 2.362,
+      "hits_dropped_total": 1930,
+      "relevant_in_pack": 0.73929,
+      "tokens_per_successful_query": 5651.783,
+      "successful_queries": 604
+    },
+    "page": {
+      "unit": "page",
+      "budget": 6000,
+      "source_ranking": "cell-vector-chunk",
+      "queries": 817,
+      "tokens_delivered": 5428.942,
+      "tokens_delivered_total": 4435446,
+      "hits_dropped": 4.89,
+      "hits_dropped_total": 3995,
+      "relevant_in_pack": 0.613219,
+      "tokens_per_successful_query": 5423.002,
+      "successful_queries": 501
+    }
+  }
+}

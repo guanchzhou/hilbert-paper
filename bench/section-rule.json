@@ -1,0 +1,12 @@
+{
+  "definition": "A section is the hit chunk plus neighboring chunks on the same page until a markdown heading.",
+  "order": "Chunks on one page sorted by chunk_index.",
+  "heading": "An ATX heading line matching ^[ \\t]{0,3}#{1,6}[ \\t]+\\S. Lines inside a ``` or ~~~ fence do not count. fenced_code chunks are never heading boundaries.",
+  "left": "If the hit chunk contains a heading, it opens the section and earlier chunks are excluded. Otherwise include preceding chunks through the nearest chunk that contains a heading.",
+  "right": "Include following chunks that contain no heading. Stop before the next heading chunk, without including it.",
+  "window": "The hit chunk plus one neighbor on each side in chunk_index order.",
+  "chunk": "The winning chunk_text only.",
+  "page": "pages.compiled_truth for that slug.",
+  "pack": "Walk the chunk-vector top 10 in rank order. Keep a unit when estimate_tokens of its text fits in the remaining 6000-token budget. A unit that does not fit is dropped and later units are still considered. Units are not truncated.",
+  "tokens": "ceil((len-cjk)/4)+cjk via metrics.estimate_tokens."
+}

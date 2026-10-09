@@ -1,0 +1,19 @@
+{
+  "pages_live": 1225,
+  "chunk_count": 5155,
+  "chunks_all": 5160,
+  "embedding_model": "ollama:qwen3-embedding-8k",
+  "embedding_model_http": "qwen3-embedding-8k",
+  "dimensions": 1024,
+  "embedding_column_dimensions": 1024,
+  "embedded_chunks": 5160,
+  "reranker_enabled": true,
+  "query_prefix": "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery:",
+  "query_prefix_bytes": 91,
+  "qrels": "qrels-dev.json",
+  "qrels_count": 817,
+  "qrels_dev_sha256": "87b6f6a2f0b87c8d55f8bf902e00099be366a363326295732e281a7b26a5f338",
+  "chunk_hilbert_count": 5079,
+  "chunk_hilbert_prefix": "hk1:8:8:9e3779b97f4a7c15:",
+  "chunk_hilbert_all_keys_match_prefix": true
+}

@@ -1,0 +1,10 @@
+{
+  "source": "gbrain eval output saved in ~/.gbrain/eval on 5 October 2026: after-junk-dev, title-dev, rerank30-dev, baseline-test. Means are printed to two decimals by gbrain eval.",
+  "dev": {
+    "baseline": {"P@10": 0.08, "R@10": 0.65, "MRR": 0.52, "nDCG@10": 0.53},
+    "title": {"P@10": 0.08, "R@10": 0.65, "MRR": 0.52, "nDCG@10": 0.52},
+    "rerank": {"P@10": 0.08, "R@10": 0.65, "MRR": 0.53, "nDCG@10": 0.54}
+  },
+  "hybrid_heldout": {"P@10": 0.08, "R@10": 0.65, "MRR": 0.52, "nDCG@10": 0.53},
+  "latency_seconds": {"off": 0.13, "on": 3.8}
+}

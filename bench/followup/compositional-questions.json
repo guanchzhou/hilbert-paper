@@ -1,0 +1,389 @@
+{
+ "preregistration": "preregistration.md#s6",
+ "seed": 20261008,
+ "link_types": [
+  "mentions",
+  "",
+  "related_to",
+  "see_also",
+  "related",
+  "topic",
+  "relates_to"
+ ],
+ "max_degree": 60,
+ "common_range": [
+  3,
+  15
+ ],
+ "qualifying_pairs": 2090,
+ "snapshot_pages": 1223,
+ "n": 60,
+ "gold_size": {
+  "median": 3.0,
+  "min": 3,
+  "max": 15
+ },
+ "questions": [
+  {
+   "id": 0,
+   "gold_size": 3,
+   "linkers_a": 5,
+   "linkers_b": 23
+  },
+  {
+   "id": 1,
+   "gold_size": 6,
+   "linkers_a": 15,
+   "linkers_b": 51
+  },
+  {
+   "id": 2,
+   "gold_size": 3,
+   "linkers_a": 7,
+   "linkers_b": 8
+  },
+  {
+   "id": 3,
+   "gold_size": 6,
+   "linkers_a": 12,
+   "linkers_b": 51
+  },
+  {
+   "id": 4,
+   "gold_size": 3,
+   "linkers_a": 22,
+   "linkers_b": 44
+  },
+  {
+   "id": 5,
+   "gold_size": 4,
+   "linkers_a": 28,
+   "linkers_b": 17
+  },
+  {
+   "id": 6,
+   "gold_size": 3,
+   "linkers_a": 5,
+   "linkers_b": 13
+  },
+  {
+   "id": 7,
+   "gold_size": 3,
+   "linkers_a": 13,
+   "linkers_b": 10
+  },
+  {
+   "id": 8,
+   "gold_size": 3,
+   "linkers_a": 4,
+   "linkers_b": 12
+  },
+  {
+   "id": 9,
+   "gold_size": 3,
+   "linkers_a": 5,
+   "linkers_b": 6
+  },
+  {
+   "id": 10,
+   "gold_size": 3,
+   "linkers_a": 17,
+   "linkers_b": 9
+  },
+  {
+   "id": 11,
+   "gold_size": 3,
+   "linkers_a": 3,
+   "linkers_b": 36
+  },
+  {
+   "id": 12,
+   "gold_size": 5,
+   "linkers_a": 11,
+   "linkers_b": 13
+  },
+  {
+   "id": 13,
+   "gold_size": 3,
+   "linkers_a": 4,
+   "linkers_b": 46
+  },
+  {
+   "id": 14,
+   "gold_size": 15,
+   "linkers_a": 41,
+   "linkers_b": 40
+  },
+  {
+   "id": 15,
+   "gold_size": 3,
+   "linkers_a": 15,
+   "linkers_b": 8
+  },
+  {
+   "id": 16,
+   "gold_size": 4,
+   "linkers_a": 8,
+   "linkers_b": 60
+  },
+  {
+   "id": 17,
+   "gold_size": 6,
+   "linkers_a": 10,
+   "linkers_b": 43
+  },
+  {
+   "id": 18,
+   "gold_size": 4,
+   "linkers_a": 15,
+   "linkers_b": 13
+  },
+  {
+   "id": 19,
+   "gold_size": 3,
+   "linkers_a": 24,
+   "linkers_b": 29
+  },
+  {
+   "id": 20,
+   "gold_size": 3,
+   "linkers_a": 4,
+   "linkers_b": 7
+  },
+  {
+   "id": 21,
+   "gold_size": 4,
+   "linkers_a": 6,
+   "linkers_b": 11
+  },
+  {
+   "id": 22,
+   "gold_size": 5,
+   "linkers_a": 11,
+   "linkers_b": 8
+  },
+  {
+   "id": 23,
+   "gold_size": 6,
+   "linkers_a": 9,
+   "linkers_b": 41
+  },
+  {
+   "id": 24,
+   "gold_size": 3,
+   "linkers_a": 9,
+   "linkers_b": 23
+  },
+  {
+   "id": 25,
+   "gold_size": 3,
+   "linkers_a": 7,
+   "linkers_b": 26
+  },
+  {
+   "id": 26,
+   "gold_size": 5,
+   "linkers_a": 6,
+   "linkers_b": 43
+  },
+  {
+   "id": 27,
+   "gold_size": 6,
+   "linkers_a": 16,
+   "linkers_b": 33
+  },
+  {
+   "id": 28,
+   "gold_size": 3,
+   "linkers_a": 8,
+   "linkers_b": 23
+  },
+  {
+   "id": 29,
+   "gold_size": 3,
+   "linkers_a": 7,
+   "linkers_b": 8
+  },
+  {
+   "id": 30,
+   "gold_size": 13,
+   "linkers_a": 18,
+   "linkers_b": 44
+  },
+  {
+   "id": 31,
+   "gold_size": 3,
+   "linkers_a": 6,
+   "linkers_b": 4
+  },
+  {
+   "id": 32,
+   "gold_size": 3,
+   "linkers_a": 9,
+   "linkers_b": 27
+  },
+  {
+   "id": 33,
+   "gold_size": 5,
+   "linkers_a": 16,
+   "linkers_b": 17
+  },
+  {
+   "id": 34,
+   "gold_size": 4,
+   "linkers_a": 7,
+   "linkers_b": 6
+  },
+  {
+   "id": 35,
+   "gold_size": 4,
+   "linkers_a": 7,
+   "linkers_b": 44
+  },
+  {
+   "id": 36,
+   "gold_size": 3,
+   "linkers_a": 28,
+   "linkers_b": 5
+  },
+  {
+   "id": 37,
+   "gold_size": 3,
+   "linkers_a": 4,
+   "linkers_b": 12
+  },
+  {
+   "id": 38,
+   "gold_size": 10,
+   "linkers_a": 21,
+   "linkers_b": 60
+  },
+  {
+   "id": 39,
+   "gold_size": 6,
+   "linkers_a": 6,
+   "linkers_b": 6
+  },
+  {
+   "id": 40,
+   "gold_size": 3,
+   "linkers_a": 8,
+   "linkers_b": 11
+  },
+  {
+   "id": 41,
+   "gold_size": 3,
+   "linkers_a": 17,
+   "linkers_b": 6
+  },
+  {
+   "id": 42,
+   "gold_size": 5,
+   "linkers_a": 11,
+   "linkers_b": 7
+  },
+  {
+   "id": 43,
+   "gold_size": 3,
+   "linkers_a": 10,
+   "linkers_b": 5
+  },
+  {
+   "id": 44,
+   "gold_size": 3,
+   "linkers_a": 19,
+   "linkers_b": 33
+  },
+  {
+   "id": 45,
+   "gold_size": 3,
+   "linkers_a": 10,
+   "linkers_b": 9
+  },
+  {
+   "id": 46,
+   "gold_size": 12,
+   "linkers_a": 23,
+   "linkers_b": 33
+  },
+  {
+   "id": 47,
+   "gold_size": 3,
+   "linkers_a": 9,
+   "linkers_b": 11
+  },
+  {
+   "id": 48,
+   "gold_size": 3,
+   "linkers_a": 18,
+   "linkers_b": 4
+  },
+  {
+   "id": 49,
+   "gold_size": 4,
+   "linkers_a": 21,
+   "linkers_b": 8
+  },
+  {
+   "id": 50,
+   "gold_size": 3,
+   "linkers_a": 4,
+   "linkers_b": 11
+  },
+  {
+   "id": 51,
+   "gold_size": 3,
+   "linkers_a": 9,
+   "linkers_b": 6
+  },
+  {
+   "id": 52,
+   "gold_size": 3,
+   "linkers_a": 6,
+   "linkers_b": 13
+  },
+  {
+   "id": 53,
+   "gold_size": 3,
+   "linkers_a": 5,
+   "linkers_b": 21
+  },
+  {
+   "id": 54,
+   "gold_size": 3,
+   "linkers_a": 21,
+   "linkers_b": 5
+  },
+  {
+   "id": 55,
+   "gold_size": 3,
+   "linkers_a": 8,
+   "linkers_b": 46
+  },
+  {
+   "id": 56,
+   "gold_size": 7,
+   "linkers_a": 9,
+   "linkers_b": 44
+  },
+  {
+   "id": 57,
+   "gold_size": 3,
+   "linkers_a": 6,
+   "linkers_b": 3
+  },
+  {
+   "id": 58,
+   "gold_size": 3,
+   "linkers_a": 5,
+   "linkers_b": 28
+  },
+  {
+   "id": 59,
+   "gold_size": 5,
+   "linkers_a": 12,
+   "linkers_b": 26
+  }
+ ],
+ "private": "note names, note text and question texts are kept out of the repository"
+}

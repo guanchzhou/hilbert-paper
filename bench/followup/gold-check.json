@@ -1,0 +1,109 @@
+{
+ "preregistration": "preregistration.md#s6",
+ "checked": 30,
+ "correct_and_complete": 25,
+ "share_yes": 0.833333,
+ "marked_no": [
+  17,
+  18,
+  19,
+  24,
+  25
+ ],
+ "n": 25,
+ "summary": {
+  "dense_question_top10": {
+   "recall": 0.418667,
+   "precision": 0.164,
+   "size": 10.0,
+   "examined": 10.0,
+   "tokens": 114281.72,
+   "tokens_per_correct": 69683.97561
+  },
+  "dense_question_top30": {
+   "recall": 0.658,
+   "precision": 0.089333,
+   "size": 30.0,
+   "examined": 30.0,
+   "tokens": 281528.28,
+   "tokens_per_correct": 105047.865672
+  },
+  "dense_facets": {
+   "recall": 0.426,
+   "precision": 0.206325,
+   "size": 10.04,
+   "examined": 89.96,
+   "tokens": 205095.4,
+   "tokens_per_correct": 116531.477273
+  },
+  "hk1_facets": {
+   "recall": 0.176,
+   "precision": 0.025319,
+   "size": 44.64,
+   "examined": 312.44,
+   "tokens": 604432.24,
+   "tokens_per_correct": 755540.3
+  },
+  "links_join": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "size": 4.32,
+   "examined": 36.12,
+   "tokens": 56671.48,
+   "tokens_per_correct": 13118.398148
+  }
+ },
+ "tests": {
+  "hk1_facets vs dense_facets (primary)": {
+   "mean_new": 0.176,
+   "mean_comparator": 0.426,
+   "diff": -0.25,
+   "ci95": [
+    -0.380667,
+    -0.126667
+   ],
+   "p": 0.001499,
+   "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+   "alternative": "two-sided",
+   "n": 25,
+   "n_nonzero": 21,
+   "improved": 4,
+   "worsened": 17,
+   "p_holm": 0.001726
+  },
+  "dense_facets vs dense_question_top30": {
+   "mean_new": 0.426,
+   "mean_comparator": 0.658,
+   "diff": -0.232,
+   "ci95": [
+    -0.34,
+    -0.130667
+   ],
+   "p": 0.000863,
+   "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+   "alternative": "two-sided",
+   "n": 25,
+   "n_nonzero": 16,
+   "improved": 1,
+   "worsened": 15,
+   "p_holm": 0.001726
+  },
+  "hk1_facets vs dense_question_top30": {
+   "mean_new": 0.176,
+   "mean_comparator": 0.658,
+   "diff": -0.482,
+   "ci95": [
+    -0.620683,
+    -0.342667
+   ],
+   "p": 6.8e-05,
+   "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+   "alternative": "two-sided",
+   "n": 25,
+   "n_nonzero": 23,
+   "improved": 2,
+   "worsened": 21,
+   "p_holm": 0.000203
+  }
+ }
+}

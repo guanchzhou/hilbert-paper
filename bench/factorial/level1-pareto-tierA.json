@@ -1,0 +1,1095 @@
+{
+ "n_questions": 817,
+ "recall_tokens_latency": [
+  {
+   "label": "lexical + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "lexical",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "R@10": 0.260252,
+   "tokens": 3309.577723,
+   "latency": 61.592142
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "R@10": 0.317506,
+   "tokens": 3441.332925,
+   "latency": 26.11738
+  },
+  {
+   "label": "dense + mean-of-chunks + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "R@10": 0.328624,
+   "tokens": 3475.985312,
+   "latency": 26.114612
+  },
+  {
+   "label": "dense + mean-of-chunks + PPR + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "off",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "R@10": 0.33148,
+   "tokens": 3511.930233,
+   "latency": 65.038971
+  },
+  {
+   "label": "dense + mean-of-chunks + Rocchio + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "R@10": 0.341109,
+   "tokens": 3526.827417,
+   "latency": 26.1805
+  },
+  {
+   "label": "dense + mean-of-chunks + PPR + Rocchio + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "on",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "R@10": 0.343659,
+   "tokens": 3558.085679,
+   "latency": 65.104859
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.662071,
+   "tokens": 3742.074663,
+   "latency": 25.043594
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + filter=partitions + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "partitions",
+    "F8": "pruned"
+   },
+   "R@10": 0.618937,
+   "tokens": 3742.900857,
+   "latency": 25.036866
+  },
+  {
+   "label": "dense + mean-of-chunks + PPR + centering + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.6854,
+   "tokens": 3758.53978,
+   "latency": 63.967953
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + Rocchio + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "on",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.669467,
+   "tokens": 3825.058752,
+   "latency": 25.260779
+  },
+  {
+   "label": "dense + centering + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.703034,
+   "tokens": 3860.310894,
+   "latency": 25.167398
+  },
+  {
+   "label": "dense + mean-of-chunks + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.683287,
+   "tokens": 3864.198286,
+   "latency": 25.040826
+  },
+  {
+   "label": "dense + mean-of-chunks + filter=partitions + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "partitions",
+    "F8": "pruned"
+   },
+   "R@10": 0.645518,
+   "tokens": 3880.602203,
+   "latency": 25.034098
+  },
+  {
+   "label": "dense + PPR + centering + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "on",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.721128,
+   "tokens": 3886.007344,
+   "latency": 64.091757
+  },
+  {
+   "label": "dense + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.698391,
+   "tokens": 3910.406365,
+   "latency": 25.16463
+  },
+  {
+   "label": "hybrid + mean-of-chunks + centering + Rocchio + unit=pruned",
+   "config": {
+    "F1": "hybrid",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "on",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.704339,
+   "tokens": 3923.033048,
+   "latency": 60.759592
+  },
+  {
+   "label": "hybrid + centering + unit=pruned",
+   "config": {
+    "F1": "hybrid",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.704532,
+   "tokens": 3934.49694,
+   "latency": 60.666211
+  },
+  {
+   "label": "dense + PPR + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "R@10": 0.712928,
+   "tokens": 3935.209302,
+   "latency": 64.088989
+  },
+  {
+   "label": "hybrid + Rocchio + unit=page",
+   "config": {
+    "F1": "hybrid",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.704368,
+   "tokens": 5306.023256,
+   "latency": 60.131374
+  },
+  {
+   "label": "hybrid + centering + unit=page",
+   "config": {
+    "F1": "hybrid",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.704532,
+   "tokens": 5373.383109,
+   "latency": 59.916957
+  },
+  {
+   "label": "dense + mean-of-chunks + Rocchio + filter=partitions + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "partitions",
+    "F8": "page"
+   },
+   "R@10": 0.661112,
+   "tokens": 5384.436965,
+   "latency": 24.368938
+  },
+  {
+   "label": "dense + mean-of-chunks + Rocchio + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.700892,
+   "tokens": 5406.789474,
+   "latency": 24.508757
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + unit=chunk",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "chunk"
+   },
+   "R@10": 0.662071,
+   "tokens": 5415.228886,
+   "latency": 24.29434
+  },
+  {
+   "label": "dense + mean-of-chunks + PPR + Rocchio + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "on",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.704625,
+   "tokens": 5419.818849,
+   "latency": 63.433116
+  },
+  {
+   "label": "dense + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.698391,
+   "tokens": 5428.942472,
+   "latency": 24.415376
+  },
+  {
+   "label": "dense + PPR + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.712928,
+   "tokens": 5437.798042,
+   "latency": 63.339735
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + filter=partitions + unit=chunk",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "partitions",
+    "F8": "chunk"
+   },
+   "R@10": 0.618937,
+   "tokens": 5441.280294,
+   "latency": 24.287612
+  },
+  {
+   "label": "dense + Rocchio + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.702002,
+   "tokens": 5447.756426,
+   "latency": 24.632561
+  },
+  {
+   "label": "dense + mean-of-chunks + filter=partitions + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "partitions",
+    "F8": "page"
+   },
+   "R@10": 0.645518,
+   "tokens": 5457.904529,
+   "latency": 24.284843
+  },
+  {
+   "label": "dense + PPR + centering + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "on",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.721128,
+   "tokens": 5467.117503,
+   "latency": 63.342503
+  },
+  {
+   "label": "dense + centering + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.703034,
+   "tokens": 5469.28519,
+   "latency": 24.418144
+  },
+  {
+   "label": "dense + mean-of-chunks + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "page"
+   },
+   "R@10": 0.683287,
+   "tokens": 5471.370869,
+   "latency": 24.291572
+  }
+ ],
+ "survival_tokens_latency": [
+  {
+   "label": "lexical + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "lexical",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "survival": 0.388005,
+   "tokens": 3309.577723,
+   "latency": 61.592142
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "survival": 0.424725,
+   "tokens": 3441.332925,
+   "latency": 26.11738
+  },
+  {
+   "label": "dense + mean-of-chunks + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "survival": 0.435741,
+   "tokens": 3475.985312,
+   "latency": 26.114612
+  },
+  {
+   "label": "dense + mean-of-chunks + PPR + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "off",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "survival": 0.444308,
+   "tokens": 3511.930233,
+   "latency": 65.038971
+  },
+  {
+   "label": "dense + mean-of-chunks + Rocchio + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "survival": 0.439412,
+   "tokens": 3526.827417,
+   "latency": 26.1805
+  },
+  {
+   "label": "dense + mean-of-chunks + PPR + Rocchio + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "on",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "survival": 0.445532,
+   "tokens": 3558.085679,
+   "latency": 65.104859
+  },
+  {
+   "label": "lexical + PPR + filter=hk1 + unit=pruned",
+   "config": {
+    "F1": "lexical",
+    "F2": "best",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "off",
+    "F7": "hk1",
+    "F8": "pruned"
+   },
+   "survival": 0.471236,
+   "tokens": 3610.536108,
+   "latency": 100.516501
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.821297,
+   "tokens": 3742.074663,
+   "latency": 25.043594
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + filter=partitions + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "partitions",
+    "F8": "pruned"
+   },
+   "survival": 0.773562,
+   "tokens": 3742.900857,
+   "latency": 25.036866
+  },
+  {
+   "label": "dense + mean-of-chunks + PPR + centering + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.849449,
+   "tokens": 3758.53978,
+   "latency": 63.967953
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + Rocchio + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "on",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.849449,
+   "tokens": 3825.058752,
+   "latency": 25.260779
+  },
+  {
+   "label": "dense + mean-of-chunks + PPR + centering + Rocchio + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "on",
+    "F6": "on",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.875153,
+   "tokens": 3839.035496,
+   "latency": 64.185139
+  },
+  {
+   "label": "dense + centering + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.871481,
+   "tokens": 3860.310894,
+   "latency": 25.167398
+  },
+  {
+   "label": "dense + mean-of-chunks + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.847001,
+   "tokens": 3864.198286,
+   "latency": 25.040826
+  },
+  {
+   "label": "hybrid + mean-of-chunks + centering + unit=pruned",
+   "config": {
+    "F1": "hybrid",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.876377,
+   "tokens": 3870.379437,
+   "latency": 60.542407
+  },
+  {
+   "label": "dense + mean-of-chunks + filter=partitions + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "partitions",
+    "F8": "pruned"
+   },
+   "survival": 0.79437,
+   "tokens": 3880.602203,
+   "latency": 25.034098
+  },
+  {
+   "label": "hybrid + mean-of-chunks + PPR + centering + unit=pruned",
+   "config": {
+    "F1": "hybrid",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.882497,
+   "tokens": 3883.307222,
+   "latency": 99.466766
+  },
+  {
+   "label": "dense + PPR + centering + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "on",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.883721,
+   "tokens": 3886.007344,
+   "latency": 64.091757
+  },
+  {
+   "label": "hybrid + mean-of-chunks + unit=pruned",
+   "config": {
+    "F1": "hybrid",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.886169,
+   "tokens": 3906.488372,
+   "latency": 60.539639
+  },
+  {
+   "label": "dense + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.867809,
+   "tokens": 3910.406365,
+   "latency": 25.16463
+  },
+  {
+   "label": "hybrid + mean-of-chunks + PPR + unit=pruned",
+   "config": {
+    "F1": "hybrid",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.887393,
+   "tokens": 3912.011016,
+   "latency": 99.463998
+  },
+  {
+   "label": "hybrid + mean-of-chunks + PPR + centering + Rocchio + unit=pruned",
+   "config": {
+    "F1": "hybrid",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "on",
+    "F6": "on",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.891065,
+   "tokens": 3924.075887,
+   "latency": 99.683951
+  },
+  {
+   "label": "dense + PPR + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.892289,
+   "tokens": 3935.209302,
+   "latency": 64.088989
+  },
+  {
+   "label": "dense + mean-of-chunks + Rocchio + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.873929,
+   "tokens": 3965.282742,
+   "latency": 25.258011
+  },
+  {
+   "label": "hybrid + mean-of-chunks + PPR + Rocchio + unit=pruned",
+   "config": {
+    "F1": "hybrid",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "on",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.895961,
+   "tokens": 3975.996328,
+   "latency": 99.681183
+  },
+  {
+   "label": "hybrid + mean-of-chunks + Rocchio + unit=pruned",
+   "config": {
+    "F1": "hybrid",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.889841,
+   "tokens": 3976.345165,
+   "latency": 60.756824
+  },
+  {
+   "label": "dense + mean-of-chunks + PPR + Rocchio + unit=pruned",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "on",
+    "F5": "off",
+    "F6": "on",
+    "F7": "none",
+    "F8": "pruned"
+   },
+   "survival": 0.895961,
+   "tokens": 3983.78825,
+   "latency": 64.18237
+  },
+  {
+   "label": "dense + mean-of-chunks + Rocchio + filter=partitions + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "partitions",
+    "F8": "page"
+   },
+   "survival": 0.559364,
+   "tokens": 5384.436965,
+   "latency": 24.368938
+  },
+  {
+   "label": "dense + mean-of-chunks + Rocchio + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "on",
+    "F7": "none",
+    "F8": "page"
+   },
+   "survival": 0.607099,
+   "tokens": 5406.789474,
+   "latency": 24.508757
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + unit=chunk",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "chunk"
+   },
+   "survival": 0.706242,
+   "tokens": 5415.228886,
+   "latency": 24.29434
+  },
+  {
+   "label": "dense + mean-of-chunks + centering + filter=partitions + unit=chunk",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "partitions",
+    "F8": "chunk"
+   },
+   "survival": 0.664627,
+   "tokens": 5441.280294,
+   "latency": 24.287612
+  },
+  {
+   "label": "dense + mean-of-chunks + filter=partitions + unit=page",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "partitions",
+    "F8": "page"
+   },
+   "survival": 0.564259,
+   "tokens": 5457.904529,
+   "latency": 24.284843
+  },
+  {
+   "label": "dense + mean-of-chunks + unit=chunk",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "chunk"
+   },
+   "survival": 0.72705,
+   "tokens": 5481.700122,
+   "latency": 24.291572
+  },
+  {
+   "label": "dense + unit=chunk",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "none",
+    "F8": "chunk"
+   },
+   "survival": 0.755202,
+   "tokens": 5503.085679,
+   "latency": 24.415376
+  },
+  {
+   "label": "dense + mean-of-chunks + filter=partitions + unit=chunk",
+   "config": {
+    "F1": "dense",
+    "F2": "mean",
+    "F3": "off",
+    "F4": "off",
+    "F5": "off",
+    "F6": "off",
+    "F7": "partitions",
+    "F8": "chunk"
+   },
+   "survival": 0.686659,
+   "tokens": 5505.455324,
+   "latency": 24.284843
+  },
+  {
+   "label": "dense + centering + unit=chunk",
+   "config": {
+    "F1": "dense",
+    "F2": "best",
+    "F3": "off",
+    "F4": "off",
+    "F5": "on",
+    "F6": "off",
+    "F7": "none",
+    "F8": "chunk"
+   },
+   "survival": 0.75765,
+   "tokens": 5530.26683,
+   "latency": 24.418144
+  }
+ ]
+}

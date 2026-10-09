@@ -1,0 +1,8 @@
+{
+  "server_version": "18.6 (Homebrew)",
+  "pgvector": "0.8.7",
+  "pages_live": 1226,
+  "embedded_chunks": 5164,
+  "chunk_hilbert_rows": 4969,
+  "measured_at": "2026-10-06T12:56:08+0300"
+}

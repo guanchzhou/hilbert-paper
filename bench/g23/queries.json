@@ -1,0 +1,16 @@
+{
+  "registered_at": "2026-10-07T05:50:00Z",
+  "rule": "Each query passes when a page from its expected source is in the top 10 of the federated default search. Fixed before the new sources were embedded.",
+  "k": 10,
+  "queries": [
+    {"source": "zig-hilbert", "query": "hk2 multi-probe hash tables"},
+    {"source": "zig-klient", "query": "kubernetes client in zig watch and list resources"},
+    {"source": "zig-yaml", "query": "yaml parser zig 0.17 compatibility"},
+    {"source": "c3s", "query": "c3s kubernetes resource subscription"},
+    {"source": "bambu-monitor", "query": "bambu printer camera stream monitor"},
+    {"source": "zig-select", "query": "Floyd-Rivest selection quickselect in zig"},
+    {"source": "zig-diffuse", "query": "heat kernel matrix exponential Al-Mohy Higham"},
+    {"source": "zig-rabitq", "query": "RaBitQ extended multi-bit codes estimator"},
+    {"source": "zig-pq", "query": "product quantization k-means codebook asymmetric distance"}
+  ]
+}

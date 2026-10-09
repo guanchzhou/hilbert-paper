@@ -1,0 +1,26 @@
+{
+  "scratches": 2,
+  "both_dropped": true,
+  "live_brain_written": false,
+  "in_session": {
+    "n_vectors": 200000,
+    "n_real_embeddings": 5160,
+    "noise": "gaussian sigma 0.02",
+    "median_ms": 0.801,
+    "p95_ms": 2.933,
+    "index_bytes": 1637187584,
+    "index_build_s": 49.5,
+    "exact_recall_at_10": 0.588,
+    "hnsw_ef_search": 40,
+    "note": "Timed inside one Postgres session. Scratch database dropped."
+  },
+  "range_scan": {
+    "n": 200000,
+    "real_vectors": 5155,
+    "pgvector_median_ms": 68.175,
+    "pgvector_p95_ms": 272.931,
+    "hilbert_one_range_ms": 364.537,
+    "hilbert_one_range_rows": 734,
+    "note": "Each timing opens a new psql. The Hilbert figure is one prefix range, not a probe. Scratch database dropped."
+  }
+}

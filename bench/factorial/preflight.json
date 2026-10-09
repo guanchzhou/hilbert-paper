@@ -1,0 +1,25 @@
+{
+ "taken": "2026-10-06T1637",
+ "folder": "/Users/andreymaltsev/.gbrain/backups/night2-preflight-2026-10-06T1637",
+ "dump_bytes": 110612571,
+ "dump_seconds": 7.1,
+ "restore_seconds": 4.9,
+ "restore_exit": 0,
+ "restore_error_lines": [],
+ "tables": 119,
+ "rows_live_before": 28054,
+ "rows_restored": 28054,
+ "tables_differing_from_live_before": {},
+ "tables_changed_live_during_dump": {},
+ "versions": {
+  "postgresql": "18.6 (Homebrew)",
+  "pgvector": "0.8.7",
+  "gbrain": "gbrain 0.60.85.0"
+ },
+ "corpus": {
+  "live_pages": 1228,
+  "chunks": 5174,
+  "embedded_chunks": 5174
+ },
+ "scratch_dir_to_delete": "/var/folders/yp/zkf7d44j597ftvjlhdkrbsc40000gp/T/gbrain-restore-vbgu1qv2"
+}

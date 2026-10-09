@@ -1,0 +1,13 @@
+{
+  "n_queries": 50,
+  "warmup_queries": 3,
+  "hnsw_ef_search": "40",
+  "sql": "SELECT id FROM content_chunks ORDER BY embedding <=> %s::vector LIMIT 10",
+  "index_scan": true,
+  "plan_first_line": "Limit  (cost=722.83..783.60 rows=10 width=12)",
+  "median_ms": 0.679395501720137,
+  "p95_ms": 1.7776249987946358,
+  "min_ms": 0.4159159980190452,
+  "max_ms": 3.560708002623869,
+  "client": "psycopg 3, one persistent connection, automatic preparation off"
+}

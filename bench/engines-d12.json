@@ -1,0 +1,191 @@
+{
+  "queries": 817,
+  "warmup": 20,
+  "k_fetched": 50,
+  "hub_cap": 50,
+  "client": "one connection per engine from Python; latency is client-observed",
+  "page_recall_rule": "top 50 chunks collapsed to the first 10 distinct notes",
+  "pgvector": {
+    "version": {
+      "postgresql": "18.6 (Homebrew)",
+      "pgvector": "0.8.7"
+    },
+    "vector": [
+      {
+        "engine": "pgvector",
+        "index": "HNSW",
+        "ef_search": 100,
+        "setting": "pgvector ef_search 100",
+        "median_ms": 1.474500008043833,
+        "p95_ms": 2.0236670097801834,
+        "mean_ms": 1.5346200392298535,
+        "chunk_recall_vs_exact_at_10": 0.9935128518971849,
+        "page_recall_at_10": 0.6974733344990383
+      },
+      {
+        "engine": "pgvector",
+        "index": "none (full scan)",
+        "setting": "pgvector exact",
+        "median_ms": 13.467540993588045,
+        "p95_ms": 17.124375008279458,
+        "mean_ms": 13.997585283607448,
+        "chunk_recall_vs_exact_at_10": 1.0,
+        "page_recall_at_10": 0.698391327155097
+      }
+    ],
+    "hop": {
+      "engine": "postgres",
+      "median_ms": 0.13647950254380703,
+      "p95_ms": 0.32120799005497247,
+      "mean_ms": 0.17824996645989208,
+      "identical_sets": 300,
+      "starts": 300
+    },
+    "corpus": {
+      "chunks": 5171,
+      "pages": 1228,
+      "edges": 8298
+    }
+  },
+  "sqlite_vec": {
+    "version": {
+      "sqlite_vec": "v0.1.9",
+      "sqlite": "3.50.4"
+    },
+    "load_seconds": 0.5117158749926602,
+    "vector": [
+      {
+        "engine": "sqlite-vec",
+        "index": "none (exact vec0 scan)",
+        "setting": "sqlite-vec exact",
+        "median_ms": 5.893666995689273,
+        "p95_ms": 6.212624997715466,
+        "mean_ms": 5.942172820090215,
+        "chunk_recall_vs_exact_at_10": 1.0,
+        "page_recall_at_10": 0.698391327155097
+      }
+    ],
+    "hop": {
+      "engine": "sqlite",
+      "median_ms": 0.00904199987417087,
+      "p95_ms": 0.01883300137706101,
+      "mean_ms": 0.011136790174835673,
+      "identical_sets": 300,
+      "starts": 300
+    },
+    "corpus": {
+      "chunks": 5171,
+      "pages": 1228,
+      "edges": 8298
+    }
+  },
+  "libsql": {
+    "version": {
+      "libsql_sqlite": "3.45.1"
+    },
+    "load_seconds": 0.13901620800606906,
+    "index_seconds": 41.9754933330114,
+    "vector": [
+      {
+        "engine": "libsql",
+        "index": "libsql_vector_idx (DiskANN, defaults)",
+        "setting": "libsql index",
+        "median_ms": 8.786457998212427,
+        "p95_ms": 9.35287500033155,
+        "mean_ms": 8.78064330217555,
+        "chunk_recall_vs_exact_at_10": 0.9997552019583843,
+        "page_recall_at_10": 0.698391327155097
+      },
+      {
+        "engine": "libsql",
+        "index": "none (full scan)",
+        "setting": "libsql exact",
+        "median_ms": 11.217040999326855,
+        "p95_ms": 12.553249995107763,
+        "mean_ms": 9.384608554589418,
+        "chunk_recall_vs_exact_at_10": 0.9998776009791921,
+        "page_recall_at_10": 0.698391327155097
+      }
+    ],
+    "hop": {
+      "engine": "libsql",
+      "median_ms": 0.01222949504153803,
+      "p95_ms": 0.028124995878897607,
+      "mean_ms": 0.015179293404798955,
+      "identical_sets": 300,
+      "starts": 300
+    },
+    "corpus": {
+      "chunks": 5171,
+      "pages": 1228,
+      "edges": 8298
+    }
+  },
+  "mongodb": {
+    "version": {
+      "mongodb": "9.0.2"
+    },
+    "load_seconds": 0.42127474999870174,
+    "index_seconds": 18.638051125002676,
+    "vector": [
+      {
+        "engine": "mongodb",
+        "index": "vectorSearch (HNSW, mongot)",
+        "numCandidates": 100,
+        "setting": "mongodb numCandidates 100",
+        "median_ms": 9.070625004824251,
+        "p95_ms": 12.016166001558304,
+        "mean_ms": 9.217195208299126,
+        "chunk_recall_vs_exact_at_10": 0.9959608323133415,
+        "page_recall_at_10": 0.698391327155097
+      },
+      {
+        "engine": "mongodb",
+        "index": "vectorSearch (HNSW, mongot)",
+        "numCandidates": 200,
+        "setting": "mongodb numCandidates 200",
+        "median_ms": 10.01741600339301,
+        "p95_ms": 13.574917000369169,
+        "mean_ms": 10.260946956222918,
+        "chunk_recall_vs_exact_at_10": 0.9979192166462668,
+        "page_recall_at_10": 0.698391327155097
+      },
+      {
+        "engine": "mongodb",
+        "index": "vectorSearch (HNSW, mongot)",
+        "numCandidates": 500,
+        "setting": "mongodb numCandidates 500",
+        "median_ms": 10.56862500263378,
+        "p95_ms": 14.550749998306856,
+        "mean_ms": 10.8100417735311,
+        "chunk_recall_vs_exact_at_10": 0.9993880048959608,
+        "page_recall_at_10": 0.698391327155097
+      },
+      {
+        "engine": "mongodb",
+        "index": "vectorSearch exact (ENN)",
+        "setting": "mongodb exact",
+        "median_ms": 10.624916001688689,
+        "p95_ms": 15.233540994813666,
+        "mean_ms": 10.912007440481165,
+        "chunk_recall_vs_exact_at_10": 0.9998776009791921,
+        "page_recall_at_10": 0.698391327155097
+      }
+    ],
+    "hop": {
+      "engine": "mongodb",
+      "median_ms": 0.6264374969759956,
+      "p95_ms": 1.4205839979695156,
+      "mean_ms": 0.6849273327194775,
+      "identical_sets": 300,
+      "starts": 300
+    },
+    "dropped": true,
+    "corpus": {
+      "chunks": 5172,
+      "pages": 1229,
+      "edges": 8308
+    }
+  },
+  "corpus_note": "pgvector, sqlite-vec and libSQL were measured in one session; MongoDB about 20 minutes later, after the live corpus had gained a chunk and ten links"
+}

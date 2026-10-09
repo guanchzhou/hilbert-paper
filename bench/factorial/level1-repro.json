@@ -1,0 +1,110 @@
+[
+ {
+  "check": "dense R@10",
+  "cell": "dense|best|off|off|off|off|none",
+  "half": "all",
+  "value": 0.698391,
+  "reference": 0.698391,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "lexical-OR chunk R@10",
+  "cell": "lexical|best|off|off|off|off|none",
+  "half": "all",
+  "value": 0.534202,
+  "reference": 0.534,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "hybrid RRF R@10",
+  "cell": "hybrid|best|off|off|off|off|none",
+  "half": "all",
+  "value": 0.701166,
+  "reference": 0.701,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "note-mean R@10",
+  "cell": "dense|mean|off|off|off|off|none",
+  "half": "all",
+  "value": 0.683287,
+  "reference": 0.683,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "dense rerank R@10",
+  "cell": "dense|best|on|off|off|off|none",
+  "half": "all",
+  "value": 0.734715,
+  "reference": 0.735,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "centering H4a R@10",
+  "cell": "dense|best|off|off|on|off|none",
+  "half": "all",
+  "value": 0.703034,
+  "reference": 0.703034,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "Rocchio chosen R@10",
+  "cell": "dense|best|off|off|off|on|none",
+  "half": "all",
+  "value": 0.702002,
+  "reference": 0.702002,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "PPR chosen R@10 (confirm)",
+  "cell": "dense|best|off|on|off|off|none",
+  "half": "confirm",
+  "value": 0.71201,
+  "reference": 0.71201,
+  "n": 408,
+  "pass": true
+ },
+ {
+  "check": "hk1 L1x16 R@10",
+  "cell": "dense|best|off|off|off|off|hk1",
+  "half": "all",
+  "value": 0.304491,
+  "reference": 0.304491,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "partitions chosen R@10",
+  "cell": "dense|best|off|off|off|off|partitions",
+  "half": "all",
+  "value": 0.645465,
+  "reference": 0.645465,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "chunk pack survival",
+  "cell": "dense|best|off|off|off|off|none",
+  "half": "all",
+  "value": 0.755202,
+  "reference": 0.755202,
+  "n": 817,
+  "pass": true
+ },
+ {
+  "check": "pruned pack survival",
+  "cell": "dense|best|off|off|off|off|none",
+  "half": "all",
+  "value": 0.867809,
+  "reference": 0.867809,
+  "n": 817,
+  "pass": true
+ }
+]

@@ -1,0 +1,332 @@
+{
+ "preregistration": "preregistration.md#addendum-2",
+ "threshold": 0.5,
+ "human_labels": {
+  "sufficiency": 100,
+  "relevance": 30
+ },
+ "judge27b_vs_human": {
+  "sufficiency": {
+   "n": 100,
+   "agreement": 0.83,
+   "kappa": 0.497041
+  },
+  "relevance": {
+   "n": 30,
+   "agreement": 0.633333,
+   "kappa": 0.266667
+  }
+ },
+ "models": {
+  "clef-flash": {
+   "items_judged": 1959,
+   "sufficiency": {
+    "vs_judge27b": {
+     "n": 900,
+     "reference_yes": 0.754444,
+     "model_yes": 0.648889,
+     "agreement": 0.801111,
+     "agreement_ci95": [
+      0.775556,
+      0.826667
+     ],
+     "kappa": 0.531179,
+     "kappa_ci95": [
+      0.473191,
+      0.588352
+     ],
+     "auroc": 0.866542,
+     "auroc_ci95": [
+      0.836371,
+      0.89548
+     ]
+    },
+    "seconds_median": 16.694596,
+    "seconds_mean": 17.67074,
+    "input_tokens_median": 5239.5,
+    "mean_p_yes": 0.608879,
+    "vs_human": {
+     "n": 100,
+     "reference_yes": 0.8,
+     "model_yes": 0.72,
+     "agreement": 0.8,
+     "agreement_ci95": [
+      0.72,
+      0.87
+     ],
+     "kappa": 0.456522,
+     "kappa_ci95": [
+      0.244121,
+      0.649028
+     ],
+     "auroc": 0.8,
+     "auroc_ci95": [
+      0.654398,
+      0.925992
+     ]
+    }
+   },
+   "relevance": {
+    "vs_judge27b": {
+     "n": 1059,
+     "reference_yes": 0.423985,
+     "model_yes": 0.106704,
+     "agreement": 0.673277,
+     "agreement_ci95": [
+      0.644004,
+      0.701605
+     ],
+     "kappa": 0.257796,
+     "kappa_ci95": [
+      0.215272,
+      0.302369
+     ],
+     "auroc": 0.894777,
+     "auroc_ci95": [
+      0.875389,
+      0.913365
+     ]
+    },
+    "seconds_median": 7.478803,
+    "seconds_mean": 11.198291,
+    "input_tokens_median": 2001.0,
+    "mean_p_yes": 0.157981,
+    "vs_human": {
+     "n": 30,
+     "reference_yes": 0.6,
+     "model_yes": 0.166667,
+     "agreement": 0.433333,
+     "agreement_ci95": [
+      0.266667,
+      0.6
+     ],
+     "kappa": 0.0,
+     "kappa_ci95": [
+      -0.245283,
+      0.230769
+     ],
+     "auroc": 0.590278,
+     "auroc_ci95": [
+      0.370532,
+      0.8125
+     ]
+    }
+   },
+   "s1_s4_replication": {
+    "yes": {
+     "A": 0.666667,
+     "B": 0.706667,
+     "Bcut": 0.64,
+     "H": 0.64,
+     "R": 0.586667,
+     "L": 0.653333
+    },
+    "mean_p_yes": {
+     "A": 0.629587,
+     "B": 0.635235,
+     "Bcut": 0.607472,
+     "H": 0.59981,
+     "R": 0.566591,
+     "L": 0.614582
+    },
+    "A_vs_B": {
+     "mean_new": 0.666667,
+     "mean_comparator": 0.706667,
+     "diff": -0.04,
+     "ci95": [
+      -0.106667,
+      0.026667
+     ],
+     "p": 0.344928,
+     "test": "exact McNemar (binomial on discordant pairs), two-sided; ci95 is a bootstrap interval of the mean difference",
+     "new_only": 11,
+     "comparator_only": 17,
+     "n": 150
+    }
+   },
+   "s2_replication": {
+    "unlabelled_judged_relevant": 0.106704,
+    "ci95": [
+     0.076493,
+     0.141063
+    ],
+    "R@10_extended": {
+     "reference": 0.776591,
+     "best": 0.858873
+    },
+    "reranker_gain_extended": {
+     "mean_new": 0.858873,
+     "mean_comparator": 0.776591,
+     "diff": 0.082282,
+     "ci95": [
+      0.032291,
+      0.135213
+     ],
+     "p": 0.00601,
+     "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+     "alternative": "two-sided",
+     "n": 80,
+     "n_nonzero": 28,
+     "improved": 22,
+     "worsened": 6
+    }
+   }
+  },
+  "jev-9b": {
+   "items_judged": 1959,
+   "sufficiency": {
+    "vs_judge27b": {
+     "n": 900,
+     "reference_yes": 0.754444,
+     "model_yes": 0.312222,
+     "agreement": 0.493333,
+     "agreement_ci95": [
+      0.461111,
+      0.525556
+     ],
+     "kappa": 0.149257,
+     "kappa_ci95": [
+      0.111065,
+      0.188952
+     ],
+     "auroc": 0.672272,
+     "auroc_ci95": [
+      0.633969,
+      0.70912
+     ]
+    },
+    "seconds_median": 4.340721,
+    "seconds_mean": 4.353615,
+    "input_tokens_median": 1024.0,
+    "mean_p_yes": 0.4638,
+    "share_truncated": 1.0,
+    "vs_human": {
+     "n": 100,
+     "reference_yes": 0.8,
+     "model_yes": 0.42,
+     "agreement": 0.48,
+     "agreement_ci95": [
+      0.38,
+      0.58
+     ],
+     "kappa": 0.051095,
+     "kappa_ci95": [
+      -0.090846,
+      0.189308
+     ],
+     "auroc": 0.574375,
+     "auroc_ci95": [
+      0.441191,
+      0.708079
+     ]
+    }
+   },
+   "relevance": {
+    "vs_judge27b": {
+     "n": 1059,
+     "reference_yes": 0.423985,
+     "model_yes": 0.84136,
+     "agreement": 0.550519,
+     "agreement_ci95": [
+      0.521246,
+      0.580737
+     ],
+     "kappa": 0.185572,
+     "kappa_ci95": [
+      0.150835,
+      0.222571
+     ],
+     "auroc": 0.762197,
+     "auroc_ci95": [
+      0.732901,
+      0.790288
+     ]
+    },
+    "seconds_median": 4.309525,
+    "seconds_mean": 4.076186,
+    "input_tokens_median": 1024.0,
+    "mean_p_yes": 0.573331,
+    "share_truncated": 0.736544,
+    "vs_human": {
+     "n": 30,
+     "reference_yes": 0.6,
+     "model_yes": 0.866667,
+     "agreement": 0.666667,
+     "agreement_ci95": [
+      0.5,
+      0.833333
+     ],
+     "kappa": 0.21875,
+     "kappa_ci95": [
+      -0.066351,
+      0.528302
+     ],
+     "auroc": 0.625,
+     "auroc_ci95": [
+      0.402715,
+      0.819876
+     ]
+    }
+   },
+   "s1_s4_replication": {
+    "yes": {
+     "A": 0.246667,
+     "B": 0.553333,
+     "Bcut": 0.466667,
+     "H": 0.3,
+     "R": 0.106667,
+     "L": 0.2
+    },
+    "mean_p_yes": {
+     "A": 0.457618,
+     "B": 0.505188,
+     "Bcut": 0.500371,
+     "H": 0.454202,
+     "R": 0.423177,
+     "L": 0.442245
+    },
+    "A_vs_B": {
+     "mean_new": 0.246667,
+     "mean_comparator": 0.553333,
+     "diff": -0.306667,
+     "ci95": [
+      -0.4,
+      -0.213333
+     ],
+     "p": 0.0,
+     "test": "exact McNemar (binomial on discordant pairs), two-sided; ci95 is a bootstrap interval of the mean difference",
+     "new_only": 11,
+     "comparator_only": 57,
+     "n": 150
+    }
+   },
+   "s2_replication": {
+    "unlabelled_judged_relevant": 0.84136,
+    "ci95": [
+     0.801125,
+     0.87798
+    ],
+    "R@10_extended": {
+     "reference": 0.696197,
+     "best": 0.710344
+    },
+    "reranker_gain_extended": {
+     "mean_new": 0.710344,
+     "mean_comparator": 0.696197,
+     "diff": 0.014146,
+     "ci95": [
+      -0.007985,
+      0.036695
+     ],
+     "p": 0.276082,
+     "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+     "alternative": "two-sided",
+     "n": 80,
+     "n_nonzero": 40,
+     "improved": 25,
+     "worsened": 15
+    }
+   }
+  }
+ }
+}

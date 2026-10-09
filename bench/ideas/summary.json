@@ -1,0 +1,419 @@
+{
+ "family": [
+  "H1a",
+  "H1b",
+  "H2",
+  "H3",
+  "H4a",
+  "H4b",
+  "H4c",
+  "H4d",
+  "H5",
+  "H6",
+  "H7",
+  "H8",
+  "H9",
+  "H10",
+  "H11",
+  "H12"
+ ],
+ "m": 16,
+ "correction": "Holm step-down over all 16; not-run hypotheses enter with p = 1",
+ "hypotheses": [
+  {
+   "id": "H1a",
+   "idea": 1,
+   "p": 0.000437,
+   "p_holm_family": 0.006555,
+   "threshold": 0.03,
+   "hypothesis": "H1a rerank default instruction",
+   "diff": 0.036323,
+   "ci95": [
+    0.014466,
+    0.058939
+   ],
+   "n": 817,
+   "status": "accepted",
+   "accepted": true,
+   "reasons": []
+  },
+  {
+   "id": "H1b",
+   "idea": 1,
+   "p": 0.126464,
+   "p_holm_family": 1.0,
+   "threshold": 0.03,
+   "hypothesis": "H1b rerank corpus instruction",
+   "diff": 0.011905,
+   "ci95": [
+    -0.010915,
+    0.035059
+   ],
+   "n": 817,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect +0.0119 below threshold +0.03",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H2",
+   "idea": 2,
+   "p": 0.0,
+   "p_holm_family": 0.0,
+   "threshold": 0.03,
+   "hypothesis": "H2 pruned pack survival",
+   "diff": 0.098039,
+   "ci95": [
+    0.071078,
+    0.127451
+   ],
+   "n": 408,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "judge guard not passed"
+   ]
+  },
+  {
+   "id": "H3",
+   "idea": 3,
+   "p": 0.431291,
+   "p_holm_family": 1.0,
+   "threshold": 0.02,
+   "hypothesis": "H3 query instruction",
+   "diff": 0.002369,
+   "ci95": [
+    -0.013972,
+    0.018588
+   ],
+   "n": 408,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect +0.0024 below threshold +0.02",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H4a",
+   "idea": 4,
+   "p": 0.24544,
+   "p_holm_family": 1.0,
+   "threshold": 0.02,
+   "hypothesis": "H4a subtract shared mean",
+   "diff": 0.004642,
+   "ci95": [
+    -0.008361,
+    0.017261
+   ],
+   "n": 817,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect +0.0046 below threshold +0.02",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H4b",
+   "idea": 4,
+   "p": 0.984548,
+   "p_holm_family": 1.0,
+   "threshold": 0.02,
+   "hypothesis": "H4b subtract separate means",
+   "diff": -0.017145,
+   "ci95": [
+    -0.033619,
+    -0.001527
+   ],
+   "n": 817,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect -0.0171 below threshold +0.02",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H4c",
+   "idea": 4,
+   "p": 0.225043,
+   "p_holm_family": 1.0,
+   "threshold": 0.02,
+   "hypothesis": "H4c project off shared direction",
+   "diff": 0.004336,
+   "ci95": [
+    -0.006793,
+    0.015606
+   ],
+   "n": 817,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect +0.0043 below threshold +0.02",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H4d",
+   "idea": 4,
+   "p": 0.968787,
+   "p_holm_family": 1.0,
+   "threshold": 0.02,
+   "hypothesis": "H4d project off separate directions",
+   "diff": -0.014697,
+   "ci95": [
+    -0.030865,
+    0.001122
+   ],
+   "n": 817,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect -0.0147 below threshold +0.02",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H5",
+   "idea": 5,
+   "p": 0.37744,
+   "p_holm_family": 1.0,
+   "threshold": 0.02,
+   "hypothesis": "H5 Rocchio PRF",
+   "diff": 0.00192,
+   "ci95": [
+    -0.013115,
+    0.016708
+   ],
+   "n": 408,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect +0.0019 below threshold +0.02",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H6",
+   "idea": 6,
+   "p": 0.881472,
+   "p_holm_family": 1.0,
+   "threshold": -0.03,
+   "hypothesis": "H6 Hilbert partitions non-inferior to exhaustive",
+   "diff": -0.043219,
+   "ci95": [
+    -0.065686,
+    -0.023119
+   ],
+   "n": 408,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect -0.0432 below threshold -0.03",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H7",
+   "idea": 7,
+   "p": 0.966106,
+   "p_holm_family": 1.0,
+   "threshold": -0.03,
+   "hypothesis": "H7 Hilbert forest non-inferior to exhaustive",
+   "diff": -0.058905,
+   "ci95": [
+    -0.090197,
+    -0.028268
+   ],
+   "n": 408,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect -0.0589 below threshold -0.03",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H8",
+   "idea": 8,
+   "p": 1.0,
+   "p_holm_family": 1.0,
+   "threshold": 0.03,
+   "status": "not run",
+   "accepted": false
+  },
+  {
+   "id": "H9",
+   "idea": 9,
+   "p": 0.069417,
+   "p_holm_family": 0.902421,
+   "threshold": 0.02,
+   "hypothesis": "H9 PPR",
+   "diff": 0.010784,
+   "ci95": [
+    0.000572,
+    0.022426
+   ],
+   "n": 408,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect +0.0108 below threshold +0.02",
+    "family Holm p 0.902 >= 0.05"
+   ]
+  },
+  {
+   "id": "H10",
+   "idea": 10,
+   "p": 0.029541,
+   "p_holm_family": 0.413574,
+   "threshold": 0.03,
+   "hypothesis": "H10 HyDE",
+   "diff": 0.009395,
+   "ci95": [
+    0.000735,
+    0.020016
+   ],
+   "n": 408,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect +0.0094 below threshold +0.03",
+    "family Holm p 0.414 >= 0.05"
+   ]
+  },
+  {
+   "id": "H11",
+   "idea": 11,
+   "p": 1.0,
+   "p_holm_family": 1.0,
+   "threshold": -0.02,
+   "hypothesis": "H11 adaptive-k",
+   "diff": -0.192166,
+   "ci95": [
+    -0.220318,
+    -0.166463
+   ],
+   "n": 817,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect -0.1922 below threshold -0.02",
+    "family Holm p 1 >= 0.05"
+   ]
+  },
+  {
+   "id": "H12",
+   "idea": 12,
+   "p": 1.0,
+   "p_holm_family": 1.0,
+   "threshold": 0.03,
+   "hypothesis": "H12 MUVERA vs best chunk",
+   "diff": -0.258121,
+   "ci95": [
+    -0.304938,
+    -0.213374
+   ],
+   "n": 314,
+   "status": "not accepted",
+   "accepted": false,
+   "reasons": [
+    "effect -0.2581 below threshold +0.03",
+    "family Holm p 1 >= 0.05"
+   ]
+  }
+ ],
+ "ideas": {
+  "1": {
+   "file": "1-rerank",
+   "accepted": true,
+   "hypotheses": [
+    "H1a",
+    "H1b"
+   ]
+  },
+  "2": {
+   "file": "2-prune",
+   "accepted": false,
+   "hypotheses": [
+    "H2"
+   ]
+  },
+  "3": {
+   "file": "3-instruction",
+   "accepted": false,
+   "hypotheses": [
+    "H3"
+   ]
+  },
+  "4": {
+   "file": "4-centering",
+   "accepted": false,
+   "hypotheses": [
+    "H4a",
+    "H4b",
+    "H4c",
+    "H4d"
+   ]
+  },
+  "5": {
+   "file": "5-rocchio",
+   "accepted": false,
+   "hypotheses": [
+    "H5"
+   ]
+  },
+  "6": {
+   "file": "6-partitions",
+   "accepted": false,
+   "hypotheses": [
+    "H6"
+   ]
+  },
+  "7": {
+   "file": "7-forest",
+   "accepted": false,
+   "hypotheses": [
+    "H7"
+   ]
+  },
+  "8": {
+   "file": "8-synopsis",
+   "accepted": false,
+   "hypotheses": [
+    "H8"
+   ]
+  },
+  "9": {
+   "file": "9-ppr",
+   "accepted": false,
+   "hypotheses": [
+    "H9"
+   ]
+  },
+  "10": {
+   "file": "10-hyde",
+   "accepted": false,
+   "hypotheses": [
+    "H10"
+   ]
+  },
+  "11": {
+   "file": "11-adaptive-k",
+   "accepted": false,
+   "hypotheses": [
+    "H11"
+   ]
+  },
+  "12": {
+   "file": "12-muvera",
+   "accepted": false,
+   "hypotheses": [
+    "H12"
+   ]
+  }
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "preregistration": "preregistration.md#s1",
+ "n": 150,
+ "yes": {
+  "A": 0.713333,
+  "B": 0.793333,
+  "Bcut": 0.793333
+ },
+ "tokens": {
+  "Bcut": 3736.953333
+ },
+ "survival": {
+  "Bcut": 0.726667
+ },
+ "Bcut_vs_A": {
+  "mean_new": 0.793333,
+  "mean_comparator": 0.713333,
+  "diff": 0.08,
+  "ci95": [
+   0.013333,
+   0.146667
+  ],
+  "p": 0.028959,
+  "test": "exact McNemar (binomial on discordant pairs), two-sided; ci95 is a bootstrap interval of the mean difference",
+  "new_only": 19,
+  "comparator_only": 7,
+  "n": 150
+ },
+ "Bcut_vs_B": {
+  "mean_new": 0.793333,
+  "mean_comparator": 0.793333,
+  "diff": 0.0,
+  "ci95": [
+   -0.026667,
+   0.026667
+  ],
+  "p": 1.0,
+  "test": "exact McNemar (binomial on discordant pairs), two-sided; ci95 is a bootstrap interval of the mean difference",
+  "new_only": 2,
+  "comparator_only": 2,
+  "n": 150
+ },
+ "reading": "content explains the gap"
+}

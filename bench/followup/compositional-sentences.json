@@ -1,0 +1,2541 @@
+{
+ "preregistration": "preregistration.md#addendum",
+ "n": 60,
+ "sentences": 165279,
+ "sentences_embedded_here": 455,
+ "facet_k": 50,
+ "hk1_probe": {
+  "level": 1,
+  "ranges": 16
+ },
+ "probe_seconds_per_facet": 0.0012703833332731544,
+ "summary": {
+  "chunk-dense": {
+   "recall": 0.4787698412698412,
+   "precision": 0.24031931306931303,
+   "size_median": 8.5,
+   "gold_found": 110,
+   "evidence_tokens_per_correct": 106183.68181818182,
+   "note_tokens_per_correct": 106183.68181818182,
+   "seconds_per_correct": 0.0010981522450244732,
+   "seconds_per_question": 0.002013279115878201
+  },
+  "chunk-hk1": {
+   "recall": 0.18178266178266175,
+   "precision": 0.02244990087942714,
+   "size_median": 44.0,
+   "gold_found": 47,
+   "evidence_tokens_per_correct": 797840.2127659575,
+   "note_tokens_per_correct": 797840.2127659575,
+   "seconds_per_correct": 0.0035138448738701086,
+   "seconds_per_question": 0.002752511817864919
+  },
+  "sentence-dense": {
+   "recall": 0.9235897435897436,
+   "precision": 0.36305925795183386,
+   "size_median": 12.0,
+   "gold_found": 229,
+   "evidence_tokens_per_correct": 150.80786026200875,
+   "note_tokens_per_correct": 54332.33624454148,
+   "seconds_per_correct": 0.006028215048324284,
+   "seconds_per_question": 0.023007687434437686
+  },
+  "sentence-hk1": {
+   "recall": 0.9638888888888888,
+   "precision": 0.0052650135986481855,
+   "size_median": 869.0,
+   "gold_found": 251,
+   "evidence_tokens_per_correct": 91291.55776892431,
+   "note_tokens_per_correct": 565681.2390438247,
+   "seconds_per_correct": 0.0013519397289635973,
+   "seconds_per_question": 0.005655614532831047
+  }
+ },
+ "tests": {
+  "sentence-hk1 vs sentence-dense": {
+   "mean_new": 0.9638888888888888,
+   "mean_comparator": 0.9235897435897436,
+   "diff": 0.04029914529914531,
+   "ci95": [
+    -0.014444444444444446,
+    0.09448717948717948
+   ],
+   "p": 0.07827565522222357,
+   "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+   "alternative": "two-sided",
+   "n": 60,
+   "n_nonzero": 14,
+   "improved": 11,
+   "worsened": 3,
+   "p_holm": 0.07827565522222357
+  },
+  "sentence-hk1 vs chunk-hk1": {
+   "mean_new": 0.9638888888888888,
+   "mean_comparator": 0.18178266178266175,
+   "diff": 0.7821062271062271,
+   "ci95": [
+    0.7189714590964591,
+    0.8396072954822955
+   ],
+   "p": 1.4573373095148818e-11,
+   "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+   "alternative": "two-sided",
+   "n": 60,
+   "n_nonzero": 59,
+   "improved": 59,
+   "worsened": 0,
+   "p_holm": 2.9146746190297637e-11
+  }
+ },
+ "acceptance_rule": "hk1 accepted if token_ratio <= 0.75 and time_ratio <= 2.0 (per correct answer)",
+ "acceptance": {
+  "sentence-hk1 vs sentence-dense (primary)": {
+   "new": "sentence-hk1",
+   "comparator": "sentence-dense",
+   "token_measure": "evidence_tokens_per_correct",
+   "token_ratio": 605.3501296969354,
+   "time_ratio": 0.2242686629667281,
+   "accepted": false
+  },
+  "sentence-hk1 vs sentence-dense, whole notes": {
+   "new": "sentence-hk1",
+   "comparator": "sentence-dense",
+   "token_measure": "note_tokens_per_correct",
+   "token_ratio": 10.411502212932287,
+   "time_ratio": 0.2242686629667281,
+   "accepted": false
+  },
+  "chunk-hk1 vs chunk-dense": {
+   "new": "chunk-hk1",
+   "comparator": "chunk-dense",
+   "token_measure": "note_tokens_per_correct",
+   "token_ratio": 7.513774236347334,
+   "time_ratio": 3.1997793473452307,
+   "accepted": false
+  },
+  "S6b agent, hk1 tool vs dense tool (after the fact)": {
+   "token_ratio": 12.156427012579389,
+   "time_ratio": 11.508985607793834,
+   "agent": {
+    "search": {
+     "tokens_per_correct": 482999.0,
+     "seconds_per_correct": 3873.723504625028,
+     "gold_found": 1.0
+    },
+    "dense": {
+     "tokens_per_correct": 10874.933333333332,
+     "seconds_per_correct": 85.70293604726709,
+     "gold_found": 15.0
+    },
+    "hk1": {
+     "tokens_per_correct": 132200.33333333334,
+     "seconds_per_correct": 986.3538575136723,
+     "gold_found": 3.0
+    }
+   },
+   "accepted": false
+  }
+ },
+ "per_question": [
+  {
+   "id": 0,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.14285714285714285,
+    "size": 14,
+    "found": 2,
+    "evidence_tokens": 445145,
+    "note_tokens": 445145,
+    "seconds": 0.0021834159997524694
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 32,
+    "found": 0,
+    "evidence_tokens": 521934,
+    "note_tokens": 521934,
+    "seconds": 0.003225266669081369
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.21428571428571427,
+    "size": 14,
+    "found": 3,
+    "evidence_tokens": 711,
+    "note_tokens": 320133,
+    "seconds": 0.022061124996980652
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003367003367003367,
+    "size": 891,
+    "found": 3,
+    "evidence_tokens": 366454,
+    "note_tokens": 2471065,
+    "seconds": 0.004978432666878993
+   }
+  },
+  {
+   "id": 1,
+   "gold": 6,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.2,
+    "size": 10,
+    "found": 2,
+    "evidence_tokens": 128164,
+    "note_tokens": 128164,
+    "seconds": 0.0017295839934377
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 48,
+    "found": 0,
+    "evidence_tokens": 710320,
+    "note_tokens": 710320,
+    "seconds": 0.0027438086520608826
+   },
+   "sentence-dense": {
+    "recall": 0.8333333333333334,
+    "precision": 0.625,
+    "size": 8,
+    "found": 5,
+    "evidence_tokens": 347,
+    "note_tokens": 160979,
+    "seconds": 0.01873212499776855
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0070838252656434475,
+    "size": 847,
+    "found": 6,
+    "evidence_tokens": 560791,
+    "note_tokens": 2411101,
+    "seconds": 0.005642057670532571
+   }
+  },
+  {
+   "id": 2,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.09090909090909091,
+    "size": 11,
+    "found": 1,
+    "evidence_tokens": 305015,
+    "note_tokens": 305015,
+    "seconds": 0.0017012080061249435
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 22,
+    "found": 0,
+    "evidence_tokens": 472502,
+    "note_tokens": 472502,
+    "seconds": 0.0026902256771184816
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.2727272727272727,
+    "size": 11,
+    "found": 3,
+    "evidence_tokens": 624,
+    "note_tokens": 308277,
+    "seconds": 0.01853062500595115
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0034482758620689655,
+    "size": 870,
+    "found": 3,
+    "evidence_tokens": 451723,
+    "note_tokens": 2410133,
+    "seconds": 0.005010266669463212
+   }
+  },
+  {
+   "id": 3,
+   "gold": 6,
+   "chunk-dense": {
+    "recall": 0.5,
+    "precision": 0.25,
+    "size": 12,
+    "found": 3,
+    "evidence_tokens": 100731,
+    "note_tokens": 100731,
+    "seconds": 0.0017138749972218648
+   },
+   "chunk-hk1": {
+    "recall": 0.16666666666666666,
+    "precision": 0.012987012987012988,
+    "size": 77,
+    "found": 1,
+    "evidence_tokens": 645476,
+    "note_tokens": 645476,
+    "seconds": 0.0027378496573267816
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.2608695652173913,
+    "size": 23,
+    "found": 6,
+    "evidence_tokens": 834,
+    "note_tokens": 187572,
+    "seconds": 0.01914183300687
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.009389671361502348,
+    "size": 639,
+    "found": 6,
+    "evidence_tokens": 439859,
+    "note_tokens": 2142802,
+    "seconds": 0.0055947666672485265
+   }
+  },
+  {
+   "id": 4,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.3333333333333333,
+    "size": 6,
+    "found": 2,
+    "evidence_tokens": 197546,
+    "note_tokens": 197546,
+    "seconds": 0.0021499160066014156
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.015151515151515152,
+    "size": 66,
+    "found": 1,
+    "evidence_tokens": 586615,
+    "note_tokens": 586615,
+    "seconds": 0.002843766674535194
+   },
+   "sentence-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 1.0,
+    "size": 2,
+    "found": 2,
+    "evidence_tokens": 142,
+    "note_tokens": 112913,
+    "seconds": 0.0353564160031965
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0035714285714285713,
+    "size": 840,
+    "found": 3,
+    "evidence_tokens": 255038,
+    "note_tokens": 2406075,
+    "seconds": 0.005253933658726359
+   }
+  },
+  {
+   "id": 5,
+   "gold": 4,
+   "chunk-dense": {
+    "recall": 0.75,
+    "precision": 0.11538461538461539,
+    "size": 26,
+    "found": 3,
+    "evidence_tokens": 503742,
+    "note_tokens": 503742,
+    "seconds": 0.001651208003750071
+   },
+   "chunk-hk1": {
+    "recall": 0.5,
+    "precision": 0.027777777777777776,
+    "size": 72,
+    "found": 2,
+    "evidence_tokens": 827771,
+    "note_tokens": 827771,
+    "seconds": 0.0027149746723201438
+   },
+   "sentence-dense": {
+    "recall": 0.75,
+    "precision": 0.09090909090909091,
+    "size": 33,
+    "found": 3,
+    "evidence_tokens": 1031,
+    "note_tokens": 241481,
+    "seconds": 0.023465834005037323
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.004343105320304018,
+    "size": 921,
+    "found": 4,
+    "evidence_tokens": 511523,
+    "note_tokens": 2413195,
+    "seconds": 0.006370141677810656
+   }
+  },
+  {
+   "id": 6,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 8,
+    "found": 0,
+    "evidence_tokens": 304108,
+    "note_tokens": 304108,
+    "seconds": 0.0038236250111367553
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 46,
+    "found": 0,
+    "evidence_tokens": 589038,
+    "note_tokens": 589038,
+    "seconds": 0.002975974666090527
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.23076923076923078,
+    "size": 13,
+    "found": 3,
+    "evidence_tokens": 443,
+    "note_tokens": 200111,
+    "seconds": 0.04122412500146311
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003134796238244514,
+    "size": 957,
+    "found": 3,
+    "evidence_tokens": 330327,
+    "note_tokens": 2504318,
+    "seconds": 0.007683516666778209
+   }
+  },
+  {
+   "id": 7,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.2222222222222222,
+    "size": 9,
+    "found": 2,
+    "evidence_tokens": 114121,
+    "note_tokens": 114121,
+    "seconds": 0.0026927080034511164
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.02702702702702703,
+    "size": 37,
+    "found": 1,
+    "evidence_tokens": 677883,
+    "note_tokens": 677883,
+    "seconds": 0.002732766658785598
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.13043478260869565,
+    "size": 23,
+    "found": 3,
+    "evidence_tokens": 1042,
+    "note_tokens": 197640,
+    "seconds": 0.02278416699846275
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0026666666666666666,
+    "size": 1125,
+    "found": 3,
+    "evidence_tokens": 623112,
+    "note_tokens": 2629770,
+    "seconds": 0.005703766653217221
+   }
+  },
+  {
+   "id": 8,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.6666666666666666,
+    "size": 3,
+    "found": 2,
+    "evidence_tokens": 82388,
+    "note_tokens": 82388,
+    "seconds": 0.0017743329954100773
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.023255813953488372,
+    "size": 43,
+    "found": 1,
+    "evidence_tokens": 726614,
+    "note_tokens": 726614,
+    "seconds": 0.0028589336701164334
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.5,
+    "size": 6,
+    "found": 3,
+    "evidence_tokens": 194,
+    "note_tokens": 145824,
+    "seconds": 0.0289474579913076
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0033975084937712344,
+    "size": 883,
+    "found": 3,
+    "evidence_tokens": 456282,
+    "note_tokens": 2436970,
+    "seconds": 0.0065986416714925635
+   }
+  },
+  {
+   "id": 9,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.07692307692307693,
+    "size": 13,
+    "found": 1,
+    "evidence_tokens": 405057,
+    "note_tokens": 405057,
+    "seconds": 0.0016600829985691234
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.058823529411764705,
+    "size": 17,
+    "found": 1,
+    "evidence_tokens": 487843,
+    "note_tokens": 487843,
+    "seconds": 0.002650308667701514
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "size": 9,
+    "found": 3,
+    "evidence_tokens": 499,
+    "note_tokens": 187597,
+    "seconds": 0.018552458001067862
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.007575757575757576,
+    "size": 396,
+    "found": 3,
+    "evidence_tokens": 236466,
+    "note_tokens": 1832320,
+    "seconds": 0.00465426667991172
+   }
+  },
+  {
+   "id": 10,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 0,
+    "found": 0,
+    "evidence_tokens": 0,
+    "note_tokens": 0,
+    "seconds": 0.0015349160094046965
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.04,
+    "size": 25,
+    "found": 1,
+    "evidence_tokens": 502209,
+    "note_tokens": 502209,
+    "seconds": 0.0027270166586580067
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.375,
+    "size": 8,
+    "found": 3,
+    "evidence_tokens": 341,
+    "note_tokens": 241703,
+    "seconds": 0.018155249999836087
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003386004514672686,
+    "size": 886,
+    "found": 3,
+    "evidence_tokens": 406514,
+    "note_tokens": 2404841,
+    "seconds": 0.006005308675715545
+   }
+  },
+  {
+   "id": 11,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 6,
+    "found": 0,
+    "evidence_tokens": 162825,
+    "note_tokens": 162825,
+    "seconds": 0.001616375011508353
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 30,
+    "found": 0,
+    "evidence_tokens": 545916,
+    "note_tokens": 545916,
+    "seconds": 0.002694474676294097
+   },
+   "sentence-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.1111111111111111,
+    "size": 9,
+    "found": 1,
+    "evidence_tokens": 449,
+    "note_tokens": 246361,
+    "seconds": 0.01810124999610707
+   },
+   "sentence-hk1": {
+    "recall": 0.6666666666666666,
+    "precision": 0.0029069767441860465,
+    "size": 688,
+    "found": 2,
+    "evidence_tokens": 327910,
+    "note_tokens": 2223451,
+    "seconds": 0.004943641671464624
+   }
+  },
+  {
+   "id": 12,
+   "gold": 5,
+   "chunk-dense": {
+    "recall": 0.2,
+    "precision": 0.16666666666666666,
+    "size": 6,
+    "found": 1,
+    "evidence_tokens": 118660,
+    "note_tokens": 118660,
+    "seconds": 0.0017221669986611232
+   },
+   "chunk-hk1": {
+    "recall": 0.4,
+    "precision": 0.14285714285714285,
+    "size": 14,
+    "found": 2,
+    "evidence_tokens": 341012,
+    "note_tokens": 341012,
+    "seconds": 0.0027107666658897265
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.4166666666666667,
+    "size": 12,
+    "found": 5,
+    "evidence_tokens": 520,
+    "note_tokens": 246764,
+    "seconds": 0.01875629099959042
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.006157635467980296,
+    "size": 812,
+    "found": 5,
+    "evidence_tokens": 227678,
+    "note_tokens": 2415351,
+    "seconds": 0.004731225662302071
+   }
+  },
+  {
+   "id": 13,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 0,
+    "found": 0,
+    "evidence_tokens": 0,
+    "note_tokens": 0,
+    "seconds": 0.001592041997355409
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 52,
+    "found": 0,
+    "evidence_tokens": 514917,
+    "note_tokens": 514917,
+    "seconds": 0.0027197666616605907
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.6,
+    "size": 5,
+    "found": 3,
+    "evidence_tokens": 210,
+    "note_tokens": 125122,
+    "seconds": 0.018611167004564777
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.004243281471004243,
+    "size": 707,
+    "found": 3,
+    "evidence_tokens": 427872,
+    "note_tokens": 2274496,
+    "seconds": 0.005381516673272321
+   }
+  },
+  {
+   "id": 14,
+   "gold": 15,
+   "chunk-dense": {
+    "recall": 0.13333333333333333,
+    "precision": 0.4,
+    "size": 5,
+    "found": 2,
+    "evidence_tokens": 172557,
+    "note_tokens": 172557,
+    "seconds": 0.0016397080034948885
+   },
+   "chunk-hk1": {
+    "recall": 0.26666666666666666,
+    "precision": 0.06666666666666667,
+    "size": 60,
+    "found": 4,
+    "evidence_tokens": 833145,
+    "note_tokens": 833145,
+    "seconds": 0.0027279756735273017
+   },
+   "sentence-dense": {
+    "recall": 0.6,
+    "precision": 0.6428571428571429,
+    "size": 14,
+    "found": 9,
+    "evidence_tokens": 551,
+    "note_tokens": 119805,
+    "seconds": 0.01808579200587701
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.014285714285714285,
+    "size": 1050,
+    "found": 15,
+    "evidence_tokens": 476241,
+    "note_tokens": 2546151,
+    "seconds": 0.005480766657759281
+   }
+  },
+  {
+   "id": 15,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.2857142857142857,
+    "size": 7,
+    "found": 2,
+    "evidence_tokens": 157458,
+    "note_tokens": 157458,
+    "seconds": 0.0015969169908203185
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 38,
+    "found": 0,
+    "evidence_tokens": 625305,
+    "note_tokens": 625305,
+    "seconds": 0.0026836836744526713
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "size": 9,
+    "found": 3,
+    "evidence_tokens": 353,
+    "note_tokens": 233348,
+    "seconds": 0.018590916006360203
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003911342894393742,
+    "size": 767,
+    "found": 3,
+    "evidence_tokens": 341576,
+    "note_tokens": 2364694,
+    "seconds": 0.00493126666454676
+   }
+  },
+  {
+   "id": 16,
+   "gold": 4,
+   "chunk-dense": {
+    "recall": 0.5,
+    "precision": 0.16666666666666666,
+    "size": 12,
+    "found": 2,
+    "evidence_tokens": 401740,
+    "note_tokens": 401740,
+    "seconds": 0.0016712499927962199
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 45,
+    "found": 0,
+    "evidence_tokens": 582557,
+    "note_tokens": 582557,
+    "seconds": 0.0026679336709397226
+   },
+   "sentence-dense": {
+    "recall": 0.75,
+    "precision": 0.23076923076923078,
+    "size": 13,
+    "found": 3,
+    "evidence_tokens": 602,
+    "note_tokens": 363609,
+    "seconds": 0.01869887500652112
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003568242640499554,
+    "size": 1121,
+    "found": 4,
+    "evidence_tokens": 611441,
+    "note_tokens": 2607015,
+    "seconds": 0.005103933666153656
+   }
+  },
+  {
+   "id": 17,
+   "gold": 6,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.6666666666666666,
+    "size": 3,
+    "found": 2,
+    "evidence_tokens": 124138,
+    "note_tokens": 124138,
+    "seconds": 0.0017175829998450354
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 15,
+    "found": 0,
+    "evidence_tokens": 458249,
+    "note_tokens": 458249,
+    "seconds": 0.002682141666203582
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.5,
+    "size": 12,
+    "found": 6,
+    "evidence_tokens": 479,
+    "note_tokens": 96347,
+    "seconds": 0.018895834000431933
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.012903225806451613,
+    "size": 465,
+    "found": 6,
+    "evidence_tokens": 254901,
+    "note_tokens": 1793591,
+    "seconds": 0.004875641662996108
+   }
+  },
+  {
+   "id": 18,
+   "gold": 4,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 2,
+    "found": 0,
+    "evidence_tokens": 177140,
+    "note_tokens": 177140,
+    "seconds": 0.0017293749988311902
+   },
+   "chunk-hk1": {
+    "recall": 0.25,
+    "precision": 0.047619047619047616,
+    "size": 21,
+    "found": 1,
+    "evidence_tokens": 378705,
+    "note_tokens": 378705,
+    "seconds": 0.002724808667456576
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.4444444444444444,
+    "size": 9,
+    "found": 4,
+    "evidence_tokens": 457,
+    "note_tokens": 267995,
+    "seconds": 0.018500666003092192
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.004728132387706856,
+    "size": 846,
+    "found": 4,
+    "evidence_tokens": 311542,
+    "note_tokens": 2433171,
+    "seconds": 0.0053621826640058625
+   }
+  },
+  {
+   "id": 19,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 1.0,
+    "size": 2,
+    "found": 2,
+    "evidence_tokens": 112913,
+    "note_tokens": 112913,
+    "seconds": 0.0018640000052982941
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 32,
+    "found": 0,
+    "evidence_tokens": 328142,
+    "note_tokens": 328142,
+    "seconds": 0.002733307669889958
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 1.0,
+    "size": 3,
+    "found": 3,
+    "evidence_tokens": 175,
+    "note_tokens": 124138,
+    "seconds": 0.021374167001340538
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.004573170731707317,
+    "size": 656,
+    "found": 3,
+    "evidence_tokens": 260106,
+    "note_tokens": 2123115,
+    "seconds": 0.005650141666895555
+   }
+  },
+  {
+   "id": 20,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.2,
+    "size": 10,
+    "found": 2,
+    "evidence_tokens": 217414,
+    "note_tokens": 217414,
+    "seconds": 0.0018577500013634562
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.009345794392523364,
+    "size": 107,
+    "found": 1,
+    "evidence_tokens": 1006454,
+    "note_tokens": 1006454,
+    "seconds": 0.0028117256709568514
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.2,
+    "size": 15,
+    "found": 3,
+    "evidence_tokens": 478,
+    "note_tokens": 277539,
+    "seconds": 0.019453750006505288
+   },
+   "sentence-hk1": {
+    "recall": 0.6666666666666666,
+    "precision": 0.002081165452653486,
+    "size": 961,
+    "found": 2,
+    "evidence_tokens": 370601,
+    "note_tokens": 2535797,
+    "seconds": 0.006069266671450654
+   }
+  },
+  {
+   "id": 21,
+   "gold": 4,
+   "chunk-dense": {
+    "recall": 1.0,
+    "precision": 0.13333333333333333,
+    "size": 30,
+    "found": 4,
+    "evidence_tokens": 138344,
+    "note_tokens": 138344,
+    "seconds": 0.0016392090037697926
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 106,
+    "found": 0,
+    "evidence_tokens": 987826,
+    "note_tokens": 987826,
+    "seconds": 0.002781516666194269
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.17391304347826086,
+    "size": 23,
+    "found": 4,
+    "evidence_tokens": 626,
+    "note_tokens": 146230,
+    "seconds": 0.018725583009654656
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003805899143672693,
+    "size": 1051,
+    "found": 4,
+    "evidence_tokens": 527041,
+    "note_tokens": 2587712,
+    "seconds": 0.006115224661092119
+   }
+  },
+  {
+   "id": 22,
+   "gold": 5,
+   "chunk-dense": {
+    "recall": 0.8,
+    "precision": 0.16,
+    "size": 25,
+    "found": 4,
+    "evidence_tokens": 114617,
+    "note_tokens": 114617,
+    "seconds": 0.0016338749992428347
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 9,
+    "found": 0,
+    "evidence_tokens": 191795,
+    "note_tokens": 191795,
+    "seconds": 0.002693558662334302
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.20833333333333334,
+    "size": 24,
+    "found": 5,
+    "evidence_tokens": 817,
+    "note_tokens": 123434,
+    "seconds": 0.018406041999696754
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.009107468123861567,
+    "size": 549,
+    "found": 5,
+    "evidence_tokens": 359598,
+    "note_tokens": 2105293,
+    "seconds": 0.005286933662622081
+   }
+  },
+  {
+   "id": 23,
+   "gold": 6,
+   "chunk-dense": {
+    "recall": 0.5,
+    "precision": 0.23076923076923078,
+    "size": 13,
+    "found": 3,
+    "evidence_tokens": 386330,
+    "note_tokens": 386330,
+    "seconds": 0.0015735409979242831
+   },
+   "chunk-hk1": {
+    "recall": 0.16666666666666666,
+    "precision": 0.02857142857142857,
+    "size": 35,
+    "found": 1,
+    "evidence_tokens": 652214,
+    "note_tokens": 652214,
+    "seconds": 0.0026983496621445133
+   },
+   "sentence-dense": {
+    "recall": 0.8333333333333334,
+    "precision": 0.3125,
+    "size": 16,
+    "found": 5,
+    "evidence_tokens": 953,
+    "note_tokens": 144985,
+    "seconds": 0.018126708004274406
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.007702182284980745,
+    "size": 779,
+    "found": 6,
+    "evidence_tokens": 291581,
+    "note_tokens": 2301067,
+    "seconds": 0.004756849664166415
+   }
+  },
+  {
+   "id": 24,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.1111111111111111,
+    "size": 9,
+    "found": 1,
+    "evidence_tokens": 222237,
+    "note_tokens": 222237,
+    "seconds": 0.0017291659896727651
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 57,
+    "found": 0,
+    "evidence_tokens": 753874,
+    "note_tokens": 753874,
+    "seconds": 0.002761682667672479
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.25,
+    "size": 12,
+    "found": 3,
+    "evidence_tokens": 603,
+    "note_tokens": 333187,
+    "seconds": 0.018167916001402773
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.004373177842565598,
+    "size": 686,
+    "found": 3,
+    "evidence_tokens": 173046,
+    "note_tokens": 2282944,
+    "seconds": 0.006735891668843882
+   }
+  },
+  {
+   "id": 25,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.25,
+    "size": 8,
+    "found": 2,
+    "evidence_tokens": 279306,
+    "note_tokens": 279306,
+    "seconds": 0.003917374997399747
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 48,
+    "found": 0,
+    "evidence_tokens": 693706,
+    "note_tokens": 693706,
+    "seconds": 0.002781183660166183
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.21428571428571427,
+    "size": 14,
+    "found": 3,
+    "evidence_tokens": 637,
+    "note_tokens": 389659,
+    "seconds": 0.04195837500446942
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0035087719298245615,
+    "size": 855,
+    "found": 3,
+    "evidence_tokens": 380968,
+    "note_tokens": 2459519,
+    "seconds": 0.005915641665827328
+   }
+  },
+  {
+   "id": 26,
+   "gold": 5,
+   "chunk-dense": {
+    "recall": 0.6,
+    "precision": 0.75,
+    "size": 4,
+    "found": 3,
+    "evidence_tokens": 130814,
+    "note_tokens": 130814,
+    "seconds": 0.0041584999999031425
+   },
+   "chunk-hk1": {
+    "recall": 0.4,
+    "precision": 0.125,
+    "size": 16,
+    "found": 2,
+    "evidence_tokens": 269278,
+    "note_tokens": 269278,
+    "seconds": 0.0028258496580140977
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.4166666666666667,
+    "size": 12,
+    "found": 5,
+    "evidence_tokens": 741,
+    "note_tokens": 145420,
+    "seconds": 0.04235541701200418
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.008771929824561403,
+    "size": 570,
+    "found": 5,
+    "evidence_tokens": 322881,
+    "note_tokens": 2128761,
+    "seconds": 0.006291766663101347
+   }
+  },
+  {
+   "id": 27,
+   "gold": 6,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.5,
+    "size": 4,
+    "found": 2,
+    "evidence_tokens": 89083,
+    "note_tokens": 89083,
+    "seconds": 0.003901666001183912
+   },
+   "chunk-hk1": {
+    "recall": 0.16666666666666666,
+    "precision": 0.023255813953488372,
+    "size": 43,
+    "found": 1,
+    "evidence_tokens": 541378,
+    "note_tokens": 541378,
+    "seconds": 0.0029928076667905166
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.5454545454545454,
+    "size": 11,
+    "found": 6,
+    "evidence_tokens": 531,
+    "note_tokens": 120735,
+    "seconds": 0.041492625008686446
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.005819592628516004,
+    "size": 1031,
+    "found": 6,
+    "evidence_tokens": 479425,
+    "note_tokens": 2478300,
+    "seconds": 0.008258849656461583
+   }
+  },
+  {
+   "id": 28,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.06666666666666667,
+    "size": 15,
+    "found": 1,
+    "evidence_tokens": 316563,
+    "note_tokens": 316563,
+    "seconds": 0.003828917004284449
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 45,
+    "found": 0,
+    "evidence_tokens": 713186,
+    "note_tokens": 713186,
+    "seconds": 0.002903100668239252
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.16666666666666666,
+    "size": 18,
+    "found": 3,
+    "evidence_tokens": 868,
+    "note_tokens": 464154,
+    "seconds": 0.03793341699929442
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.004310344827586207,
+    "size": 696,
+    "found": 3,
+    "evidence_tokens": 228489,
+    "note_tokens": 2321073,
+    "seconds": 0.005074683661708454
+   }
+  },
+  {
+   "id": 29,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 2,
+    "found": 0,
+    "evidence_tokens": 134963,
+    "note_tokens": 134963,
+    "seconds": 0.0020896249916404486
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.03225806451612903,
+    "size": 31,
+    "found": 1,
+    "evidence_tokens": 557618,
+    "note_tokens": 557618,
+    "seconds": 0.0027158496644309102
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.42857142857142855,
+    "size": 7,
+    "found": 3,
+    "evidence_tokens": 403,
+    "note_tokens": 349951,
+    "seconds": 0.023330166994128376
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0030425963488843813,
+    "size": 986,
+    "found": 3,
+    "evidence_tokens": 425988,
+    "note_tokens": 2543997,
+    "seconds": 0.005142307663239384
+   }
+  },
+  {
+   "id": 30,
+   "gold": 13,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 14,
+    "found": 0,
+    "evidence_tokens": 89724,
+    "note_tokens": 89724,
+    "seconds": 0.002374957999563776
+   },
+   "chunk-hk1": {
+    "recall": 0.23076923076923078,
+    "precision": 0.13043478260869565,
+    "size": 23,
+    "found": 3,
+    "evidence_tokens": 540235,
+    "note_tokens": 540235,
+    "seconds": 0.0027555166719442545
+   },
+   "sentence-dense": {
+    "recall": 0.6153846153846154,
+    "precision": 0.7272727272727273,
+    "size": 11,
+    "found": 8,
+    "evidence_tokens": 411,
+    "note_tokens": 207176,
+    "seconds": 0.02151183399837464
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.012732615083251714,
+    "size": 1021,
+    "found": 13,
+    "evidence_tokens": 466701,
+    "note_tokens": 2547199,
+    "seconds": 0.0050493086722174976
+   }
+  },
+  {
+   "id": 31,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.5,
+    "size": 2,
+    "found": 1,
+    "evidence_tokens": 66449,
+    "note_tokens": 66449,
+    "seconds": 0.0016308749909512699
+   },
+   "chunk-hk1": {
+    "recall": 0.6666666666666666,
+    "precision": 0.125,
+    "size": 16,
+    "found": 2,
+    "evidence_tokens": 487787,
+    "note_tokens": 487787,
+    "seconds": 0.002667266669353315
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 1.0,
+    "size": 3,
+    "found": 3,
+    "evidence_tokens": 136,
+    "note_tokens": 124138,
+    "seconds": 0.01870970799063798
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.007444168734491315,
+    "size": 403,
+    "found": 3,
+    "evidence_tokens": 282535,
+    "note_tokens": 1835660,
+    "seconds": 0.00469609966724723
+   }
+  },
+  {
+   "id": 32,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 5,
+    "found": 0,
+    "evidence_tokens": 223085,
+    "note_tokens": 223085,
+    "seconds": 0.0017955410003196448
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.015625,
+    "size": 64,
+    "found": 1,
+    "evidence_tokens": 620811,
+    "note_tokens": 620811,
+    "seconds": 0.0026731006631356045
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "size": 9,
+    "found": 3,
+    "evidence_tokens": 499,
+    "note_tokens": 243147,
+    "seconds": 0.018439707986544818
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003575685339690107,
+    "size": 839,
+    "found": 3,
+    "evidence_tokens": 452075,
+    "note_tokens": 2404301,
+    "seconds": 0.004538016667841779
+   }
+  },
+  {
+   "id": 33,
+   "gold": 5,
+   "chunk-dense": {
+    "recall": 0.8,
+    "precision": 0.12121212121212122,
+    "size": 33,
+    "found": 4,
+    "evidence_tokens": 225153,
+    "note_tokens": 225153,
+    "seconds": 0.001567250001244247
+   },
+   "chunk-hk1": {
+    "recall": 0.8,
+    "precision": 0.04819277108433735,
+    "size": 83,
+    "found": 4,
+    "evidence_tokens": 525139,
+    "note_tokens": 525139,
+    "seconds": 0.002801141670109549
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.16129032258064516,
+    "size": 31,
+    "found": 5,
+    "evidence_tokens": 1411,
+    "note_tokens": 265931,
+    "seconds": 0.01903558299818542
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0056625141562853904,
+    "size": 883,
+    "found": 5,
+    "evidence_tokens": 286754,
+    "note_tokens": 2317641,
+    "seconds": 0.0054460166696420256
+   }
+  },
+  {
+   "id": 34,
+   "gold": 4,
+   "chunk-dense": {
+    "recall": 0.75,
+    "precision": 0.42857142857142855,
+    "size": 7,
+    "found": 3,
+    "evidence_tokens": 223453,
+    "note_tokens": 223453,
+    "seconds": 0.0015585840010317042
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 59,
+    "found": 0,
+    "evidence_tokens": 789051,
+    "note_tokens": 789051,
+    "seconds": 0.0027678496674828543
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.6666666666666666,
+    "size": 6,
+    "found": 4,
+    "evidence_tokens": 301,
+    "note_tokens": 218592,
+    "seconds": 0.020781083003384992
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.005494505494505495,
+    "size": 728,
+    "found": 4,
+    "evidence_tokens": 522075,
+    "note_tokens": 2290478,
+    "seconds": 0.005929682663312027
+   }
+  },
+  {
+   "id": 35,
+   "gold": 4,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 6,
+    "found": 0,
+    "evidence_tokens": 150586,
+    "note_tokens": 150586,
+    "seconds": 0.0017230419907718897
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 22,
+    "found": 0,
+    "evidence_tokens": 415930,
+    "note_tokens": 415930,
+    "seconds": 0.0026647256721237986
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.25,
+    "size": 16,
+    "found": 4,
+    "evidence_tokens": 669,
+    "note_tokens": 221741,
+    "seconds": 0.018206124994321726
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.004956629491945477,
+    "size": 807,
+    "found": 4,
+    "evidence_tokens": 192445,
+    "note_tokens": 2359390,
+    "seconds": 0.004345349674016083
+   }
+  },
+  {
+   "id": 36,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 1.0,
+    "size": 2,
+    "found": 2,
+    "evidence_tokens": 112913,
+    "note_tokens": 112913,
+    "seconds": 0.0017085409926949069
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.012987012987012988,
+    "size": 77,
+    "found": 1,
+    "evidence_tokens": 981093,
+    "note_tokens": 981093,
+    "seconds": 0.00275997466572638
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.6,
+    "size": 5,
+    "found": 3,
+    "evidence_tokens": 223,
+    "note_tokens": 126184,
+    "seconds": 0.017970291009987704
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.002944062806673209,
+    "size": 1019,
+    "found": 3,
+    "evidence_tokens": 563622,
+    "note_tokens": 2562275,
+    "seconds": 0.005844224663936378
+   }
+  },
+  {
+   "id": 37,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.1111111111111111,
+    "size": 9,
+    "found": 1,
+    "evidence_tokens": 188402,
+    "note_tokens": 188402,
+    "seconds": 0.0015906250046100467
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 72,
+    "found": 0,
+    "evidence_tokens": 801131,
+    "note_tokens": 801131,
+    "seconds": 0.0027399756630378156
+   },
+   "sentence-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.09090909090909091,
+    "size": 11,
+    "found": 1,
+    "evidence_tokens": 406,
+    "note_tokens": 186356,
+    "seconds": 0.017870083000161685
+   },
+   "sentence-hk1": {
+    "recall": 0.6666666666666666,
+    "precision": 0.003780718336483932,
+    "size": 529,
+    "found": 2,
+    "evidence_tokens": 90458,
+    "note_tokens": 2084456,
+    "seconds": 0.0050775166576689425
+   }
+  },
+  {
+   "id": 38,
+   "gold": 10,
+   "chunk-dense": {
+    "recall": 0.1,
+    "precision": 0.14285714285714285,
+    "size": 7,
+    "found": 1,
+    "evidence_tokens": 414536,
+    "note_tokens": 414536,
+    "seconds": 0.0016490419948240742
+   },
+   "chunk-hk1": {
+    "recall": 0.1,
+    "precision": 0.021739130434782608,
+    "size": 46,
+    "found": 1,
+    "evidence_tokens": 583744,
+    "note_tokens": 583744,
+    "seconds": 0.002711974664028579
+   },
+   "sentence-dense": {
+    "recall": 0.2,
+    "precision": 0.2857142857142857,
+    "size": 7,
+    "found": 2,
+    "evidence_tokens": 246,
+    "note_tokens": 332172,
+    "seconds": 0.01932074999785982
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.008896797153024912,
+    "size": 1124,
+    "found": 10,
+    "evidence_tokens": 506152,
+    "note_tokens": 2603076,
+    "seconds": 0.0065171416620917934
+   }
+  },
+  {
+   "id": 39,
+   "gold": 6,
+   "chunk-dense": {
+    "recall": 1.0,
+    "precision": 0.3,
+    "size": 20,
+    "found": 6,
+    "evidence_tokens": 214613,
+    "note_tokens": 214613,
+    "seconds": 0.0015420410054503009
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.15384615384615385,
+    "size": 13,
+    "found": 2,
+    "evidence_tokens": 245667,
+    "note_tokens": 245667,
+    "seconds": 0.0026229326734513356
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.3157894736842105,
+    "size": 19,
+    "found": 6,
+    "evidence_tokens": 1319,
+    "note_tokens": 175808,
+    "seconds": 0.01869962501223199
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.015151515151515152,
+    "size": 396,
+    "found": 6,
+    "evidence_tokens": 95266,
+    "note_tokens": 1924401,
+    "seconds": 0.00425422466408539
+   }
+  },
+  {
+   "id": 40,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 1.0,
+    "precision": 0.42857142857142855,
+    "size": 7,
+    "found": 3,
+    "evidence_tokens": 150779,
+    "note_tokens": 150779,
+    "seconds": 0.0016043340001488104
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 21,
+    "found": 0,
+    "evidence_tokens": 288984,
+    "note_tokens": 288984,
+    "seconds": 0.0026957246712602987
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.5,
+    "size": 6,
+    "found": 3,
+    "evidence_tokens": 252,
+    "note_tokens": 132200,
+    "seconds": 0.018124957990949042
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003787878787878788,
+    "size": 792,
+    "found": 3,
+    "evidence_tokens": 316903,
+    "note_tokens": 2380607,
+    "seconds": 0.004792266668421993
+   }
+  },
+  {
+   "id": 41,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 1.0,
+    "precision": 0.5,
+    "size": 6,
+    "found": 3,
+    "evidence_tokens": 218592,
+    "note_tokens": 218592,
+    "seconds": 0.001714290992822498
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 27,
+    "found": 0,
+    "evidence_tokens": 540470,
+    "note_tokens": 540470,
+    "seconds": 0.002735433675600992
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.5,
+    "size": 6,
+    "found": 3,
+    "evidence_tokens": 259,
+    "note_tokens": 158052,
+    "seconds": 0.01950604199373629
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.00505902192242833,
+    "size": 593,
+    "found": 3,
+    "evidence_tokens": 150432,
+    "note_tokens": 2139418,
+    "seconds": 0.005061308661728011
+   }
+  },
+  {
+   "id": 42,
+   "gold": 5,
+   "chunk-dense": {
+    "recall": 1.0,
+    "precision": 0.125,
+    "size": 40,
+    "found": 5,
+    "evidence_tokens": 91540,
+    "note_tokens": 91540,
+    "seconds": 0.0018594579887576401
+   },
+   "chunk-hk1": {
+    "recall": 0.4,
+    "precision": 0.017241379310344827,
+    "size": 116,
+    "found": 2,
+    "evidence_tokens": 795613,
+    "note_tokens": 795613,
+    "seconds": 0.002817516663829641
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.12195121951219512,
+    "size": 41,
+    "found": 5,
+    "evidence_tokens": 924,
+    "note_tokens": 140890,
+    "seconds": 0.01960374999907799
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.005434782608695652,
+    "size": 920,
+    "found": 5,
+    "evidence_tokens": 330479,
+    "note_tokens": 2506597,
+    "seconds": 0.005635808670679884
+   }
+  },
+  {
+   "id": 43,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 1.0,
+    "precision": 0.09090909090909091,
+    "size": 33,
+    "found": 3,
+    "evidence_tokens": 145124,
+    "note_tokens": 145124,
+    "seconds": 0.0019165419944329187
+   },
+   "chunk-hk1": {
+    "recall": 0.6666666666666666,
+    "precision": 0.017699115044247787,
+    "size": 113,
+    "found": 2,
+    "evidence_tokens": 1009899,
+    "note_tokens": 1009899,
+    "seconds": 0.0027435166678818255
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.075,
+    "size": 40,
+    "found": 3,
+    "evidence_tokens": 1217,
+    "note_tokens": 229544,
+    "seconds": 0.017900042003020644
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0026857654431512983,
+    "size": 1117,
+    "found": 3,
+    "evidence_tokens": 618649,
+    "note_tokens": 2630962,
+    "seconds": 0.005546475656349989
+   }
+  },
+  {
+   "id": 44,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.2222222222222222,
+    "size": 9,
+    "found": 2,
+    "evidence_tokens": 356534,
+    "note_tokens": 356534,
+    "seconds": 0.0017832090088631958
+   },
+   "chunk-hk1": {
+    "recall": 0.6666666666666666,
+    "precision": 0.03571428571428571,
+    "size": 56,
+    "found": 2,
+    "evidence_tokens": 710375,
+    "note_tokens": 710375,
+    "seconds": 0.002762308661961773
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.23076923076923078,
+    "size": 13,
+    "found": 3,
+    "evidence_tokens": 643,
+    "note_tokens": 169075,
+    "seconds": 0.028566041990416124
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.00267379679144385,
+    "size": 1122,
+    "found": 3,
+    "evidence_tokens": 553911,
+    "note_tokens": 2607584,
+    "seconds": 0.008981725664246673
+   }
+  },
+  {
+   "id": 45,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.4,
+    "size": 5,
+    "found": 2,
+    "evidence_tokens": 120429,
+    "note_tokens": 120429,
+    "seconds": 0.0019923340005334467
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 32,
+    "found": 0,
+    "evidence_tokens": 542772,
+    "note_tokens": 542772,
+    "seconds": 0.002709474674096176
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "size": 9,
+    "found": 3,
+    "evidence_tokens": 363,
+    "note_tokens": 166382,
+    "seconds": 0.020298832998378202
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.006521739130434782,
+    "size": 460,
+    "found": 3,
+    "evidence_tokens": 174191,
+    "note_tokens": 1788662,
+    "seconds": 0.00493239165856115
+   }
+  },
+  {
+   "id": 46,
+   "gold": 12,
+   "chunk-dense": {
+    "recall": 0.16666666666666666,
+    "precision": 0.16666666666666666,
+    "size": 12,
+    "found": 2,
+    "evidence_tokens": 195145,
+    "note_tokens": 195145,
+    "seconds": 0.0015672079898649827
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 43,
+    "found": 0,
+    "evidence_tokens": 558008,
+    "note_tokens": 558008,
+    "seconds": 0.002701724658739598
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.6,
+    "size": 20,
+    "found": 12,
+    "evidence_tokens": 750,
+    "note_tokens": 271880,
+    "seconds": 0.019555958002456464
+   },
+   "sentence-hk1": {
+    "recall": 0.8333333333333334,
+    "precision": 0.012004801920768308,
+    "size": 833,
+    "found": 10,
+    "evidence_tokens": 319484,
+    "note_tokens": 2430123,
+    "seconds": 0.0050749746709091905
+   }
+  },
+  {
+   "id": 47,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.6666666666666666,
+    "size": 3,
+    "found": 2,
+    "evidence_tokens": 124138,
+    "note_tokens": 124138,
+    "seconds": 0.0015867920010350645
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.013513513513513514,
+    "size": 74,
+    "found": 1,
+    "evidence_tokens": 749988,
+    "note_tokens": 749988,
+    "seconds": 0.0027190996746260985
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.5,
+    "size": 6,
+    "found": 3,
+    "evidence_tokens": 612,
+    "note_tokens": 96991,
+    "seconds": 0.018709542011492886
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.002955665024630542,
+    "size": 1015,
+    "found": 3,
+    "evidence_tokens": 509487,
+    "note_tokens": 2568664,
+    "seconds": 0.005334766666540721
+   }
+  },
+  {
+   "id": 48,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 15,
+    "found": 0,
+    "evidence_tokens": 90824,
+    "note_tokens": 90824,
+    "seconds": 0.001672375001362525
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 26,
+    "found": 0,
+    "evidence_tokens": 471944,
+    "note_tokens": 471944,
+    "seconds": 0.002632600674890758
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.15789473684210525,
+    "size": 19,
+    "found": 3,
+    "evidence_tokens": 663,
+    "note_tokens": 82064,
+    "seconds": 0.019263916998170316
+   },
+   "sentence-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 400,
+    "found": 0,
+    "evidence_tokens": 99013,
+    "note_tokens": 1817373,
+    "seconds": 0.0038517666665332704
+   }
+  },
+  {
+   "id": 49,
+   "gold": 4,
+   "chunk-dense": {
+    "recall": 0.25,
+    "precision": 0.2,
+    "size": 5,
+    "found": 1,
+    "evidence_tokens": 149026,
+    "note_tokens": 149026,
+    "seconds": 0.001791040995158255
+   },
+   "chunk-hk1": {
+    "recall": 0.25,
+    "precision": 0.023255813953488372,
+    "size": 43,
+    "found": 1,
+    "evidence_tokens": 724303,
+    "note_tokens": 724303,
+    "seconds": 0.0027414336630802913
+   },
+   "sentence-dense": {
+    "recall": 0.5,
+    "precision": 0.4,
+    "size": 5,
+    "found": 2,
+    "evidence_tokens": 232,
+    "note_tokens": 308083,
+    "seconds": 0.017776916996808723
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.004347826086956522,
+    "size": 920,
+    "found": 4,
+    "evidence_tokens": 444940,
+    "note_tokens": 2482962,
+    "seconds": 0.005703183674389342
+   }
+  },
+  {
+   "id": 50,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.09090909090909091,
+    "size": 22,
+    "found": 2,
+    "evidence_tokens": 133619,
+    "note_tokens": 133619,
+    "seconds": 0.0020705829956568778
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 92,
+    "found": 0,
+    "evidence_tokens": 924817,
+    "note_tokens": 924817,
+    "seconds": 0.0027725576777205183
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.15,
+    "size": 20,
+    "found": 3,
+    "evidence_tokens": 715,
+    "note_tokens": 131431,
+    "seconds": 0.020659875008277595
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.002657218777679362,
+    "size": 1129,
+    "found": 3,
+    "evidence_tokens": 633960,
+    "note_tokens": 2631638,
+    "seconds": 0.005638766653040269
+   }
+  },
+  {
+   "id": 51,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 1.0,
+    "precision": 0.3,
+    "size": 10,
+    "found": 3,
+    "evidence_tokens": 368692,
+    "note_tokens": 368692,
+    "seconds": 0.0016862089978531003
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.013333333333333334,
+    "size": 75,
+    "found": 1,
+    "evidence_tokens": 568711,
+    "note_tokens": 568711,
+    "seconds": 0.0027996826659849225
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.375,
+    "size": 8,
+    "found": 3,
+    "evidence_tokens": 424,
+    "note_tokens": 371907,
+    "seconds": 0.018625582990352996
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003121748178980229,
+    "size": 961,
+    "found": 3,
+    "evidence_tokens": 376721,
+    "note_tokens": 2533704,
+    "seconds": 0.005704474662100742
+   }
+  },
+  {
+   "id": 52,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.6666666666666666,
+    "precision": 0.09090909090909091,
+    "size": 22,
+    "found": 2,
+    "evidence_tokens": 169552,
+    "note_tokens": 169552,
+    "seconds": 0.002744458004599437
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 25,
+    "found": 0,
+    "evidence_tokens": 464768,
+    "note_tokens": 464768,
+    "seconds": 0.002706266675280252
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.0967741935483871,
+    "size": 31,
+    "found": 3,
+    "evidence_tokens": 1137,
+    "note_tokens": 202002,
+    "seconds": 0.020592415996361524
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.002638522427440633,
+    "size": 1137,
+    "found": 3,
+    "evidence_tokens": 614673,
+    "note_tokens": 2633369,
+    "seconds": 0.0052820166723298225
+   }
+  },
+  {
+   "id": 53,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 1.0,
+    "precision": 0.3333333333333333,
+    "size": 9,
+    "found": 3,
+    "evidence_tokens": 309088,
+    "note_tokens": 309088,
+    "seconds": 0.0016098749911179766
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 37,
+    "found": 0,
+    "evidence_tokens": 637008,
+    "note_tokens": 637008,
+    "seconds": 0.002716225671368496
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.25,
+    "size": 12,
+    "found": 3,
+    "evidence_tokens": 384,
+    "note_tokens": 154911,
+    "seconds": 0.024648250007885508
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0034562211981566822,
+    "size": 868,
+    "found": 3,
+    "evidence_tokens": 388048,
+    "note_tokens": 2400212,
+    "seconds": 0.006019724661503764
+   }
+  },
+  {
+   "id": 54,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 1.0,
+    "precision": 0.5,
+    "size": 6,
+    "found": 3,
+    "evidence_tokens": 133990,
+    "note_tokens": 133990,
+    "seconds": 0.0018647500110091642
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.00980392156862745,
+    "size": 102,
+    "found": 1,
+    "evidence_tokens": 1080601,
+    "note_tokens": 1080601,
+    "seconds": 0.0027537246763434573
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.6,
+    "size": 5,
+    "found": 3,
+    "evidence_tokens": 277,
+    "note_tokens": 130072,
+    "seconds": 0.051241499997559004
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0031545741324921135,
+    "size": 951,
+    "found": 3,
+    "evidence_tokens": 433093,
+    "note_tokens": 2529348,
+    "seconds": 0.01030034967455625
+   }
+  },
+  {
+   "id": 55,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.06666666666666667,
+    "size": 15,
+    "found": 1,
+    "evidence_tokens": 124869,
+    "note_tokens": 124869,
+    "seconds": 0.0032522090041311458
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 104,
+    "found": 0,
+    "evidence_tokens": 839780,
+    "note_tokens": 839780,
+    "seconds": 0.002721766662337662
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.2727272727272727,
+    "size": 11,
+    "found": 3,
+    "evidence_tokens": 411,
+    "note_tokens": 167010,
+    "seconds": 0.04978187500091735
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.0031380753138075313,
+    "size": 956,
+    "found": 3,
+    "evidence_tokens": 432859,
+    "note_tokens": 2498060,
+    "seconds": 0.009225891667786831
+   }
+  },
+  {
+   "id": 56,
+   "gold": 7,
+   "chunk-dense": {
+    "recall": 0.14285714285714285,
+    "precision": 0.02702702702702703,
+    "size": 37,
+    "found": 1,
+    "evidence_tokens": 223385,
+    "note_tokens": 223385,
+    "seconds": 0.003984666996984743
+   },
+   "chunk-hk1": {
+    "recall": 0.14285714285714285,
+    "precision": 0.008403361344537815,
+    "size": 119,
+    "found": 1,
+    "evidence_tokens": 807556,
+    "note_tokens": 807556,
+    "seconds": 0.0029293076780353053
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.25,
+    "size": 28,
+    "found": 7,
+    "evidence_tokens": 1094,
+    "note_tokens": 155523,
+    "seconds": 0.03143437500693835
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.008567931456548347,
+    "size": 817,
+    "found": 7,
+    "evidence_tokens": 210746,
+    "note_tokens": 2397691,
+    "seconds": 0.005416974670273097
+   }
+  },
+  {
+   "id": 57,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.14285714285714285,
+    "size": 7,
+    "found": 1,
+    "evidence_tokens": 41640,
+    "note_tokens": 41640,
+    "seconds": 0.0015459169953828678
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 46,
+    "found": 0,
+    "evidence_tokens": 527506,
+    "note_tokens": 527506,
+    "seconds": 0.002729558674521589
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.2727272727272727,
+    "size": 11,
+    "found": 3,
+    "evidence_tokens": 365,
+    "note_tokens": 46151,
+    "seconds": 0.019488083009491675
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.003432494279176201,
+    "size": 874,
+    "found": 3,
+    "evidence_tokens": 390519,
+    "note_tokens": 2457013,
+    "seconds": 0.005523391662184926
+   }
+  },
+  {
+   "id": 58,
+   "gold": 3,
+   "chunk-dense": {
+    "recall": 0.3333333333333333,
+    "precision": 0.1111111111111111,
+    "size": 9,
+    "found": 1,
+    "evidence_tokens": 391378,
+    "note_tokens": 391378,
+    "seconds": 0.001636999993934296
+   },
+   "chunk-hk1": {
+    "recall": 0.3333333333333333,
+    "precision": 0.0196078431372549,
+    "size": 51,
+    "found": 1,
+    "evidence_tokens": 769450,
+    "note_tokens": 769450,
+    "seconds": 0.002718891669549824
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.125,
+    "size": 24,
+    "found": 3,
+    "evidence_tokens": 865,
+    "note_tokens": 219867,
+    "seconds": 0.018317082998692058
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.002976190476190476,
+    "size": 1008,
+    "found": 3,
+    "evidence_tokens": 629531,
+    "note_tokens": 2534596,
+    "seconds": 0.005460724668713132
+   }
+  },
+  {
+   "id": 59,
+   "gold": 5,
+   "chunk-dense": {
+    "recall": 0.2,
+    "precision": 0.16666666666666666,
+    "size": 6,
+    "found": 1,
+    "evidence_tokens": 189828,
+    "note_tokens": 189828,
+    "seconds": 0.0016790829977253452
+   },
+   "chunk-hk1": {
+    "recall": 0.0,
+    "precision": 0.0,
+    "size": 43,
+    "found": 0,
+    "evidence_tokens": 771867,
+    "note_tokens": 771867,
+    "seconds": 0.002668058657339619
+   },
+   "sentence-dense": {
+    "recall": 1.0,
+    "precision": 0.3125,
+    "size": 16,
+    "found": 5,
+    "evidence_tokens": 666,
+    "note_tokens": 383812,
+    "seconds": 0.019305041001643986
+   },
+   "sentence-hk1": {
+    "recall": 1.0,
+    "precision": 0.005482456140350877,
+    "size": 912,
+    "found": 5,
+    "evidence_tokens": 391485,
+    "note_tokens": 2500443,
+    "seconds": 0.004549474671269612
+   }
+  }
+ ]
+}

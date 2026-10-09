@@ -1,0 +1,21 @@
+{
+ "cell": 1,
+ "name": "best sentence",
+ "arxiv": "2312.06648",
+ "n": 817,
+ "baseline": "best-chunk cosine",
+ "R@10": {
+  "best_sentence": 0.6598910065862332,
+  "best_chunk": 0.698391327155097
+ },
+ "diff": -0.03850032056886402,
+ "ci95": [
+  -0.06691197470420236,
+  -0.010960322317421464
+ ],
+ "interval_above_zero": false,
+ "improved": 80,
+ "worsened": 122,
+ "tied": 615,
+ "seed": 20261008
+}

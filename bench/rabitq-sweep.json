@@ -1,0 +1,188 @@
+{
+  "chunks": 5157,
+  "questions": 817,
+  "code_bits": 1024,
+  "query_bits": 4,
+  "bits_per_dim": [
+    1,
+    2,
+    4
+  ],
+  "exhaustive_R@10": 0.698391327155097,
+  "search_seconds_all_questions_including_index_build": {
+    "1": 1.7110390663146973,
+    "2": 1.8317549228668213,
+    "4": 3.1627259254455566
+  },
+  "rows": [
+    {
+      "code_bits_per_dim": 1,
+      "candidates": 10,
+      "share_of_chunks": 0.0019391118867558659,
+      "R@10_after_rescoring": 0.6518068426881156,
+      "exact_top10_chunks_found": 0.8062423500611996
+    },
+    {
+      "code_bits_per_dim": 1,
+      "candidates": 25,
+      "share_of_chunks": 0.004847779716889665,
+      "R@10_after_rescoring": 0.694719356530862,
+      "exact_top10_chunks_found": 0.9783353733170136
+    },
+    {
+      "code_bits_per_dim": 1,
+      "candidates": 50,
+      "share_of_chunks": 0.00969555943377933,
+      "R@10_after_rescoring": 0.6971673369470187,
+      "exact_top10_chunks_found": 0.9959608323133414
+    },
+    {
+      "code_bits_per_dim": 1,
+      "candidates": 100,
+      "share_of_chunks": 0.01939111886755866,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 0.9997552019583843
+    },
+    {
+      "code_bits_per_dim": 1,
+      "candidates": 200,
+      "share_of_chunks": 0.03878223773511732,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 1,
+      "candidates": 400,
+      "share_of_chunks": 0.07756447547023464,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 1,
+      "candidates": 800,
+      "share_of_chunks": 0.15512895094046927,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 1,
+      "candidates": 1600,
+      "share_of_chunks": 0.31025790188093855,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 2,
+      "candidates": 10,
+      "share_of_chunks": 0.0019391118867558659,
+      "R@10_after_rescoring": 0.6667191233898699,
+      "exact_top10_chunks_found": 0.8962056303549573
+    },
+    {
+      "code_bits_per_dim": 2,
+      "candidates": 25,
+      "share_of_chunks": 0.004847779716889665,
+      "R@10_after_rescoring": 0.6968613393949992,
+      "exact_top10_chunks_found": 0.9984088127294982
+    },
+    {
+      "code_bits_per_dim": 2,
+      "candidates": 50,
+      "share_of_chunks": 0.00969555943377933,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 0.9998776009791921
+    },
+    {
+      "code_bits_per_dim": 2,
+      "candidates": 100,
+      "share_of_chunks": 0.01939111886755866,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 2,
+      "candidates": 200,
+      "share_of_chunks": 0.03878223773511732,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 2,
+      "candidates": 400,
+      "share_of_chunks": 0.07756447547023464,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 2,
+      "candidates": 800,
+      "share_of_chunks": 0.15512895094046927,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 2,
+      "candidates": 1600,
+      "share_of_chunks": 0.31025790188093855,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 4,
+      "candidates": 10,
+      "share_of_chunks": 0.0019391118867558659,
+      "R@10_after_rescoring": 0.6661071282858307,
+      "exact_top10_chunks_found": 0.9472460220318238
+    },
+    {
+      "code_bits_per_dim": 4,
+      "candidates": 25,
+      "share_of_chunks": 0.004847779716889665,
+      "R@10_after_rescoring": 0.6977793320510579,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 4,
+      "candidates": 50,
+      "share_of_chunks": 0.00969555943377933,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 4,
+      "candidates": 100,
+      "share_of_chunks": 0.01939111886755866,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 4,
+      "candidates": 200,
+      "share_of_chunks": 0.03878223773511732,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 4,
+      "candidates": 400,
+      "share_of_chunks": 0.07756447547023464,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 4,
+      "candidates": 800,
+      "share_of_chunks": 0.15512895094046927,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    },
+    {
+      "code_bits_per_dim": 4,
+      "candidates": 1600,
+      "share_of_chunks": 0.31025790188093855,
+      "R@10_after_rescoring": 0.698391327155097,
+      "exact_top10_chunks_found": 1.0
+    }
+  ],
+  "seconds": 9.367130994796753
+}

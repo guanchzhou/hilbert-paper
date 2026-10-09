@@ -1,0 +1,23 @@
+{
+ "dense_ms_full_5157_chunks": 0.16229229000600753,
+ "dense_ms_per_vector": 3.147029086794794e-05,
+ "mean_notes_ms_1223_vectors": 0.052734584987774724,
+ "centre_ms": 0.002768125013972167,
+ "rocchio_extra_ms": 0.05489312499776133,
+ "rrf_ms": 0.01581270498718368,
+ "ppr_ms": 38.924359180018655,
+ "hk1_ms": 1.1068043145698792,
+ "partitions_route_ms": 0.014714148101331884,
+ "lexical_sql_ms": 35.483000000000004,
+ "rerank_ms_per_pair": 88.13298000000941,
+ "rerank_ms_50_median": 4406.649000000471,
+ "prune_ms_precomputed_sentences": 0.749254159964039,
+ "prune_embed_note": "on-the-fly sentence embedding cost per query, if sentence vectors are not precomputed",
+ "sentence_fill": null,
+ "composition": "latency = embed (if a dense part or a filter is present) + lexical SQL (if lexical part) + dense_ms_per_vector * vectors compared + centre + rocchio_extra + RRF (hybrid) + PPR + filter (hk1 key and scan, or partition routing) + rerank_ms_per_pair * pairs + prune (sentence-pruned packs only)",
+ "embed_query_ms": {
+  "median": 24.25308350211708,
+  "p95": 32.38382224699308,
+  "n": 30
+ }
+}

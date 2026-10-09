@@ -1,0 +1,7 @@
+{
+ "cell": 10,
+ "name": "drop non-evidence",
+ "arxiv": "2501.16214",
+ "ran": false,
+ "reason": "Cell 8 already cut tokens by more than 20 percent, so this cell does not run."
+}

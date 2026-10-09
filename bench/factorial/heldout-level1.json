@@ -1,0 +1,105 @@
+{
+ "split": "qrels-test",
+ "qrels_test_sha256": "96510536278c37e33835e6226a5b561c547fef9c3d199a6a1beafd2b8b3f7cc4",
+ "n": 817,
+ "snapshot": {
+  "chunks": 5157,
+  "notes": 1223
+ },
+ "runs": {
+  "best_recall": {
+   "config": "hybrid|mean|on|on|off|off|none",
+   "unit": "chunk",
+   "R@10": 0.740374,
+   "MRR": 0.521479,
+   "nDCG@10": 0.554779,
+   "hit@10": 0.80049,
+   "survival": 0.780906,
+   "tokens": 5573.581395
+  },
+  "best_survival": {
+   "config": "hybrid|mean|off|on|off|on|none",
+   "unit": "pruned",
+   "R@10": 0.722105,
+   "MRR": 0.487663,
+   "nDCG@10": 0.522214,
+   "hit@10": 0.783354,
+   "survival": 0.897185,
+   "tokens": 3925.674419
+  },
+  "reference": {
+   "config": "dense|best|off|off|off|off|none",
+   "unit": "chunk",
+   "R@10": 0.724623,
+   "MRR": 0.522397,
+   "nDCG@10": 0.551643,
+   "hit@10": 0.778458,
+   "survival": 0.75153,
+   "tokens": 5442.802938
+  }
+ },
+ "paired_vs_reference": {
+  "best_recall": {
+   "R@10": {
+    "diff": 0.015752,
+    "ci95": [
+     -0.008749,
+     0.04062
+    ],
+    "p": 0.246567,
+    "test": "two-sided Wilcoxon signed-rank on non-zero differences",
+    "n_nonzero": 163,
+    "p_holm": 0.493133
+   },
+   "survival": {
+    "mean_new": 0.780906,
+    "mean_comparator": 0.75153,
+    "diff": 0.029376,
+    "ci95": [
+     0.003672,
+     0.056304
+    ],
+    "p": 0.040036,
+    "test": "exact McNemar (binomial on discordant pairs), two-sided",
+    "new_only": 75,
+    "comparator_only": 51,
+    "n": 817,
+    "p_holm": 0.120107
+   },
+   "tokens_diff": 130.778458
+  },
+  "best_survival": {
+   "R@10": {
+    "diff": -0.002518,
+    "ci95": [
+     -0.027447,
+     0.022577
+    ],
+    "p": 0.880902,
+    "test": "two-sided Wilcoxon signed-rank on non-zero differences",
+    "n_nonzero": 158,
+    "p_holm": 0.880902
+   },
+   "survival": {
+    "mean_new": 0.897185,
+    "mean_comparator": 0.75153,
+    "diff": 0.145655,
+    "ci95": [
+     0.121175,
+     0.171359
+    ],
+    "p": 0.0,
+    "test": "exact McNemar (binomial on discordant pairs), two-sided",
+    "new_only": 124,
+    "comparator_only": 5,
+    "n": 817,
+    "p_holm": 0.0
+   },
+   "tokens_diff": -1517.128519
+  }
+ },
+ "holm": "over the four paired tests",
+ "rerank_pairs_scored": 40850,
+ "sentence_rows_embedded": 5,
+ "seconds": 3384.446408
+}

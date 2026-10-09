@@ -1,0 +1,23 @@
+{
+ "cell": 4,
+ "name": "hubness",
+ "arxiv": "2508.02538",
+ "n": 817,
+ "settings": {
+  "hubness": "mean cosine to the tuning-half queries",
+  "adjustment": "subtract"
+ },
+ "tune_n": 409,
+ "R@10": {
+  "hubness": 0.6282071457714054,
+  "best_chunk": 0.698391327155097
+ },
+ "diff": -0.0701841813836918,
+ "ci95": [
+  -0.09122807017543859,
+  -0.04862104388879175
+ ],
+ "interval_above_zero": false,
+ "passes": false,
+ "seed": 20261008
+}

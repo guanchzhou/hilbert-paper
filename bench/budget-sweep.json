@@ -1,0 +1,184 @@
+{
+  "budgets": [
+    1000,
+    2000,
+    4000,
+    6000,
+    12000,
+    24000
+  ],
+  "questions": 817,
+  "chunks": 5166,
+  "default_budget_source": "gbrain src/core/search/evidence-delivery.ts DEFAULT_RETURN_BUDGET = 6000",
+  "pack": "top 10 notes of the dense chunk ranking, units kept whole if they fit, skipped otherwise",
+  "rows": [
+    {
+      "budget": 1000,
+      "unit": "chunk",
+      "relevant_in_pack": 0.410037,
+      "tokens_delivered": 882.93,
+      "hits_dropped": 7.999
+    },
+    {
+      "budget": 1000,
+      "unit": "window",
+      "relevant_in_pack": 0.165239,
+      "tokens_delivered": 784.459,
+      "hits_dropped": 8.328
+    },
+    {
+      "budget": 1000,
+      "unit": "section",
+      "relevant_in_pack": 0.365973,
+      "tokens_delivered": 860.542,
+      "hits_dropped": 8.395
+    },
+    {
+      "budget": 1000,
+      "unit": "page",
+      "relevant_in_pack": 0.156671,
+      "tokens_delivered": 779.349,
+      "hits_dropped": 8.419
+    },
+    {
+      "budget": 2000,
+      "unit": "chunk",
+      "relevant_in_pack": 0.596083,
+      "tokens_delivered": 1851.597,
+      "hits_dropped": 6.51
+    },
+    {
+      "budget": 2000,
+      "unit": "window",
+      "relevant_in_pack": 0.399021,
+      "tokens_delivered": 1755.464,
+      "hits_dropped": 7.513
+    },
+    {
+      "budget": 2000,
+      "unit": "section",
+      "relevant_in_pack": 0.561812,
+      "tokens_delivered": 1831.543,
+      "hits_dropped": 7.045
+    },
+    {
+      "budget": 2000,
+      "unit": "page",
+      "relevant_in_pack": 0.367197,
+      "tokens_delivered": 1720.86,
+      "hits_dropped": 7.454
+    },
+    {
+      "budget": 4000,
+      "unit": "chunk",
+      "relevant_in_pack": 0.72705,
+      "tokens_delivered": 3779.592,
+      "hits_dropped": 3.788
+    },
+    {
+      "budget": 4000,
+      "unit": "window",
+      "relevant_in_pack": 0.588739,
+      "tokens_delivered": 3730.357,
+      "hits_dropped": 6.169
+    },
+    {
+      "budget": 4000,
+      "unit": "section",
+      "relevant_in_pack": 0.700122,
+      "tokens_delivered": 3793.913,
+      "hits_dropped": 4.639
+    },
+    {
+      "budget": 4000,
+      "unit": "page",
+      "relevant_in_pack": 0.53978,
+      "tokens_delivered": 3631.182,
+      "hits_dropped": 6.02
+    },
+    {
+      "budget": 6000,
+      "unit": "chunk",
+      "relevant_in_pack": 0.755202,
+      "tokens_delivered": 5505.914,
+      "hits_dropped": 1.425
+    },
+    {
+      "budget": 6000,
+      "unit": "window",
+      "relevant_in_pack": 0.687882,
+      "tokens_delivered": 5659.333,
+      "hits_dropped": 4.875
+    },
+    {
+      "budget": 6000,
+      "unit": "section",
+      "relevant_in_pack": 0.73929,
+      "tokens_delivered": 5649.606,
+      "hits_dropped": 2.373
+    },
+    {
+      "budget": 6000,
+      "unit": "page",
+      "relevant_in_pack": 0.611995,
+      "tokens_delivered": 5421.895,
+      "hits_dropped": 4.923
+    },
+    {
+      "budget": 12000,
+      "unit": "chunk",
+      "relevant_in_pack": 0.767442,
+      "tokens_delivered": 6655.111,
+      "hits_dropped": 0.0
+    },
+    {
+      "budget": 12000,
+      "unit": "window",
+      "relevant_in_pack": 0.753978,
+      "tokens_delivered": 10837.335,
+      "hits_dropped": 1.659
+    },
+    {
+      "budget": 12000,
+      "unit": "section",
+      "relevant_in_pack": 0.753978,
+      "tokens_delivered": 7905.854,
+      "hits_dropped": 0.146
+    },
+    {
+      "budget": 12000,
+      "unit": "page",
+      "relevant_in_pack": 0.682987,
+      "tokens_delivered": 10026.009,
+      "hits_dropped": 3.191
+    },
+    {
+      "budget": 24000,
+      "unit": "chunk",
+      "relevant_in_pack": 0.767442,
+      "tokens_delivered": 6655.111,
+      "hits_dropped": 0.0
+    },
+    {
+      "budget": 24000,
+      "unit": "window",
+      "relevant_in_pack": 0.766218,
+      "tokens_delivered": 14049.344,
+      "hits_dropped": 0.005
+    },
+    {
+      "budget": 24000,
+      "unit": "section",
+      "relevant_in_pack": 0.767442,
+      "tokens_delivered": 8925.291,
+      "hits_dropped": 0.044
+    },
+    {
+      "budget": 24000,
+      "unit": "page",
+      "relevant_in_pack": 0.736842,
+      "tokens_delivered": 17733.406,
+      "hits_dropped": 2.143
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+ "idea": 8,
+ "name": "per-chunk synopsis (contextual retrieval)",
+ "status": "not run within budget",
+ "timing": {
+  "sample_chunks": 20,
+  "model": "qwen3.8:latest",
+  "num_predict": 120,
+  "warmup_seconds": 30.461761,
+  "seconds_per_chunk_mean": 18.194944,
+  "seconds_per_chunk_median": 18.814674,
+  "seconds_per_chunk_p95": 30.430958,
+  "prompt_tokens_mean": 1209.8,
+  "output_tokens_mean": 80.4,
+  "chunks": 5157,
+  "projected_hours": 26.064257,
+  "budget_hours": 10.0
+ },
+ "primary": {
+  "H8 synopsis": {
+   "p": 1.0,
+   "diff": null,
+   "note": "not run within budget"
+  }
+ },
+ "limitation": "dev questions were written by an LLM from the notes; LLM synopses may share their vocabulary"
+}
