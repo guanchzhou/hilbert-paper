@@ -275,6 +275,67 @@
   )
 }
 
+#let cover-runs(n, c, rad) = {
+  let xy = range(n * n).map(d => hil-xy(n, d))
+  let cells = ()
+  for x in range(n) {
+    for y in range(n) {
+      let nx = calc.clamp(c.at(0), x, x + 1)
+      let ny = calc.clamp(c.at(1), y, y + 1)
+      if calc.sqrt(calc.pow(nx - c.at(0), 2) + calc.pow(ny - c.at(1), 2)) <= rad { cells.push((x, y)) }
+    }
+  }
+  let steps = range(n * n).filter(d => xy.at(d) in cells)
+  let runs = ()
+  for s in steps {
+    if runs.len() > 0 and runs.last().at(1) == s - 1 { runs.at(-1).at(1) = s } else { runs.push((s, s)) }
+  }
+  (cells: cells, steps: steps, runs: runs, xy: xy)
+}
+
+#let map-art(size, n, c, rad, streets: true) = box(width: size, height: size, clip: true, {
+  let u = size / n
+  let P(x, y) = (x * u, size - y * u)
+  let cov = cover-runs(n, c, rad)
+  place(rect(width: size, height: size, fill: rgb("#F4F6F8")))
+  if streets {
+    let k = n / 16
+    let river = ((0, 3.2), (3, 4.1), (6, 3.4), (9, 4.6), (12, 4.0), (16, 5.2)).map(p => (p.at(0) * k, p.at(1) * k))
+    for i in range(river.len() - 1) { place(line(start: P(..river.at(i)), end: P(..river.at(i + 1)), stroke: (paint: rgb("#D6E8FF"), thickness: size / 22, cap: "round"))) }
+    for x in (1.5, 4.2, 7.0, 10.5, 13.3) { place(line(start: P(x * k, 0), end: P(x * k, n), stroke: 3pt + white)) }
+    for y in (2.0, 7.5, 11.0, 14.2) { place(line(start: P(0, y * k), end: P(n, y * k), stroke: 3pt + white)) }
+    place(line(start: P(0, 15.5 * k), end: P(n, 6.0 * k), stroke: 5pt + white))
+  }
+  for cell in cov.cells { place(dx: cell.at(0) * u, dy: size - (cell.at(1) + 1) * u, rect(width: u, height: u, fill: blue.transparentize(84%), stroke: 0.5pt + blue.transparentize(40%))) }
+  let pts = cov.xy.map(p => P(p.at(0) + 0.5, p.at(1) + 0.5))
+  for i in range(pts.len() - 1) {
+    let on = i in cov.steps and (i + 1) in cov.steps
+    place(line(start: pts.at(i), end: pts.at(i + 1), stroke: if on { 1.8pt + blue } else { 0.8pt + hil-grey }))
+  }
+  for (i, p) in pts.enumerate() {
+    let on = i in cov.steps
+    let r = if on { 2.8pt } else { 1.8pt }
+    place(dx: p.at(0) - r, dy: p.at(1) - r, circle(radius: r, fill: if on { blue } else { hil-greydot }))
+  }
+  let cc = P(..c)
+  place(dx: cc.at(0) - rad * u, dy: cc.at(1) - rad * u, circle(radius: rad * u, stroke: (paint: ink, thickness: 1.4pt, dash: "dashed")))
+  place(dx: cc.at(0) - 6pt, dy: cc.at(1) - 6pt, circle(radius: 6pt, fill: ink, stroke: 2pt + white))
+})
+
+#let run-strip(w, n, c, rad) = {
+  let cov = cover-runs(n, c, rad)
+  let N = n * n
+  box(width: w, height: 1.3cm, {
+    place(dy: 0.45cm, line(length: w, stroke: 1.2pt + hil-grey))
+    for k in range(0, N + 1, step: calc.quo(N, 8)) { place(dx: w * k / N, dy: 0.3cm, line(length: 0.3cm, angle: 90deg, stroke: 0.8pt + hil-greydot)) }
+    for r in cov.runs {
+      place(dx: w * r.at(0) / N, dy: 0.27cm, rect(width: calc.max(w * (r.at(1) + 1 - r.at(0)) / N, 3pt), height: 0.36cm, fill: blue))
+    }
+    place(dx: 0pt, dy: 0.85cm, note[0])
+    place(dx: w - 0.8cm, dy: 0.85cm, box(width: 0.8cm, align(right, note[#(N - 1)])))
+  })
+}
+
 // ------------------------------------------------------------------ title
 
 #page(footer: none)[
@@ -379,6 +440,28 @@
       #point[Steps stay neighbours.][Two consecutive steps are always touching cells, so a range of step numbers is one compact patch of space.]
       #point[Not the other way round.][Touching cells can be far apart on the line: the two dark dots share an edge, yet lie #gap steps apart, in different first-level cells.]
       #point[The hk1 key.][The same curve in 8 dimensions: 8 random projections, each cut into 256 steps. The step number becomes a text key; its first byte names one of 256 first-level cells.]
+    ],
+  )
+]
+
+// ------------------------------------------------------------------ hilbert in practice
+
+#slide[
+  #title[Where the curve #hl[works]: places on a map]
+  #let (mc, mr) = ((6.4, 9.3), 2.3)
+  #let cv = cover-runs(16, mc, mr)
+  #grid(columns: (auto, 1fr), column-gutter: 1.1cm, align: (left, horizon),
+    stack(spacing: 0.25cm,
+      map-art(11.2cm, 16, mc, mr),
+      run-strip(11.2cm, 16, mc, mr),
+      box(width: 11.2cm, note[Schematic map. The circle touches #cv.cells.len() cells; along the curve (the strip, steps 0 to 255) they form #cv.runs.len() ranges.]),
+    ),
+    [
+      #set text(size: 1.02em)
+      #point[Two numbers become one.][Google's S2 library projects the Earth onto the six faces of a cube and numbers every face along a Hilbert curve: latitude and longitude become one 64-bit cell id.#footnote[S2 Geometry library, #raw("s2geometry.io"): six Hilbert curves, one per cube face, 30 levels, leaf cells about 1 cm across. Covering computed with #raw("zig-hilbert s2-cover"), v0.2.1.]]
+      #point[Near on the map, near in the index.]["Everything within 1 km" becomes a few cells, and the cells become a few ranges of one sorted column: `WHERE cell BETWEEN lo AND hi`.]
+      #point[Real numbers.][A 1 km circle around the Googleplex, 37.4220, −122.0841: 6 cells, 4 ranges. The point itself is cell #raw("808fba027a27f821").]
+      #point[Why it works here.][Two dimensions: a cell has 8 neighbours, and a circle touches only a few. In hk1's 8 dimensions a cell has #num(calc.pow(3, 8) - 1).]
     ],
   )
 ]
