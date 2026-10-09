@@ -1,0 +1,29 @@
+{
+ "preregistration": "preregistration.md#addendum-5",
+ "model": "qwen3:4b",
+ "n": 100,
+ "questions_per_chunk": {
+  "mean": 2.97,
+  "min": 2
+ },
+ "centred_cosine_median": {
+  "question_chunk": 0.4681553244590759,
+  "question_generated": 0.17887257039546967
+ },
+ "raw_cosine_median": {
+  "question_chunk": 0.6126121282577515,
+  "question_generated": 0.4645470380783081
+ },
+ "gain_centred": -0.28928273916244507,
+ "gain_required": 0.05,
+ "seconds_per_chunk": {
+  "mean": 5.901741768352221,
+  "median": 5.176079770986689,
+  "p95": 10.10006207115075
+ },
+ "projected_hours": 8.454245083164556,
+ "max_hours": 6.0,
+ "share_closer_centred": 0.16,
+ "passes": false,
+ "private": "note names, note text and question texts are kept out of the repository"
+}

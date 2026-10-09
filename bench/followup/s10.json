@@ -1,0 +1,247 @@
+{
+ "preregistration": "preregistration.md#addendum-5",
+ "seed": 20261009,
+ "chunks": 5157,
+ "confirmation_questions": 408,
+ "exhaustive_R@10": 0.7012254901960785,
+ "itq_iterations": 50,
+ "margin": 0.03,
+ "cell_rule": "bit = u >= 0.5 on each of eight axes",
+ "arm_D": {
+  "run": false,
+  "gate": "s10-gate.json",
+  "reason": "gate failed: generated questions farther from the question than the chunk, and over the time limit"
+ },
+ "arms": {
+  "A_random_axes": {
+   "filter": {
+    "primary_330": {
+     "budget": 330,
+     "R@10": 0.39215686274509803,
+     "scan_median": 341.0
+    },
+    "2.5%": {
+     "budget": 129,
+     "R@10": 0.29297385620915034,
+     "scan_median": 138.0
+    },
+    "5.0%": {
+     "budget": 258,
+     "R@10": 0.3716503267973856,
+     "scan_median": 268.0
+    },
+    "10.0%": {
+     "budget": 516,
+     "R@10": 0.4419934640522875,
+     "scan_median": 525.5
+    },
+    "20.0%": {
+     "budget": 1031,
+     "R@10": 0.5412173202614379,
+     "scan_median": 1041.0
+    }
+   },
+   "qa_same_cell_observed": 0.03950617283950617,
+   "qa_same_cell_theory": 0.037570614367723465,
+   "qa_pairs": 810,
+   "occupied_cells": 256,
+   "largest_cell": 55,
+   "axis_balance": [
+    0.49350397517936784,
+    0.500484777971689,
+    0.5057203800659298,
+    0.4954430870661237,
+    0.5045569129338763,
+    0.4925344192359899,
+    0.5053325576885787,
+    0.4913709521039364
+   ]
+  },
+  "B_corpus_axes": {
+   "filter": {
+    "primary_330": {
+     "budget": 330,
+     "R@10": 0.5176062091503268,
+     "scan_median": 343.0
+    },
+    "2.5%": {
+     "budget": 129,
+     "R@10": 0.4004901960784314,
+     "scan_median": 144.0
+    },
+    "5.0%": {
+     "budget": 258,
+     "R@10": 0.490563725490196,
+     "scan_median": 270.0
+    },
+    "10.0%": {
+     "budget": 516,
+     "R@10": 0.5761846405228758,
+     "scan_median": 528.0
+    },
+    "20.0%": {
+     "budget": 1031,
+     "R@10": 0.6261437908496732,
+     "scan_median": 1043.0
+    }
+   },
+   "qa_same_cell_observed": 0.11851851851851852,
+   "qa_same_cell_theory": 0.037570614367723465,
+   "qa_pairs": 810,
+   "occupied_cells": 254,
+   "largest_cell": 114,
+   "axis_balance": [
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5016482451037425,
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5000969555943378
+   ]
+  },
+  "C_itq": {
+   "filter": {
+    "primary_330": {
+     "budget": 330,
+     "R@10": 0.5415032679738562,
+     "scan_median": 418.0
+    },
+    "2.5%": {
+     "budget": 129,
+     "R@10": 0.43390522875816995,
+     "scan_median": 352.0
+    },
+    "5.0%": {
+     "budget": 258,
+     "R@10": 0.51515522875817,
+     "scan_median": 394.0
+    },
+    "10.0%": {
+     "budget": 516,
+     "R@10": 0.5760212418300653,
+     "scan_median": 554.5
+    },
+    "20.0%": {
+     "budget": 1031,
+     "R@10": 0.6428104575163398,
+     "scan_median": 1070.5
+    }
+   },
+   "qa_same_cell_observed": 0.18765432098765433,
+   "qa_same_cell_theory": 0.037570614367723465,
+   "qa_pairs": 810,
+   "occupied_cells": 193,
+   "largest_cell": 430,
+   "axis_balance": [
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5000969555943378,
+    0.5000969555943378
+   ]
+  }
+ },
+ "tests_vs_A": {
+  "B_corpus_axes vs A_random_axes": {
+   "mean_new": 0.5176062091503268,
+   "mean_comparator": 0.39215686274509803,
+   "diff": 0.12544934640522876,
+   "ci95": [
+    0.0749591503267974,
+    0.1766748366013072
+   ],
+   "p": 5.599388266174652e-06,
+   "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+   "alternative": "two-sided",
+   "n": 408,
+   "n_nonzero": 156,
+   "improved": 108,
+   "worsened": 48,
+   "p_holm": 5.599388266174652e-06
+  },
+  "C_itq vs A_random_axes": {
+   "mean_new": 0.5415032679738562,
+   "mean_comparator": 0.39215686274509803,
+   "diff": 0.14934640522875817,
+   "ci95": [
+    0.10093954248366015,
+    0.1991840277777778
+   ],
+   "p": 3.3404928970032445e-08,
+   "test": "two-sided Wilcoxon signed-rank on non-zero paired differences",
+   "alternative": "two-sided",
+   "n": 408,
+   "n_nonzero": 161,
+   "improved": 116,
+   "worsened": 45,
+   "p_holm": 6.680985794006489e-08
+  }
+ },
+ "non_inferiority": {
+  "A_random_axes non-inferior to exhaustive": {
+   "mean_new": 0.39215686274509803,
+   "mean_comparator": 0.7012254901960785,
+   "diff": -0.3090686274509804,
+   "ci95": [
+    -0.35531147875817,
+    -0.2641727941176471
+   ],
+   "p": 1.0,
+   "test": "non-inferiority: one-sided Wilcoxon signed-rank on (new - comparator + 0.03)",
+   "alternative": "greater",
+   "n": 408,
+   "n_nonzero": 408,
+   "improved": 12,
+   "worsened": 158,
+   "p_wilcoxon_preregistered": 0.9999774131431477,
+   "p_t_shifted": 1.0,
+   "p_note": "deviation D1: p = max(Wilcoxon, paired t on shifted differences)",
+   "p_holm": 1.0
+  },
+  "B_corpus_axes non-inferior to exhaustive": {
+   "mean_new": 0.5176062091503268,
+   "mean_comparator": 0.7012254901960785,
+   "diff": -0.18361928104575162,
+   "ci95": [
+    -0.2238970588235294,
+    -0.14317504084967325
+   ],
+   "p": 0.9999999999996868,
+   "test": "non-inferiority: one-sided Wilcoxon signed-rank on (new - comparator + 0.03)",
+   "alternative": "greater",
+   "n": 408,
+   "n_nonzero": 408,
+   "improved": 15,
+   "worsened": 101,
+   "p_wilcoxon_preregistered": 0.0027388045054937155,
+   "p_t_shifted": 0.9999999999996868,
+   "p_note": "deviation D1: p = max(Wilcoxon, paired t on shifted differences)",
+   "p_holm": 1.0
+  },
+  "C_itq non-inferior to exhaustive": {
+   "mean_new": 0.5415032679738562,
+   "mean_comparator": 0.7012254901960785,
+   "diff": -0.15972222222222224,
+   "ci95": [
+    -0.1999642565359477,
+    -0.12173202614379086
+   ],
+   "p": 0.9999999999332938,
+   "test": "non-inferiority: one-sided Wilcoxon signed-rank on (new - comparator + 0.03)",
+   "alternative": "greater",
+   "n": 408,
+   "n_nonzero": 408,
+   "improved": 10,
+   "worsened": 85,
+   "p_wilcoxon_preregistered": 3.115404603370371e-07,
+   "p_t_shifted": 0.9999999999332938,
+   "p_note": "deviation D1: p = max(Wilcoxon, paired t on shifted differences)",
+   "p_holm": 1.0
+  }
+ }
+}

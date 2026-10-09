@@ -322,3 +322,49 @@ rows. Acceptance: at 200,000 rows, the Hilbert key wins a box shape if it touche
 fewer buffers than the best other path, at most twice its median time. Predictions: it wins no
 shape against the composite B-tree with skip scan; it touches fewer buffers than Z-order on the
 two shapes with a free axis.
+
+## Addendum 5 (recorded 2026-10-09 13:18, before any S10 data): S10, rebuilding the key at ingest
+
+The paper explains the failed hk1 filter by the angle between a question and its answer: for a
+key made by random projections of the same embeddings, a level-1 cell is an eight-bit sign hash
+and collides with probability (1 - theta/pi)^8. Storing or ordering chunks by that key cannot
+change the angle. S10 asks whether rebuilding the key at ingest helps when the rebuild changes
+what the angle depends on: the axes of the key, or the vector that is keyed.
+
+Corpus and questions: the frozen snapshot (5,157 chunks) and the 817 development questions. The
+gate below uses the tuning half; every test uses the confirmation half (408 questions). Each arm
+keys every chunk again; gbrain itself is not changed. Seed `numpy.random.default_rng(20261009)`.
+
+Common filter. Vectors are centred by their corpus mean. A level-1 cell is the eight sign bits of
+eight axes. Each axis has a distribution function u fitted as stated per arm; an axis's distance
+to its boundary is |u - 0.5|. A query reads its own cell, then cells reached by flipping subsets
+of bits in increasing order of the summed distance of the flipped axes, whole cells at a time,
+until at least 330 chunks are candidates (the H4 setting read a median of 329). Candidates are
+ranked by exact cosine of the original chunk vectors, best chunk per note, recall at 10. Also
+reported: the curve at 2.5, 5, 10 and 20 percent of chunks scanned, and the question-to-answer
+same-cell rate on each question's best relevant chunk against (1 - theta/pi)^8.
+
+Arms:
+- A, reference: eight random +-1 axes, u logistic with scale 1.702 (the hk1 construction).
+- B, corpus axes: the top eight principal axes of the centred chunk vectors, u the empirical
+  distribution of the chunks on each axis.
+- C, ITQ: B's axes rotated by iterative quantization (Gong and Lazebnik), 50 iterations, u
+  empirical as in B.
+- D, generated questions: a local model (qwen3:4b through Ollama, thinking off, temperature 0)
+  writes three questions each chunk answers, from the note title and the chunk's first 6,000
+  characters. Each question is embedded with the query instruction; the keyed vector of a chunk
+  is the normalised mean of its three question vectors, keyed with A's axes and u. Ranking after
+  the filter is unchanged, so only the filter differs. An exploratory variant D2 gives a chunk
+  three keys, one per question.
+  Gate for D, before the corpus is generated: for 100 seeded tuning-half questions, questions are
+  generated for the best relevant chunk. D runs only if the median centred cosine between the real
+  question and the generated mean exceeds the median between the real question and the chunk by
+  at least 0.05, and the measured speed projects the corpus to at most 6 hours. Otherwise D is
+  reported as stopped, with the gate's numbers. The MLX servers are stopped while the generator
+  is loaded and restarted for embedding.
+
+Tests on the confirmation half, per-question recall at 10 at the 330-chunk scan, two-sided
+Wilcoxon signed-rank, Holm over the arms run: B against A, C against A, D against A. An arm
+rescues a single key if it is non-inferior to exhaustive cosine at the 0.03 margin (one-sided
+Wilcoxon on shifted differences, as H4), Holm over the arms run. Predictions: B and C beat A by
+less than 0.03; D passes the gate and beats A; no arm rescues a single key.
