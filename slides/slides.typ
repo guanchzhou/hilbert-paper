@@ -37,6 +37,13 @@
 #let c8 = json("/bench/followup/cell8.json")
 #let c9 = json("/bench/followup/cell9.json")
 #let c16 = json("/bench/followup/cell16.json")
+#let s9a = json("/bench/followup/s9a.json")
+#let S9(a) = s9a.summary.at(a)
+#let s9b = json("/bench/followup/s9b.json")
+#let S9R = ("area_type_months", "area_months", "type_months").map(sh => s9b.results.at("200000").summary.at(sh).acceptance.buffer_ratio)
+#let s10 = json("/bench/followup/s10.json")
+#let SA(a) = s10.arms.at(a).filter.primary_330.at("R@10")
+#let SQ(a) = s10.arms.at(a).qa_same_cell_observed / s10.arms.at(a).qa_same_cell_theory
 #let fl2 = json("/bench/factorial/level2-summary.json")
 #let FCTX = fl2.marginals.at("num_ctx (local)")
 #let EF(name) = eff.conditions.find(c => c.condition == name)
@@ -324,9 +331,11 @@
   #grid(columns: (1.4fr, 1fr), gutter: 1cm,
     image("/figures/fig14-lsh-model.svg", width: 100%),
     [
+      #set text(size: 0.86em)
       #point[SimHash.][The first level of the key is the sign pattern of 8 random projections: an 8-bit SimHash.#footnote[Charikar, STOC 2002; Indyk and Motwani, STOC 1998.]]
-      #point[Narrow cone.][Embeddings crowd into a narrow cone; after removing the mean direction, hashing theory predicts the measured collisions: #fx(lqa.centred.same_cell_observed) observed vs #fx(lqa.centred.same_cell_predicted) predicted.#footnote[Ethayarajh, EMNLP 2019; Mu and Viswanath, ICLR 2018.]]
-      #point[Too far apart.][A question and its answer are too far apart for one key: about #calc.round(lqa.centred.at("independent_8bit_tables_for_0.9")) independent keys would be needed for 90% recall.]
+      #point[Narrow cone.][Embeddings crowd into a narrow cone; after removing the mean direction, the theory for random projections predicts the collisions: #fx(lqa.centred.same_cell_observed) observed vs #fx(lqa.centred.same_cell_predicted) predicted.#footnote[Ethayarajh, EMNLP 2019; Mu and Viswanath, ICLR 2018.]]
+      #point[Too far apart.][For one key on random axes a question and its answer are too far apart: about #calc.round(lqa.centred.at("independent_8bit_tables_for_0.9")) independent keys would be needed for 90% recall.]
+      #point[Axes fitted to the notes.][On rotated principal axes a question and its answer share a cell #fx(SQ("C_itq"), d: 0)× as often as the theory says. Recall #fx(SA("C_itq")) vs #fx(SA("A_random_axes")), still below #fx(s10.at("exhaustive_R@10")) for every chunk.#footnote[Gong, Lazebnik, Gordo and Perronnin, iterative quantization, TPAMI 35(12), 2013.]]
     ],
   )
 ]
@@ -439,16 +448,16 @@
 
 #slide[
   #title[Scoreboard #hl[so far]]
-  #set text(size: 14.5pt)
+  #set text(size: 13.5pt)
   #table(
-    columns: (1.2fr, 1fr, 1.7fr),
+    columns: (1.25fr, 0.75fr, 1.9fr),
     column-gutter: 0.8cm,
     stroke: (x, y) => if y == 0 {
       (bottom: 2pt + if x == 0 { ink } else { blue })
     } else {
       (bottom: 0.6pt + slate)
     },
-    inset: (x: 0pt, y: 6.5pt),
+    inset: (x: 0pt, y: 5.5pt),
     table.header([Question], hl[Winner], hl[Measured]),
     [Keywords or vectors?], [vectors], [recall #fx(grid-data.at("vector-chunk").R) vs #fx(grid-data.at("keyword-page").R)],
     [What to hand the model?], [chunks], [right note kept #fx(units.chunk.relevant_in_pack) vs #fx(units.page.relevant_in_pack) at equal tokens],
@@ -464,6 +473,8 @@
     [Sentence packs answer the question?], [chunks], [judged sufficient #fx(fjp.yes.A) vs #fx(fjp.yes.B), #fjp.mcnemar_two_sided.new_only vs #fjp.mcnemar_two_sided.comparator_only questions],
     [Hilbert key as a facet map?], [no], [found #fx(fuc.at("hk1_facets").recall) vs #fx(fuc.at("dense_facets").recall), with #fx(fus.acceptance.at("chunk-hk1 vs chunk-dense").token_ratio, d: 1)× the tokens per answer],
     [Reranker null on unseen questions?], [underpowered], [power #fx(fpw.curves.at("held-out (+0.016)").curve.find(c => c.n == 800).power * 100, d: 0)%; with judge labels +#fx(fqe.reranker_gain.at("extended").diff)],
+    [Hilbert key over area, type, month?], [B-tree], [#fx(calc.min(..S9R), d: 2) to #fx(calc.max(..S9R), d: 2)× its buffers; area filter #fx(S9("dense_title_area_filter").recall) vs area words #fx(S9("dense_title_and_area_words").recall)],
+    [Key rebuilt on axes fitted to the notes?], [no], [#fx(SA("C_itq")) vs #fx(SA("A_random_axes")) on random axes and #fx(s10.at("exhaustive_R@10")) for every chunk],
   )
   #v(1fr)
   #align(right)[#text(size: 18pt)[These are #text(fill: blue, style: "italic")[measured findings, not decisions].]]
