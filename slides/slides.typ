@@ -76,6 +76,9 @@
 #let muted = rgb("#757F8A")
 #let hair = rgb("#C8CDD3")
 #let foot = rgb("#888888")
+#let hil-line = rgb("#4C8DF6")
+#let hil-grey = rgb("#D5D9DE")
+#let hil-greydot = rgb("#BFC4CA")
 
 #let W = 33.867cm
 #let H = 19.05cm
@@ -110,13 +113,13 @@
   #v(-0.35cm)
   #text(size: 15pt, fill: muted)[#label]
 ]
-#let card(head, body, h: auto) = stack(
+#let card(head, body, h: auto, size: 14pt) = stack(
   block(width: 100%, fill: slate, inset: (x: 13pt, y: 12pt), below: 0pt)[
     #text(size: 17pt, weight: 600, fill: white)[#head]
   ],
   v(0.22cm),
   block(width: 100%, height: h, fill: pale, inset: (x: 13pt, top: 12pt, bottom: 14pt))[
-    #text(size: 14pt, weight: 400)[#body]
+    #text(size: size, weight: 400)[#body]
     #place(bottom + left, dy: 4pt, line(length: 1.1cm, stroke: 2.5pt + blue))
   ],
 )
@@ -125,6 +128,30 @@
   #hl[#lead] #body
 ]
 #let note(body) = text(size: 13pt, weight: 400, fill: muted)[#body]
+#let fill-row(cols, gutter: 1cm, ..cells) = block(height: 1fr, width: 100%,
+  grid(columns: cols, rows: (100%,), column-gutter: gutter, align: horizon, ..cells))
+#let fig(path) = image(path, width: 100%, height: 100%, fit: "contain")
+#let tile(head, value, label, fill: pale, ink-col: ink, value-col: blue) = block(width: 100%, height: 100%, fill: fill, inset: (x: 14pt, top: 13pt, bottom: 24pt))[
+  #text(size: 15pt, weight: 600, fill: if fill == pale { slate } else { ink-col })[#head]
+  #v(1fr)
+  #text(size: 40pt, weight: 600, fill: value-col)[#value]
+  #v(-0.25cm)
+  #block(height: 2.5cm, text(size: 13.5pt, weight: 400, fill: ink-col)[#label])
+  #place(bottom + left, dy: 14pt, line(length: 1.1cm, stroke: 2.5pt + value-col))
+]
+#let pair-bars(groups, bw: 9.4cm, rh: 0.6cm) = grid(columns: (auto, bw), column-gutter: 0.35cm, row-gutter: 0.14cm,
+  align: (right + horizon, left + horizon),
+  ..groups.map(((head, a, b)) => (
+    grid.cell(colspan: 2, align: left, pad(top: 0.4cm, text(size: 14pt, weight: 600)[#head])),
+    ..(([sentence packs], a, blue), ([chunk packs], b, hil-greydot)).map(((n, v, c)) => (
+      text(size: 12.5pt, weight: 400)[#n],
+      box(width: bw, height: rh, {
+        place(dy: 0.12 * rh, rect(width: bw * v, height: 0.76 * rh, fill: c))
+        place(left + horizon, dx: bw * v + 0.15cm, text(size: 12pt, weight: 600, fill: if c == blue { blue } else { slate })[#fx(v)])
+      }),
+    )).flatten(),
+  )).flatten()
+)
 #let slide(body) = page[#counter(footnote).update(0)#body]
 #let divider(kick, body) = page(fill: rgb("#F3F8FF"), footer: none)[
   #place(top + left, dx: 0.85cm - mx, dy: 10.33cm - 0.9cm, image("/slides/network-wide.png", width: 33.02cm))
@@ -135,9 +162,6 @@
 ]
 #let network = image("/slides/network.png", height: H)
 
-#let hil-line = rgb("#4C8DF6")
-#let hil-grey = rgb("#D5D9DE")
-#let hil-greydot = rgb("#BFC4CA")
 #let hil-xy(n, d) = {
   let (x, y, t, s) = (0, 0, d, 1)
   while s < n {
@@ -177,6 +201,79 @@
     place(dx: p.at(0) - 6.5pt, dy: p.at(1) - 6.5pt, circle(radius: 6.5pt, fill: ink, stroke: 2pt + white))
   }
 })
+
+#let lcg(n, seed) = {
+  let s = seed
+  let out = ()
+  for i in range(n) {
+    s = calc.rem(s * 1103515245 + 12345, 2147483648)
+    out.push(s / 2147483648)
+  }
+  out
+}
+#let question-art(h) = box(width: 32cm, height: h, {
+  let base = h - 0.9cm
+  let mid = base / 2
+  let r = lcg(92, 7)
+  let pts = range(46).map(i => (0.3cm + r.at(2 * i) * 12.4cm, 0.25cm + r.at(2 * i + 1) * (base - 0.5cm)))
+  let dist(a, b) = calc.sqrt(calc.pow((a.at(0) - b.at(0)) / 1cm, 2) + calc.pow((a.at(1) - b.at(1)) / 1cm, 2))
+  for i in range(pts.len()) {
+    for j in range(i + 1, pts.len()) {
+      if dist(pts.at(i), pts.at(j)) < 1.7 { place(line(start: pts.at(i), end: pts.at(j), stroke: 0.7pt + hil-grey)) }
+    }
+  }
+  let hits = range(pts.len()).sorted(key: i => -pts.at(i).at(0)).slice(0, 6)
+  let right = hits.sorted(key: i => pts.at(i).at(1)).at(3)
+  let sn = (16cm, mid)
+  for i in hits { place(line(start: pts.at(i), end: sn, stroke: 0.9pt + hil-line)) }
+  for (i, p) in pts.enumerate() {
+    let (fill, rad) = if i == right { (ink, 5pt) } else if i in hits { (blue, 4pt) } else { (hil-greydot, 3pt) }
+    place(dx: p.at(0) - rad, dy: p.at(1) - rad, circle(radius: rad, fill: fill, stroke: if i == right { 1.5pt + white } else { none }))
+  }
+  let (px0, px1) = (19.6cm, 23.6cm)
+  place(dx: px0, dy: 0.1cm, rect(width: px1 - px0, height: base - 0.2cm, fill: pale))
+  let slots = range(6).map(k => (px0 + 0.6cm, 0.5cm + k * (base - 1cm) / 5))
+  for s in slots { place(line(start: sn, end: s, stroke: 0.9pt + hil-line)) }
+  for (k, s) in slots.enumerate() {
+    place(line(start: (s.at(0) + 0.35cm, s.at(1)), end: (px1 - 0.45cm - calc.rem(k * 7, 5) * 0.25cm, s.at(1)), stroke: 1.6pt + hair))
+    let (fill, rad) = if k == 2 { (ink, 5pt) } else { (blue, 4pt) }
+    place(dx: s.at(0) - rad, dy: s.at(1) - rad, circle(radius: rad, fill: fill, stroke: if k == 2 { 1.5pt + white } else { none }))
+  }
+  place(dx: sn.at(0) - 9pt, dy: mid - 9pt, circle(radius: 9pt, fill: blue))
+  let mn = (29cm, mid)
+  place(line(start: (px1, mid), end: mn, stroke: 1.6pt + blue))
+  place(dx: mn.at(0) - 16pt, dy: mid - 16pt, circle(radius: 16pt, fill: blue))
+  let label(x, wd, body) = place(dx: x - wd / 2, dy: base + 0.2cm, box(width: wd, align(center, text(size: 13pt, weight: 400, fill: muted, body))))
+  label(6.5cm, 13cm, [#num(man.pages_live) notes, #num(man.chunk_count) chunks; dark: the note that answers])
+  label(sn.at(0), 4cm, [search])
+  label((px0 + px1) / 2, 8cm, [#text(fill: blue)[Recall:] is the dark one in the pack?])
+  label(mn.at(0), 4cm, [model])
+  place(dx: (px1 + mn.at(0)) / 2 - 2.6cm, dy: mid - 1.05cm, box(width: 5.2cm, align(center, text(size: 13pt, weight: 400, fill: muted)[#text(fill: blue)[Cost:] tokens it reads])))
+})
+
+#let shap-chart(keys, lo: -0.1, hi: 0.07, bw: 8.6cm, rh: 0.6cm) = {
+  let X(v) = bw * (calc.clamp(v, lo, hi) - lo) / (hi - lo)
+  let x0 = X(0)
+  grid(columns: (auto, bw), column-gutter: 0.35cm, row-gutter: 0.14cm, align: (right + horizon, left + horizon),
+    ..keys.map(((k, name)) => {
+      let v = fsh.at(k).at("R@10").shapley
+      let (a, b) = if v >= 0 { (x0, X(v)) } else { (X(v), x0) }
+      let lab = [#if v >= 0 [+]#fx(v)]
+      (text(size: 12.5pt, weight: 400)[#name], box(width: bw, height: rh, {
+        place(dx: a, dy: 0.12 * rh, rect(width: b - a, height: 0.76 * rh, fill: if v >= 0 { blue } else if v < lo { slate } else { hil-greydot }))
+        if v < lo {
+          for dx in (0.55cm, 0.75cm) { place(line(start: (dx, rh), end: (dx + 0.18cm, 0pt), stroke: 2.5pt + white)) }
+          place(left + horizon, dx: 1.1cm, text(size: 12pt, weight: 600, fill: white, lab))
+        } else if v >= 0 {
+          place(left + horizon, dx: b + 0.15cm, text(size: 12pt, weight: 600, fill: blue, lab))
+        } else {
+          place(left + horizon, dx: a - 2.15cm, box(width: 2cm, align(right, text(size: 12pt, weight: 600, fill: slate, lab))))
+        }
+        place(line(start: (x0, -0.08cm), end: (x0, rh + 0.08cm), stroke: 0.8pt + ink))
+      }))
+    }).flatten()
+  )
+}
 
 // ------------------------------------------------------------------ title
 
@@ -224,6 +321,8 @@
       ]
     ],
   )
+  #v(1fr)
+  #question-art(5.3cm)
 ]
 
 #divider[Part 1][What was tested]
@@ -233,12 +332,12 @@
 #slide[
   #title[Storage and #hl[search]]
   #grid(columns: (1fr, 1fr, 1fr), column-gutter: 0.5cm, row-gutter: 0.45cm,
-    card(h: 3.6cm)[gbrain][The personal knowledge base: notes mirrored from Obsidian into Postgres, chunked, embedded, searchable over MCP by Cursor and Claude Code.#footnote[gbrain, #raw("github.com/garrytan/gbrain"), version 0.60.64.]],
-    card(h: 3.6cm)[Postgres + pgvector][The database. pgvector adds vector columns and an HNSW nearest-neighbour index.#footnote[pgvector 0.8.6, #raw("github.com/pgvector/pgvector")\; HNSW: Malkov and Yashunin, IEEE TPAMI 2020.]],
-    card(h: 3.6cm)[Qwen3-Embedding][Turns each chunk and each question into a 1,024-number vector; runs locally through MLX on the laptop GPU.#footnote[Zhang et al., Qwen3 Embedding, arXiv:2506.05176, 2025.]],
-    card(h: 3.6cm)[Keyword search][Postgres full-text search: matches words, ranks by term density. The classic baseline next to vectors.#footnote[PostgreSQL 16 documentation, chapter 12, Full Text Search.]],
-    card(h: 3.6cm)[Reranker][A small cross-encoder (Qwen3-Reranker 0.6B) that reads the question and each candidate together and re-orders them.#footnote[Nogueira and Cho, Passage re-ranking with BERT, arXiv:1901.04085, 2019.]],
-    card(h: 3.6cm)[ArangoDB][A document and graph database, tested on the same vectors as a possible second engine.#footnote[ArangoDB 3.12 documentation, vector indexes.]],
+    card(h: 4.1cm, size: 16.5pt)[gbrain][The personal knowledge base: notes mirrored from Obsidian into Postgres, chunked, embedded, searchable over MCP by Cursor and Claude Code.#footnote[gbrain, #raw("github.com/garrytan/gbrain"), version 0.60.64.]],
+    card(h: 4.1cm, size: 16.5pt)[Postgres + pgvector][The database. pgvector adds vector columns and an HNSW nearest-neighbour index.#footnote[pgvector 0.8.6, #raw("github.com/pgvector/pgvector")\; HNSW: Malkov and Yashunin, IEEE TPAMI 2020.]],
+    card(h: 4.1cm, size: 16.5pt)[Qwen3-Embedding][Turns each chunk and each question into a 1,024-number vector; runs locally through MLX on the laptop GPU.#footnote[Zhang et al., Qwen3 Embedding, arXiv:2506.05176, 2025.]],
+    card(h: 4.1cm, size: 16.5pt)[Keyword search][Postgres full-text search: matches words, ranks by term density. The classic baseline next to vectors.#footnote[PostgreSQL 16 documentation, chapter 12, Full Text Search.]],
+    card(h: 4.1cm, size: 16.5pt)[Reranker][A small cross-encoder (Qwen3-Reranker 0.6B) that reads the question and each candidate together and re-orders them.#footnote[Nogueira and Cho, Passage re-ranking with BERT, arXiv:1901.04085, 2019.]],
+    card(h: 4.1cm, size: 16.5pt)[ArangoDB][A document and graph database, tested on the same vectors as a possible second engine.#footnote[ArangoDB 3.12 documentation, vector indexes.]],
   )
 ]
 
@@ -247,12 +346,12 @@
 #slide[
   #title[The key and the #hl[agent side]]
   #grid(columns: (1fr, 1fr, 1fr), column-gutter: 0.5cm, row-gutter: 0.45cm,
-    card(h: 3.6cm)[zig-hilbert and hk1][Built for this study: turns a vector into a short sortable text key on a Hilbert curve, so a database prefix range could act as a cheap search filter.#footnote[Maltsev, zig-hilbert, #raw("github.com/guanchzhou/zig-hilbert"), v0.2.1; Hilbert, Mathematische Annalen 38, 1891.]],
-    card(h: 3.6cm)[Evidence unit][What is handed to the model under a 6,000-token budget: a chunk, a window, a section, or the whole note.],
-    card(h: 3.6cm)[RTK][A filter that shortens shell command output before an AI agent reads it; hooks into Cursor and Claude Code.#footnote[RTK 0.51.0, #raw("www.rtk-ai.app").]],
-    card(h: 3.6cm)[Cursor CLI][The Cursor agent run headless from the terminal, with a choice of models.],
-    card(h: 3.6cm)[Claude Code][Anthropic's coding agent, run headless with the same tasks.],
-    card(h: 3.6cm)[Local model][qwen3.8, a 27B model in Ollama on the laptop, with context windows from 8K to 128K tokens.#footnote[Ollama, #raw("ollama.com").]],
+    card(h: 4.5cm, size: 16.5pt)[zig-hilbert and hk1][Built for this study: turns a vector into a short sortable text key on a Hilbert curve, so a database prefix range could act as a cheap search filter.#footnote[Maltsev, zig-hilbert, #raw("github.com/guanchzhou/zig-hilbert"), v0.2.1; Hilbert, Mathematische Annalen 38, 1891.]],
+    card(h: 4.5cm, size: 16.5pt)[Evidence unit][What is handed to the model under a 6,000-token budget: a chunk, a window, a section, or the whole note.],
+    card(h: 4.5cm, size: 16.5pt)[RTK][A filter that shortens shell command output before an AI agent reads it; hooks into Cursor and Claude Code.#footnote[RTK 0.51.0, #raw("www.rtk-ai.app").]],
+    card(h: 4.5cm, size: 16.5pt)[Cursor CLI][The Cursor agent run headless from the terminal, with a choice of models.],
+    card(h: 4.5cm, size: 16.5pt)[Claude Code][Anthropic's coding agent, run headless with the same tasks.],
+    card(h: 4.5cm, size: 16.5pt)[Local model][qwen3.8, a 27B model in Ollama on the laptop, with context windows from 8K to 128K tokens.#footnote[Ollama, #raw("ollama.com").]],
   )
 ]
 
@@ -288,8 +387,8 @@
 
 #slide[
   #title[How it was #hl[measured]]
-  #grid(columns: (1.1fr, 1fr), gutter: 1cm,
-    image("/figures/fig01-pipeline.svg", width: 100%),
+  #fill-row((1.55fr, 1fr),
+    fig("/figures/fig01-pipeline.svg"),
     [
       #point[Preregistered.][Hypotheses and pass criteria were written down and committed before any measurement.]
       #point[Paired.][One switch changes at a time; every comparison is made question by question.]
@@ -334,8 +433,8 @@
 #slide[
   #tag[Result 1]
   #title[Fixing keywords does #hl[not change the winner]]
-  #grid(columns: (1.5fr, 1fr), gutter: 1cm,
-    image("/figures/fig12-keyword.svg", width: 100%),
+  #fill-row((2.05fr, 1fr),
+    fig("/figures/fig12-keyword.svg"),
     [
       #point[AND to OR.][Switching keyword search from AND to OR lifts it from #fx(C("keyword-and-chunk").recall) to #fx(C("keyword-or-chunk").recall).]
       #point[Rank fusion.][Mixing keywords and vectors ties vectors on recall (#fx(C("hybrid-rrf-chunk").recall) vs #fx(C("vector-chunk").recall)) and lowers the top-rank quality.#footnote[Reciprocal rank fusion: Cormack, Clarke and Büttcher, SIGIR 2009.]]
@@ -349,7 +448,7 @@
 #slide[
   #tag[Result 2]
   #title[Return #hl[chunks], not whole notes]
-  #grid(columns: (1fr, 1.5fr), gutter: 1cm,
+  #fill-row((1fr, 1.6fr),
     [
       Under a 6,000-token budget, how often is the right note inside what the model gets?
       #v(0.3cm)
@@ -361,7 +460,7 @@
       #let BS(b, u) = bs.rows.find(r => r.budget == b and r.unit == u)
       #note[6,000 tokens is gbrain's default. No unit beats chunks at any budget tried, from #num(bs.budgets.first()) (#fx(BS(bs.budgets.first(), "chunk").relevant_in_pack) vs #fx(BS(bs.budgets.first(), "page").relevant_in_pack)) to #num(bs.budgets.last()) (#fx(BS(bs.budgets.last(), "chunk").relevant_in_pack) vs #fx(BS(bs.budgets.last(), "page").relevant_in_pack)).]
     ],
-    image("/figures/fig06-units.svg", width: 100%),
+    fig("/figures/fig06-units.svg"),
   )
 ]
 
@@ -399,8 +498,8 @@
 #slide[
   #tag[Result 3]
   #title[Why the key fails: it is an #hl[8-bit hash]]
-  #grid(columns: (1.4fr, 1fr), gutter: 1cm,
-    image("/figures/fig14-lsh-model.svg", width: 100%),
+  #fill-row((1.75fr, 1fr),
+    fig("/figures/fig14-lsh-model.svg"),
     [
       #set text(size: 0.86em)
       #point[SimHash.][The first level of the key is the sign pattern of 8 random projections: an 8-bit SimHash.#footnote[Charikar, STOC 2002; Indyk and Motwani, STOC 1998.]]
@@ -470,8 +569,8 @@
 #slide[
   #tag[Exploratory]
   #title[Twelve ideas from recent papers, #hl[tested]]
-  #grid(columns: (2fr, 1fr), gutter: 0.8cm,
-    image("/figures/fig19-ideas.svg", width: 100%),
+  #fill-row((2fr, 1fr), gutter: 0.8cm,
+    fig("/figures/fig19-ideas.svg"),
     [
       #big([+#fx(I("H1a").diff)], [recall from reranking the vector top 50 — the only idea accepted])
       #note[#i1.secondary.default.near_misses_moved_into_top10 near-misses move into the top ten; cost #fx(i1.secondary.default.latency_seconds.median, d: 1) s per question.]
@@ -486,14 +585,14 @@
 #slide[
   #tag[Exploratory]
   #title[More relevant notes per token? #hl[Not with these]]
-  #grid(columns: (1.35fr, 1fr), gutter: 0.9cm,
+  #fill-row((1.35fr, 1fr), gutter: 0.9cm,
     [
-      #set text(size: 15pt)
+      #set text(size: 17pt)
       #table(
         columns: (auto, 1fr, auto),
         column-gutter: 0.6cm,
         stroke: (x, y) => if y == 0 { (bottom: 2pt + blue) } else { (bottom: 0.6pt + hair) },
-        inset: (x: 0pt, y: 6.5pt),
+        inset: (x: 0pt, y: 10pt),
         align: (left, left, right),
         table.header([], [Method], hl[Change in survival]),
         [M1], [Relevance per token, greedy fill], [#fx(es.family.M1.diff)],
@@ -561,12 +660,32 @@
   #grid(columns: (1fr, 1fr), gutter: 0.9cm,
     [
       #big([#fx(fho.runs.best_survival.survival)], [held-out questions with a relevant note in the pack, packing the best sentences of the top 30 notes (chunks: #fx(fho.runs.reference.survival))])
-      #note[#fho.paired_vs_reference.best_survival.survival.new_only questions favour sentence packs, #fho.paired_vs_reference.best_survival.survival.comparator_only favour chunks; #num(-fho.paired_vs_reference.best_survival.tokens_diff) fewer tokens. A pre-registered judge found them sufficient to answer less often (#fx(fjp.yes.A) vs #fx(fjp.yes.B) on #fjp.n questions), so this is reaching the note, not answering.]
+      #note[#fho.paired_vs_reference.best_survival.survival.new_only questions favour sentence packs, #fho.paired_vs_reference.best_survival.survival.comparator_only favour chunks; #num(-fho.paired_vs_reference.best_survival.tokens_diff) fewer tokens. A pre-registered judge found them sufficient to answer less often, so this is reaching the note, not answering.]
+      #v(0.2cm)
+      #pair-bars((
+        ([Relevant note in the pack, held-out questions], fho.runs.best_survival.survival, fho.runs.reference.survival),
+        ([Judged sufficient to answer, #fjp.n questions], fjp.yes.A, fjp.yes.B),
+      ), rh: 0.85cm)
     ],
     [
       #point[#num(fcells.n_cells) combinations.][Eight switches crossed on #fcells.n_questions_analysis_set questions; each switch scored by its average contribution (Shapley value).]
       #point[Reranker.][Largest recall gain on development questions (+#fx(fsh.at("F3=on").at("R@10").shapley)) for #fx(fsh.at("F3=on").latency.shapley / 1000, d: 1) s; on unseen questions the best combination's gain shrank to +#fx(fho.paired_vs_reference.best_recall.at("R@10").diff), not significant.]
-      #point[Hilbert key filter.][#fx(fsh.at("F7=hk1").at("R@10").shapley) recall in every combination.]
+      #v(0.15cm)
+      #text(size: 15pt, weight: 600)[What each switch adds to recall at 10]
+      #v(0.05cm)
+      #shap-chart((
+        ("F3=on", [Reranker on the top 50]),
+        ("F4=on", [Link-graph PageRank]),
+        ("F1=hybrid", [Keyword and vector hybrid]),
+        ("F6=on", [Rocchio feedback]),
+        ("F5=on", [Mean-direction removal]),
+        ("F2=mean", [Note mean, not best chunk]),
+        ("F7=partitions", [Hilbert partitions filter]),
+        ("F1=lexical", [Keywords instead of vectors]),
+        ("F7=hk1", [Hilbert key filter]),
+      ), bw: 7.6cm, rh: 0.52cm)
+      #v(0.05cm)
+      #note[Evidence units are left out: they do not change the ranking.]
     ],
   )
 ]
@@ -576,23 +695,16 @@
 #slide[
   #tag[Exploratory]
   #title[The same switches, #hl[measured again]]
-  #grid(columns: (1fr, 1fr), gutter: 0.9cm,
-    [
-      #point[Best sentence.][Recall at 10 #fx(c1.at("R@10").best_sentence) against #fx(c1.at("R@10").best_chunk).]
-      #point[Seed clamp.][Recall changed by #fx(c2.diff). The original top note stayed in the top ten.]
-      #point[Forward push.][#fx(c3.at("R@10").forward_push) against #fx(c3.at("R@10").existing_pagerank), and the walk is slower.]
-      #point[Reranker on exact ties.][#fx(c5.seconds.selective, d: 2) s against #fx(c5.seconds.always_on, d: 2) s. Confirmation MRR stays inside the always-on interval.]
-    ],
-    [
-      #big([#fx((1 - c8.token_ratio) * 100, d: 0)%], [fewer tokens when a separate checker stops the pack], size: 48pt)
-      #note[The 27B judge calls those packs sufficient for #fx(c8.sufficiency.yes) of 150 questions, against #fx(c8.sufficiency.chunk_pack) for the full chunk pack.]
-      #v(0.35cm)
-      #point[Winning sentence and its headings.][#fx(c9.tokens.sentence_headings, d: 0) tokens, sufficient for #fx(c9.sufficiency.yes).]
-      #point[Cover both pages.][Set recall #fx(c16.set_recall) on the 60 two-page questions, above #fx(c16.bar).]
-      #v(0.15cm)
-      #note[The held-out questions stay sealed.]
-    ],
-  )
+  #block(height: 1fr, grid(columns: (1fr,) * 4, rows: (1fr, 1fr), gutter: 0.45cm,
+    tile[Best sentence][#fx(c1.at("R@10").best_sentence)][recall at 10, against #fx(c1.at("R@10").best_chunk) for the best chunk],
+    tile[Seed clamp][#fx(c2.diff)][change in recall; the original top note stayed in the top ten],
+    tile[Forward push][#fx(c3.at("R@10").forward_push)][recall at 10, against #fx(c3.at("R@10").existing_pagerank) for PageRank; the walk is slower],
+    tile[Reranker on exact ties][#fx(c5.seconds.selective, d: 2) s][against #fx(c5.seconds.always_on, d: 2) s always on; confirmation MRR stays inside the always-on interval],
+    tile[A checker stops the pack][#fx((1 - c8.token_ratio) * 100, d: 0)%][fewer tokens; the 27B judge calls them sufficient for #fx(c8.sufficiency.yes) of 150 questions, against #fx(c8.sufficiency.chunk_pack) for the chunk pack],
+    tile[Winning sentence and its headings][#fx(c9.tokens.sentence_headings, d: 0)][tokens, sufficient for #fx(c9.sufficiency.yes)],
+    tile[Cover both pages][#fx(c16.set_recall)][set recall on the 60 two-page questions, above #fx(c16.bar)],
+    tile([Held-out questions], [sealed], [none of these checks opened them], fill: slate, ink-col: white, value-col: white),
+  ))
 ]
 
 // ------------------------------------------------------------------ close
